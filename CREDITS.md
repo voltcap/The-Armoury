@@ -44,11 +44,11 @@ Fiore Furlan dei Liberi da Premariacco; illustrator unknown. Getty Museum, Ms. L
 
 [The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.](https://www.getty.edu/art/collection/object/108HP6) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
-### Rustam's Fourth Course, He Cleaves a Witch
+### Algerian nimcha with scabbard
 
-Painting attributed to Qadimi; text by Abu'l Qasim Firdausi. The Metropolitan Museum of Art, 1970.301.17; fol. 120v. c. 1525.
+Makers unrecorded. The Metropolitan Museum of Art, 36.25.1550a, b. Hilt and scabbard: late 17th–early 18th century; blade: 16th–17th century.
 
-[The Metropolitan Museum of Art, New York; Gift of Arthur A. Houghton Jr., 1970. Resized and converted to WebP; full composition retained.](https://www.metmuseum.org/art/collection/search/452126) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+[The Metropolitan Museum of Art, New York; Bequest of George C. Stone, 1935. Converted to WebP; full composition retained.](https://www.metmuseum.org/art/collection/search/24327) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ### Blade and mounting for a katana
 
@@ -72,6 +72,7 @@ Unknown Italian maker. The Walters Art Museum, 51.529. c. 1550.
 
 - Three.js r160 and its examples: MIT, see `dist/vendor/LICENSE`.
 - IM Fell English and UnifrakturMaguntia: SIL Open Font License 1.1, see the two license files in `dist/assets/fonts/`. Fonts are stored locally.
+- The local botanical SVG corner and floral ornaments are covered by the project’s MIT license.
 - The custom decorative border is provided under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 Historical books linked in the Reading room are not included in the repository. Their availability online does not grant redistribution rights to the entire books or their illustrations.

@@ -1,0 +1,674 @@
+:root {
+  --corner-art: url("assets/foliate-light-corner.svg");
+  --flourish-art: url("assets/foliate-light-flourish.svg");
+  --paper: #ede0bc;
+  --paper-deep: #e0cca0;
+  --ink: #302719;
+  --muted: #6d5939;
+  --gold: #aa873e;
+  --gold-bright: #ddbe68;
+}
+:root[data-theme="dark"] {
+  --corner-art: url("assets/foliate-dark-corner.svg");
+  --flourish-art: url("assets/foliate-dark-flourish.svg");
+  --paper: #121110;
+  --paper-deep: #201d17;
+  --ink: #e8ddbd;
+  --muted: #baaa83;
+  --blue: #dfc77f;
+  --red: #d2b15e;
+  --gold: #bb9847;
+  --gold-bright: #edcf7a;
+  --line: #b18c4566;
+  --stage: #38301b40;
+  --label: #1b1912f5;
+}
+body {
+  background-image:
+    radial-gradient(ellipse at 50% 10%, #fff7da38, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.45' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.075' filter='url(%23p)'/%3E%3C/svg%3E");
+}
+:root[data-theme="dark"] body {
+  background-image: radial-gradient(
+    ellipse at 50% 12%,
+    #5042231a,
+    transparent 70%
+  );
+}
+.folio-frame {
+  border-image-source: url("assets/illumination.webp");
+  border-image-slice: 215;
+  border-image-repeat: round;
+  filter: drop-shadow(0 1px 2px #39270f70);
+}
+[data-theme="dark"] .folio-frame {
+  filter: brightness(0.72) saturate(0.95) drop-shadow(0 0 8px #cda95b20);
+}
+.volume {
+  box-shadow:
+    0 0 0 3px var(--paper),
+    0 0 0 4px var(--gold),
+    0 0 0 7px var(--paper),
+    0 0 0 8px var(--line),
+    inset 0 0 60px #73501d10;
+}
+header {
+  position: relative;
+  background-image:
+    var(--flourish-art),
+    linear-gradient(110deg, transparent, #af88451a, transparent);
+  background-repeat: no-repeat;
+  background-size:
+    190px 52px,
+    auto;
+  background-position:
+    52% center,
+    center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1px;
+  font-size: 40px;
+  overflow: visible;
+}
+.illuminated-initial {
+  display: inline-grid;
+  place-items: center;
+  font-size: 48px;
+  line-height: 1;
+  width: 44px;
+  height: 50px;
+  margin-right: 2px;
+  color: #e2c779;
+  -webkit-text-fill-color: #e2c779;
+  background: #31513a;
+  border: 3px double #b79a50;
+  box-shadow:
+    inset 0 0 0 2px #1b3927,
+    0 0 0 1px #755e2c;
+  text-shadow: 1px 1px #1e3021;
+  filter: none;
+}
+[data-theme="dark"] .illuminated-initial {
+  background: #2e542c;
+  color: #edcf70;
+  -webkit-text-fill-color: #edcf70;
+  box-shadow:
+    inset 0 0 0 2px #153919,
+    0 0 0 1px #a08238;
+}
+[data-theme="dark"] header {
+  background-color: #0d0d0b;
+}
+[data-theme="dark"] .book-nav {
+  background: #173e6a;
+  border-top: 1px solid #bb9847;
+  box-shadow:
+    inset 0 2px #29608b55,
+    inset 0 -2px #080a0d66;
+}
+[data-theme="dark"] .book-nav button {
+  color: #e0c984;
+}
+[data-theme="dark"] .book-nav button.selected {
+  color: #fff0b9;
+  background: linear-gradient(0deg, #0c16245e, transparent);
+}
+.specimen-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.specimen-heading:after {
+  content: "";
+  flex: 0 1 145px;
+  height: 36px;
+  background: var(--flourish-art) center/contain no-repeat;
+}
+[data-theme="dark"] #viewport {
+  background: radial-gradient(ellipse at 50% 40%, #37302058, #0c0d0c 85%);
+}
+.stage-florals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.stage-florals i {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background: var(--corner-art) center/contain no-repeat;
+  top: 0;
+  left: 0;
+}
+.stage-florals i:nth-child(2) {
+  left: auto;
+  right: 0;
+  transform: rotate(90deg);
+}
+.stage-florals i:nth-child(3) {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
+.stage-florals i:nth-child(4) {
+  top: auto;
+  bottom: 0;
+  transform: rotate(270deg);
+}
+.page-heading h1 {
+  position: relative;
+  padding-bottom: 24px;
+}
+.page-heading h1:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 160px;
+  height: 30px;
+  background: var(--flourish-art) left center/contain no-repeat;
+}
+.archive-card {
+  box-shadow:
+    inset 0 0 0 3px var(--paper),
+    inset 0 0 0 4px var(--line);
+}
+.archive-image {
+  background-image: var(--corner-art);
+  background-position: 8px 8px;
+  background-size: 52px;
+  background-repeat: no-repeat;
+}
+.craft-card {
+  background-image: var(--corner-art);
+  background-position: right 3px;
+  background-size: 48px;
+  background-repeat: no-repeat;
+  padding-right: 15px;
+}
+.chapter-number {
+  display: inline-grid;
+  place-items: center;
+  border: 3px double var(--gold);
+  min-width: 37px;
+  height: 40px;
+  font-size: 22px;
+  color: var(--gold);
+  background: #ae883917;
+}
+.timeline-date {
+  background-image: var(--flourish-art);
+  background-size: 110px 30px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 35px;
+}
+
+/* Study occupies the viewport. The other folios retain their document layout. */
+:root[data-page="study"] body {
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  padding: clamp(18px, 3.5vh, 36px) clamp(22px, 3.2vw, 44px);
+}
+:root[data-page="study"] .volume {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+:root[data-page="study"] .folio-frame {
+  position: fixed;
+}
+:root[data-page="study"] header {
+  flex: none;
+  padding: 10px 20px;
+}
+:root[data-page="study"] .book-nav {
+  flex: none;
+}
+:root[data-page="study"] .book-nav button {
+  padding: 9px 5px 7px;
+}
+:root[data-page="study"] #studyPage {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr) 285px;
+  overflow: hidden;
+}
+:root[data-page="study"] .collection {
+  min-width: 0;
+  min-height: 0;
+  padding: 12px 12px 14px;
+}
+:root[data-page="study"] #weapons {
+  height: 100%;
+  display: grid;
+  grid-auto-rows: minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+}
+:root[data-page="study"] .weapon {
+  min-width: 0;
+  padding: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+}
+:root[data-page="study"] .workbench {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+  padding: 0 20px 10px;
+}
+:root[data-page="study"] .specimen-heading {
+  padding: 13px 0 10px;
+}
+:root[data-page="study"] h1 {
+  font-size: 36px;
+}
+:root[data-page="study"] .stage-toolbar {
+  margin-bottom: 10px;
+  gap: 7px;
+}
+:root[data-page="study"] .stage-toolbar button {
+  min-height: 36px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+:root[data-page="study"] .stage-toolbar .primary {
+  min-height: 38px;
+  font-size: 14px !important;
+}
+:root[data-page="study"] #viewport {
+  height: auto;
+  min-height: 0;
+  flex: none;
+}
+:root[data-page="study"] .view-controls {
+  padding: 6px 0 5px;
+}
+:root[data-page="study"] .assembly {
+  padding: 7px 2px 0;
+  margin: 0;
+}
+:root[data-page="study"] .assembly input {
+  margin: 15px 0;
+}
+:root[data-page="study"] .assembly-actions button {
+  padding: 8px 4px;
+}
+:root[data-page="study"] .inspector {
+  min-height: 0;
+  padding: 0 17px 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+:root[data-page="study"] .inspector-tabs {
+  min-height: 45px;
+  height: 45px;
+  flex: none;
+  margin-bottom: 10px;
+}
+:root[data-page="study"] .study-modes {
+  margin-bottom: 7px;
+}
+:root[data-page="study"] .part-row {
+  padding: 5px 3px;
+  font-size: 12px;
+  min-height: 30px;
+}
+:root[data-page="study"] #partDetail {
+  margin-top: 13px;
+  padding-top: 12px;
+}
+:root[data-page="study"] #partDetail h2 {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+:root[data-page="study"] #partDescription {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+:root[data-page="study"] #partSources {
+  gap: 6px;
+  margin-bottom: 10px;
+}
+:root[data-page="study"] #partSources a {
+  font-size: 11px;
+  line-height: 1.3;
+}
+:root[data-page="study"] .part-navigation {
+  padding-top: 7px;
+}
+:root[data-page="study"] #historyPanel {
+  font-size: 13px;
+  line-height: 1.55;
+}
+:root[data-page="study"] #historyPanel h2 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+:root[data-page="study"] #sources {
+  margin-top: 12px;
+  gap: 8px;
+}
+
+@media (min-width: 1550px) and (min-height: 850px) {
+  :root[data-page="study"] #studyPage {
+    grid-template-columns: 195px minmax(0, 1fr) 320px;
+  }
+  :root[data-page="study"] .weapon {
+    font-size: 17px;
+  }
+  :root[data-page="study"] h1 {
+    font-size: 48px;
+  }
+  :root[data-page="study"] #partDescription {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  :root[data-page="study"] .part-row {
+    font-size: 15px;
+    min-height: 40px;
+  }
+  :root[data-page="study"] #partDetail {
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  :root[data-page="study"] #partDetail h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1000px) {
+  header {
+    background-size:
+      110px 35px,
+      auto;
+    background-position:
+      54% center,
+      center;
+  }
+  :root[data-page="study"] #studyPage {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    grid-template-rows: 46px minmax(0, 1fr);
+  }
+  :root[data-page="study"] .collection {
+    grid-column: 1/-1;
+    padding: 0 12px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  :root[data-page="study"] #weapons {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 4px;
+    padding: 5px 0;
+  }
+  :root[data-page="study"] .weapon {
+    min-width: max-content;
+    width: auto;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  :root[data-page="study"] .inspector {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+@media (max-width: 660px) {
+  header {
+    background-image: none;
+  }
+  .brand {
+    font-size: 29px;
+  }
+  .illuminated-initial {
+    font-size: 36px;
+    width: 30px;
+    height: 40px;
+  }
+  .page-heading h1:after {
+    width: 125px;
+  }
+  :root[data-page="study"] body {
+    padding: 17px 18px;
+  }
+  :root[data-page="study"] header {
+    padding: 7px 10px;
+  }
+  :root[data-page="study"] .brand {
+    font-size: 27px;
+  }
+  :root[data-page="study"] .header-actions {
+    flex-direction: row;
+    gap: 4px;
+  }
+  :root[data-page="study"] .header-actions button {
+    font-size: 9px;
+    width: 58px;
+    min-height: 31px;
+    padding: 4px;
+  }
+  :root[data-page="study"] #studyPage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 39px minmax(0, 1fr) auto;
+  }
+  :root[data-page="study"] .book-nav {
+    padding: 0 8px;
+    gap: 3px;
+  }
+  :root[data-page="study"] .book-nav button {
+    font-size: 11px;
+  }
+  :root[data-page="study"] .workbench {
+    padding: 0 11px 7px;
+  }
+  :root[data-page="study"] .specimen-heading {
+    padding: 6px 0;
+  }
+  :root[data-page="study"] h1 {
+    font-size: 27px;
+  }
+  :root[data-page="study"] .specimen-heading:after {
+    height: 24px;
+    flex-basis: 100px;
+  }
+  :root[data-page="study"] .stage-toolbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 7px;
+    gap: 4px 6px;
+  }
+  :root[data-page="study"] .stage-toolbar .primary {
+    grid-column: auto;
+    font-size: 12px !important;
+    min-height: 32px;
+  }
+  :root[data-page="study"] .stage-toolbar button {
+    min-height: 32px;
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+  :root[data-page="study"] .focus-option {
+    grid-column: 1/-1;
+    justify-content: flex-end;
+    font-size: 10px;
+  }
+  :root[data-page="study"] .focus-option input {
+    width: 13px;
+    height: 13px;
+  }
+  :root[data-page="study"] .stage-florals i {
+    width: 37px;
+    height: 37px;
+  }
+  :root[data-page="study"] .view-controls {
+    padding: 3px 0;
+    gap: 10px;
+  }
+  :root[data-page="study"] .view-controls button {
+    font-size: 10px;
+  }
+  :root[data-page="study"] .assembly-head {
+    font-size: 11px;
+  }
+  :root[data-page="study"] .assembly {
+    padding-top: 3px;
+  }
+  :root[data-page="study"] .assembly input {
+    margin: 13px 0;
+  }
+  :root[data-page="study"] .assembly-actions button {
+    padding: 5px 3px;
+    font-size: 11px;
+  }
+  :root[data-page="study"] .inspector {
+    max-height: 34dvh;
+    overflow: auto;
+    border-top: 3px double var(--gold);
+    padding: 0 11px 6px;
+  }
+  :root[data-page="study"] .inspector-tabs {
+    height: 30px;
+    min-height: 30px;
+    margin-bottom: 4px;
+  }
+  :root[data-page="study"] .inspector-tabs button {
+    font-size: 13px;
+  }
+  :root[data-page="study"] .study-modes {
+    margin-bottom: 3px;
+  }
+  :root[data-page="study"] .study-modes button {
+    padding: 3px 0 4px;
+    font-size: 12px;
+  }
+  :root[data-page="study"] #parts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px 7px;
+  }
+  :root[data-page="study"] .part-row {
+    font-size: 11px;
+    min-height: 25px;
+    padding: 3px 0;
+  }
+  :root[data-page="study"] #partDetail {
+    margin-top: 5px;
+    padding-top: 6px;
+  }
+  :root[data-page="study"] #partDetail h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  :root[data-page="study"] #partDescription {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0 0 7px;
+  }
+  :root[data-page="study"] #partSources {
+    gap: 4px;
+    margin-bottom: 5px;
+  }
+  :root[data-page="study"] #partSources a {
+    font-size: 10px;
+  }
+  :root[data-page="study"] .part-navigation {
+    padding-top: 3px;
+  }
+  :root[data-page="study"] .part-navigation button {
+    min-height: 24px;
+    font-size: 11px;
+    padding: 2px;
+  }
+  :root[data-page="study"] #isolateMobile {
+    display: none;
+  }
+}
+
+#weaponSelect {
+  display: none;
+}
+@media (max-width: 660px) {
+  :root[data-page="study"] #weapons {
+    display: none;
+  }
+  :root[data-page="study"] #weaponSelect {
+    display: block;
+    width: 100%;
+    min-height: 29px;
+    height: 29px;
+    padding: 3px 8px;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  :root[data-page="study"] .inspector {
+    max-height: 40dvh;
+  }
+}
+
+:root[data-page="study"] #partSources {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+}
+@media (min-width: 500px) and (max-width: 660px) {
+  :root[data-page="study"] #studyPage {
+    grid-template-columns: minmax(0, 1fr) 215px;
+    grid-template-rows: 39px minmax(0, 1fr);
+  }
+  :root[data-page="study"] .inspector {
+    max-height: none;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+  :root[data-page="study"] #parts {
+    grid-template-columns: 1fr 1fr;
+  }
+  :root[data-page="study"] .stage-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  :root[data-page="study"] .stage-toolbar button {
+    min-width: 0;
+  }
+  :root[data-page="study"] .specimen-heading:after {
+    display: none;
+  }
+}
+@media (max-width: 499px) {
+  :root[data-page="study"] .specimen-heading {
+    display: none;
+  }
+  :root[data-page="study"] .workbench {
+    padding-top: 5px;
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+  }
+  :root[data-page="study"] .assembly input {
+    margin: 10px 0;
+  }
+  :root[data-page="study"] .assembly-actions button {
+    padding: 4px 2px;
+  }
+  :root[data-page="study"] .assembly-head {
+    line-height: 1.3;
+  }
+  :root[data-page="study"] .stage-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}

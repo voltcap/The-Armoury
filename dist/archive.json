@@ -80,24 +80,23 @@
     "imageChanges": "Resized and converted to WebP; full composition retained."
   },
   {
-    "id": "rustam",
-    "title": "Rustam's Fourth Course, He Cleaves a Witch",
-    "date": "c. 1525",
-    "origin": "Iran",
-    "creator": "Painting attributed to Qadimi; text by Abu'l Qasim Firdausi",
-    "shelfmark": "The Metropolitan Museum of Art, 1970.301.17; fol. 120v",
-    "source": "https://www.metmuseum.org/art/collection/search/452126",
+    "id": "algerian-nimcha",
+    "title": "Algerian nimcha with scabbard",
+    "date": "Hilt and scabbard: late 17th–early 18th century; blade: 16th–17th century",
+    "origin": "Algeria (hilt and scabbard); Europe (blade)",
+    "creator": "Makers unrecorded",
+    "shelfmark": "The Metropolitan Museum of Art, 36.25.1550a, b",
+    "source": "https://www.metmuseum.org/art/collection/search/24327",
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "credit": "The Metropolitan Museum of Art, New York; Gift of Arthur A. Houghton Jr., 1970. Resized and converted to WebP; full composition retained.",
-    "description": "An early-sixteenth-century Iranian illustration of an episode in Firdausi's Shahnama. The sword belongs to a legendary narrative, not an eyewitness record of the ancient events.",
-    "relation": "An example of sword imagery in Persian manuscript painting. It does not establish an Arabian or Ottoman identity for the supplied curved-sword model.",
+    "credit": "The Metropolitan Museum of Art, New York; Bequest of George C. Stone, 1935. Converted to WebP; full composition retained.",
+    "description": "This North African saber combines Algerian hilt and scabbard fittings with a European blade. The downturned quillons, knuckle guard and openwork leather scabbard distinguish its construction.",
+    "relation": "A documented example of sword craftsmanship in the Arab world; its component dates and geographic attributions belong to this museum object.",
     "weapons": [
-      "arabic",
-      "yatagan"
+      "arabic"
     ],
-    "image": "./assets/archive/rustam.webp",
-    "imageChanges": "Resized and converted to WebP; full composition retained."
+    "image": "./assets/archive/algerian-nimcha.webp",
+    "imageChanges": "Converted to WebP; full composition retained."
   },
   {
     "id": "museum-katana",

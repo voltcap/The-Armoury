@@ -25,12 +25,11 @@ function sources(refs) {
   assert.ok(refs?.length, "Missing source");
   for (const s of refs) assert.match(s.url, /^https:\/\//);
 }
-test("all specimens have sourced histories, features and chronological context", () => {
+test("all specimens have sourced histories and features", () => {
   assert.equal(Object.keys(modelConfig).length, 9);
   let featureCount = 0;
   for (const id of Object.keys(modelConfig)) {
     sources(modelHistory[id].sources);
-    sources(chronology[id].sources);
     assert.ok(modelHistory[id].context);
     for (const part of modelHistory[id].parts) {
       assert.ok(part.function);
@@ -45,8 +44,27 @@ test("all specimens have sourced histories, features and chronological context",
     }
   }
   assert.equal(featureCount, 54);
-  assert.equal(chronology.katana.dateStart, null);
-  assert.equal(chronology.arabic.dateStart, null);
+  for (const [id, entry] of Object.entries(chronology)) {
+    assert.ok(id in modelConfig);
+    assert.ok(
+      Number.isFinite(entry.dateStart) && Number.isFinite(entry.dateEnd),
+    );
+    assert.equal(entry.dateKind, "earliest-attested");
+    assert.equal(entry.dateQualifier, "source-reported-first-appearance");
+    assert.ok(entry.evidence);
+    sources(entry.sources);
+  }
+  for (const id of [
+    "longsword",
+    "arming",
+    "gladius",
+    "arabic",
+    "katana",
+    "guards",
+    "yatagan",
+    "axe",
+  ])
+    assert.equal(chronology[id], undefined);
 });
 
 test("craftsmanship links resolve to actual feature landmarks", () => {
@@ -63,6 +81,9 @@ test("craftsmanship links resolve to actual feature landmarks", () => {
 
 test("archive images exist and retain reusable licenses and attribution", async () => {
   assert.equal(archive.length, 8);
+  assert.ok(archive.some((x) => x.id === "algerian-nimcha"));
+  assert.ok(!archive.some((x) => x.id === "rustam"));
+  await assert.rejects(fs.access(new URL("assets/archive/rustam.webp", root)));
   for (const entry of archive) {
     assert.ok(["CC0", "CC BY 4.0"].includes(entry.license), entry.title);
     assert.ok(

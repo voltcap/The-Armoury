@@ -1,4 +1,4 @@
-import { initSuite } from "./suite.js";
+import { initSuite } from "./suite.js?v=1.0.1";
 import * as T from "./vendor/three.module.js";
 import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
@@ -158,6 +158,7 @@ try {
 } catch {}
 $("focusToggle").checked = autoFocus;
 let studyVisible = true;
+let cameraIntent = "whole";
 let renderer;
 try {
   renderer = new T.WebGLRenderer({
@@ -230,13 +231,22 @@ function resize() {
     if (isolated) {
       frameSelected();
       revealViewer();
-    } else resetCamera();
+    } else if (autoFocus && cameraIntent === "feature") frameFeature();
+    else if (autoFocus && cameraIntent === "part") frameSelected();
+    else resetCamera();
   }
 }
 new ResizeObserver(resize).observe($("viewport"));
 resize();
 
 function renderCollection() {
+  $("weaponSelect").innerHTML = collection
+    .map(
+      (w) =>
+        `<option value="${esc(w.id)}" ${w.id === active.id ? "selected" : ""}>${esc(w.short)}</option>`,
+    )
+    .join("");
+  $("weaponSelect").onchange = (e) => loadWeapon(e.target.value);
   $("weapons").innerHTML = collection
     .map(
       (w) =>
@@ -692,14 +702,16 @@ async function loadWeapon(id, customRoot = null) {
     }
     currentRaw = root;
     addSurfaces(root, id === "custom" ? computeConfig(root) : config[id]);
+    return true;
   } catch (error) {
-    if (token !== requestId) return;
+    if (token !== requestId) return false;
     setReady(false);
     $("loading").innerHTML =
       '<p>Unable to load this model.</p><button id="retryModel">Retry</button>';
     $("retryModel").onclick = () =>
       loadWeapon(id, id === "custom" ? importedRoot : null);
     console.error(error);
+    return false;
   }
 }
 function prepareFeatures() {
@@ -753,10 +765,10 @@ function renderParts() {
         `<button class="part-row ${i === at ? "active" : ""}" ${details ? "data-feature" : "data-part"}="${i}" aria-pressed="${i === at}">${esc(p.name)}</button>`,
     )
     .join("");
-  document
+  $("parts")
     .querySelectorAll("[data-part]")
     .forEach((b) => (b.onclick = () => selectPart(+b.dataset.part)));
-  document
+  $("parts")
     .querySelectorAll("[data-feature]")
     .forEach((b) => (b.onclick = () => selectFeature(+b.dataset.feature)));
   showInfo();
@@ -818,14 +830,14 @@ function showInfo() {
     .slice(0, 2)
     .map(
       (s) =>
-        `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>`,
+        `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.title)}" aria-label="${esc(s.title)}">${esc(s.title.split(" · ")[0])}</a>`,
     )
     .join("");
   labels.forEach((l, i) => l.classList.toggle("active", i === selected));
   applyIsolation();
 }
 function selectPart(index, reframe = true) {
-  if (!parts.length) return;
+  if (!parts.length || !Number.isFinite(index)) return;
   studyMode = "pieces";
   selected = (index + parts.length) % parts.length;
   renderParts();
@@ -835,7 +847,7 @@ function selectPart(index, reframe = true) {
   }
 }
 function selectFeature(index) {
-  if (!activeFeatures.length) return;
+  if (!activeFeatures.length || !Number.isFinite(index)) return;
   studyMode = "details";
   featureIndex = (index + activeFeatures.length) % activeFeatures.length;
   selected = activeFeatures[featureIndex].parentIndex;
@@ -868,6 +880,7 @@ function applyIsolation() {
   });
 }
 function revealViewer() {
+  if (document.documentElement.dataset.page === "study") return;
   if (innerWidth <= 660) {
     const bounds = $("viewport").getBoundingClientRect();
     if (bounds.top < 0 || bounds.bottom > innerHeight)
@@ -913,6 +926,7 @@ function fitBox(box, canonical = false, padding = 1.3) {
   moveCamera(center, center.clone().addScaledVector(direction, distance));
 }
 function frameSelected() {
+  cameraIntent = "part";
   const p = parts[selected];
   if (!p) return;
   fitBox(
@@ -922,6 +936,7 @@ function frameSelected() {
   );
 }
 function frameFeature() {
+  cameraIntent = "feature";
   const f = activeFeatures[featureIndex];
   if (!f) return;
   const p = parts[f.parentIndex],
@@ -938,6 +953,7 @@ function frameFeature() {
   );
 }
 function resetCamera() {
+  cameraIntent = "whole";
   if (!parts.length) return;
   const box = new T.Box3();
   for (const p of parts)
@@ -1361,7 +1377,8 @@ initSuite({
   },
   inspect: async (id, name) => {
     document.querySelector('[data-tab="anatomy"]').click();
-    await loadWeapon(id);
+    const ready = await loadWeapon(id);
+    if (!ready || active.id !== id) return;
     if (name) {
       const index = activeFeatures.findIndex((f) => f.name === name);
       if (index >= 0) selectFeature(index);

@@ -17,11 +17,11 @@ The app uses museum collection records for specific objects and terminology. Cat
 
 - `dist/history.json`: contextual copy, individual piece descriptions, object-specific sources.
 - `dist/anatomy.json`: 54 feature landmarks and their sources.
-- `dist/chronology.json`: dated comparisons and undated entries.
+- `dist/chronology.json`: source-reported first appearances; later comparisons and undated entries are excluded.
 - `dist/craft.json`: six construction and decoration topics.
 - `dist/archive.json`: image records, dates, institutions and licenses.
 - `dist/bibliography.json`: reading-room entries.
 
 ## Interpreting the illustrations
 
-I.33 and Fiore are evidence for historical fighting-book imagery, not identifications of the supplied sword models. The Persian Shahnama illustration represents a literary narrative. Its painting date does not date the story it depicts. The pollaxe in Fiore is distinct from the woodworking T-axe in the collection.
+I.33 and Fiore are evidence for historical fighting-book imagery, not identifications of the supplied sword models. The Algerian nimcha record distinguishes the dates and origins of its fittings from those of its blade. The pollaxe in Fiore is distinct from the woodworking T-axe in the collection.

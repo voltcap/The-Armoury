@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="study">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -22,12 +22,15 @@
     </script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="suite.css" />
+    <link rel="stylesheet" href="manuscript.css?v=1.0.1" />
   </head>
   <body>
     <div class="folio-frame" aria-hidden="true"></div>
     <div class="volume">
       <header>
-        <a class="brand" href="./" aria-label="The Armoury">The Armoury</a>
+        <a class="brand" href="./" aria-label="The Armoury"
+          ><span class="illuminated-initial">T</span>he Armoury</a
+        >
         <div class="header-actions">
           <button id="themeBtn" aria-pressed="false">Dark mode</button
           ><button id="importBtn">Import model</button
@@ -43,6 +46,7 @@
       </nav>
       <main id="studyPage">
         <aside class="collection">
+          <select id="weaponSelect" aria-label="Choose weapon"></select>
           <div id="weapons" aria-label="Weapon collection"></div>
         </aside>
         <section class="workbench" aria-label="3D viewer">
@@ -62,6 +66,9 @@
             >
           </div>
           <div id="viewport">
+            <div class="stage-florals" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
             <canvas
               id="scene"
               tabindex="0"
@@ -248,8 +255,9 @@
           </div>
         </div>
         <p class="page-note">
-          Dates belong to cited historical comparisons or documented traditions.
-          They do not date the supplied digital models or modern replicas.
+          Source-reported first appearances. Weapon types without an established
+          first-use period are omitted. Dates do not describe the supplied
+          digital models.
         </p>
         <div id="chronologyList"></div>
       </section>
@@ -288,6 +296,6 @@
       </div>
       <p id="archiveZoomCredit" class="credit"></p>
     </dialog>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js?v=1.0.1"></script>
   </body>
 </html>

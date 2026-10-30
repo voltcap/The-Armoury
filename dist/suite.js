@@ -1,4 +1,9 @@
-import { archive, chronology, craft, bibliography } from "./research.js";
+import {
+  archive,
+  chronology,
+  craft,
+  bibliography,
+} from "./research.js?v=1.0.1";
 import { createComparison } from "./compare.js";
 
 const $ = (id) => document.getElementById(id);
@@ -26,6 +31,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
     if (!["study", "archive", "compare", "chronology", "craft"].includes(next))
       next = "study";
     page = next;
+    document.documentElement.dataset.page = page;
     for (const button of document.querySelectorAll("[data-page]")) {
       button.classList.toggle("selected", button.dataset.page === page);
       button.setAttribute(
@@ -78,7 +84,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
       (b) =>
         (b.onclick = async () => {
           navigate("study");
-          await inspect(b.dataset.inspect, b.dataset.feature);
+          await inspect(b.dataset.inspect, b.dataset.inspectFeature);
         }),
     );
   }
@@ -101,7 +107,13 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
   $("archiveFilter").onchange = renderArchive;
   renderArchive();
   const dated = catalog
-    .filter((w) => chronology[w.id])
+    .filter(
+      (w) =>
+        Number.isFinite(chronology[w.id]?.dateStart) &&
+        ["earliest-attested", "earliest-surviving"].includes(
+          chronology[w.id]?.dateKind,
+        ),
+    )
     .sort(
       (a, b) =>
         (chronology[a.id].dateStart ?? Infinity) -
@@ -130,7 +142,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
       entries
         .map((w) => {
           const x = chronology[w.id];
-          return `<article class="timeline-entry"><div class="timeline-date">${escape(x.dateLabel)}<span>${escape(x.region)}</span></div><div><h2>${escape(w.short)}</h2><p class="dateline">${escape(x.status)}</p><p>${escape(x.description)}</p><p class="archive-relation">${escape(x.relation)}</p><p class="credit">${escape(x.creator)}<br>${escape(x.shelfmark)}</p><div class="source-links">${sourceLinks(x.sources)}</div><button class="text-button" data-inspect="${w.id}">Study this weapon</button></div></article>`;
+          return `<article class="timeline-entry"><div class="timeline-date">${escape(x.dateLabel)}<span>${escape(x.region)}</span></div><div><h2>${escape(w.short)}</h2><p class="dateline">${escape(x.status)}</p><p>${escape(x.description)}</p><div class="source-links">${sourceLinks(x.sources)}</div><button class="text-button" data-inspect="${w.id}">Study this weapon</button></div></article>`;
         })
         .join("") || "<p>No weapons match these filters.</p>";
     bindInspect($("chronologyList"));
@@ -139,7 +151,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
   $("craftGrid").innerHTML = craft
     .map(
       (x, i) =>
-        `<article class="craft-card"><span class="chapter-number">${String(i + 1).padStart(2, "0")}</span><h2>${escape(x.title)}</h2><p>${escape(x.text)}</p><div class="source-links">${sourceLinks(x.sources)}</div><button class="text-button" data-inspect="${escape(x.weapon)}" data-feature="${escape(x.feature)}">Inspect ${escape(x.feature.toLowerCase())}</button></article>`,
+        `<article class="craft-card"><span class="chapter-number">${String(i + 1).padStart(2, "0")}</span><h2>${escape(x.title)}</h2><p>${escape(x.text)}</p><div class="source-links">${sourceLinks(x.sources)}</div><button class="text-button" data-inspect="${escape(x.weapon)}" data-inspect-feature="${escape(x.feature)}">Inspect ${escape(x.feature.toLowerCase())}</button></article>`,
     )
     .join("");
   bindInspect($("craftGrid"));

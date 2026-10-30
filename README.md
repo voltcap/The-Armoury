@@ -9,10 +9,10 @@ An interactive collection of nine weapon models, presented as an illuminated man
 - **Study:** animated separation and reassembly, individual piece isolation, 54 finer-detail landmarks, labels, mesh view and automatic rotation.
 - **Archive:** eight zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
 - **Compare:** two selectable models with linked rotation and zoom, independent viewing, and a reset control.
-- **Chronology:** browse dated historical comparisons by period and region. Undated and fantasy designs are identified separately.
+- **Chronology:** browse source-reported first appearances. Entries supported only by dates of later museum comparisons are excluded.
 - **Craft:** six sourced studies of hilt assembly, quillons, decoration, Japanese mountings, yatagan grips and carrying fittings, plus a reading room.
 
-Light and dark themes are included. Selecting a part can animate the camera to a close-up; disable **Close-up on selection** to read its information while viewing the complete assembly. **Reset position** restores the camera and shows all pieces while preserving the separation amount.
+Light and dark themes are included. Study fits the viewport; the other tabs retain their scrolling document layout. Selecting a part can animate the camera to a close-up; disable **Close-up on selection** to read its information while viewing the complete assembly. **Reset position** restores the camera and shows all pieces while preserving the separation amount.
 
 ## Run locally
 
@@ -55,7 +55,7 @@ The T-axe is contextualized as a woodworking tool. The Arabic-titled model is sh
 
 Historical text is based on museum collection records, technical essays, catalogues and archaeological publications. The reading room links books including _The Art of Chivalry_, _Islamic Arms and Armor in The Metropolitan Museum of Art_, _The Academy of the Sword_ and _Art of the Samurai_.
 
-Each feature has a supporting source link. Museum-object dates and descriptions remain attached to their specific comparisons; they do not establish a model's date, materials, dimensions or provenance. Manuscript illustrations are interpreted as period images, including literary and instructional contexts.
+Each feature has a supporting source link. Museum-object dates and descriptions remain attached to their specific comparisons; they do not establish a model's date, materials, dimensions or provenance. Chronology currently includes the flanged mace's documented first-appearance period; no sword is assigned an unsupported invention date. Manuscript illustrations are interpreted as period images, including literary and instructional contexts.
 
 See [Sources and further reading](docs/SOURCES.md) and [Historical method](docs/HISTORICAL_METHOD.md). The books themselves are not redistributed here.
 
