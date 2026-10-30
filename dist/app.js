@@ -1,11 +1,11 @@
-import { layoutCallouts } from "./label-layout.js?v=1.1.0";
-import { initSuite } from "./suite.js?v=1.1.0";
+import { layoutCallouts } from "./label-layout.js?v=1.1.1";
+import { initSuite } from "./suite.js?v=1.1.1";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.0";
-import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.1.0";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.1";
+import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.1.1";
 import { partitionGeometry, buildCutCaps, lower, upper } from "./clean-cut.js";
-import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.1.0";
+import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.1.1";
 
 const roman = (n) =>
   ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][n] ||
@@ -72,6 +72,9 @@ const scene = new T.Scene(),
   camera = new T.PerspectiveCamera(31, 1, 0.01, 200);
 camera.position.set(1.5, 3, 18);
 const controls = new OrbitControls(camera, $("scene"));
+// Wheel and pinch handlers update the camera before the animation loop runs.
+// Their change event must invalidate the canvas even if the next update is idle.
+controls.addEventListener("change", () => (needsRender = true));
 controls.enableDamping = true;
 controls.dampingFactor = 0.07;
 controls.minDistance = 0.2;

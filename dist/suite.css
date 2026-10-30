@@ -4,15 +4,15 @@
 .book-nav {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 18px;
   border-bottom: 1px solid var(--line);
   padding: 0 16px;
   flex-wrap: wrap;
   background: linear-gradient(90deg, transparent, #a7803210, transparent);
 }
 .book-nav button {
-  padding: 13px 4px 10px;
-  font-size: 16px;
+  padding: 9px 4px 7px;
+  font-size: 14px;
   border-bottom: 3px solid transparent;
   color: var(--muted);
 }

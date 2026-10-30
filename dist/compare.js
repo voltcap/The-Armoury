@@ -1,8 +1,8 @@
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.0";
-import { acquireModel, disposeModel } from "./model-assets.js?v=1.1.0";
-import { modelConfig } from "./data.js?v=1.1.0";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.1";
+import { acquireModel, disposeModel } from "./model-assets.js?v=1.1.1";
+import { modelConfig } from "./data.js?v=1.1.1";
 
 // Each model uses the study viewer's ten-unit span, not an inferred physical scale.
 export function createComparison(catalog, history) {
