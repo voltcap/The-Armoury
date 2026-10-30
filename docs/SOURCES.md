@@ -11,22 +11,25 @@ The app uses museum collection records for specific objects and terminology. Cat
 - **[Sword and Dagger Pommels Associated with the Crusades, Part I](https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134)**. Donald J. La Rocca (2011). Metropolitan Museum Journal 46, pp. 133–144. The opening discussion on p. 133 explains European hilt assembly and later remounting.
 - **[The Japanese Blade: Technology and Manufacture](https://www.metmuseum.org/essays/the-japanese-blade-technology-and-manufacture)**. Edward Hunter (2003). Museum essay explaining forging, hardening and the separate crafts involved in sword mountings.
 - **[Techniques of Decoration on Arms and Armor](https://www.metmuseum.org/essays/techniques-of-decoration-on-arms-and-armor)**. Dirk H. Breiding (2003). Museum essay distinguishing techniques such as engraving, etching and inlay; surface appearance alone is not a material analysis.
-- **[Wood and Woodworking in Anglo-Scandinavian and Medieval York](https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf)**. C. A. Morris (2000). York Archaeological Trust monograph, The Archaeology of York 17/13. Includes archaeological discussion of woodworking axes and their forms.
 
 ## Content files
 
 - `dist/history.json`: contextual copy, individual piece descriptions, object-specific sources.
-- `dist/anatomy.json`: 77 feature landmarks and their sources.
+- `dist/anatomy.json`: 71 feature landmarks and their sources.
 - `dist/craft.json`: six construction and decoration topics.
 - `dist/archive.json`: image records, dates, institutions and licenses.
 - `dist/bibliography.json`: reading-room entries.
 
 ## Interpreting the illustrations
 
-I.33 and Fiore are evidence for historical fighting-book imagery, not identifications of the supplied sword models. The Algerian nimcha record distinguishes the dates and origins of its fittings from those of its blade. The pollaxe in Fiore is distinct from the woodworking T-axe in the collection.
+I.33 and Fiore are evidence for historical fighting-book imagery, not identifications of the supplied sword models. The Algerian nimcha record distinguishes the dates and origins of its fittings from those of its blade.
 
 ## Additional collection specimens
 
 The Oakeshott Institute’s own specimen records support the new scans’ identification, dating and documented features: [Bronze Age sword OC078](https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa), [Moonbrand](https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec), [English hanger OC059](https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d), and [Milanese rapier](https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2). The [Institute’s detailed Moonbrand study](https://www.patreon.com/oakeshott/posts/moonbrand-46319770) discusses its Type XIV form, fullers, markings, surviving grip and corrosion.
 
 The hanger’s 1795 London hallmark dates its hilt. The rapier’s proposed attribution to Antonio Picinino is tentative. Neither date is a claim about when that sword family was first invented. Moonbrand is privately owned and in the Institute’s care; the rapier is also from a private collection.
+
+## New Archive comparisons
+
+Four open museum photographs add a riveted Bronze Age sword, a thirteenth-century French sword, an Italian rapier hilt and a London hunting sword dated 1778–79. Each caption identifies the individual collection record and keeps its date separate from that of the corresponding scanned specimen.

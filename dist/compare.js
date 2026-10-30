@@ -1,9 +1,9 @@
-import { createCameraTracker } from "./camera-state.js?v=1.2.0";
+import { createCameraTracker } from "./camera-state.js?v=1.2.1";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.0";
-import { acquireModel, disposeModel } from "./model-assets.js?v=1.2.0";
-import { modelConfig } from "./data.js?v=1.2.0";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.1";
+import { acquireModel, disposeModel } from "./model-assets.js?v=1.2.1";
+import { modelConfig } from "./data.js?v=1.2.1";
 
 // Each model uses the study viewer's ten-unit span, not an inferred physical scale.
 export function createComparison(catalog, history) {
@@ -144,7 +144,6 @@ export function createComparison(catalog, history) {
         g.computeBoundingSphere();
         const material = exhibitMaterial(
           Array.isArray(mesh.material) ? mesh.material[0] : mesh.material,
-          { dim: id === "axe" ? 0.66 : 1 },
         );
         v.group.add(new T.Mesh(g, material));
       });

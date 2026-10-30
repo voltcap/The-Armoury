@@ -2253,38 +2253,6 @@
       }
     },
     {
-      "file": "replica_anglo-saxon_t-axe.glb",
-      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/replica-anglo-saxon-t-axe-f10adc47456d427fa19fb3a90db18460",
-      "before": {
-        "file": "replica_anglo-saxon_t-axe.glb",
-        "bytes": 6974092,
-        "sha256": "083bada6086cab78857b821018ca0bd69624aa67a8b0015533b05b0b90a65672",
-        "meshCount": 2,
-        "primitiveCount": 2,
-        "vertices": 99034,
-        "triangles": 184743,
-        "textures": []
-      },
-      "after": {
-        "file": "replica_anglo-saxon_t-axe.glb",
-        "bytes": 4118768,
-        "sha256": "60744079e5c8b13209af62dabec0554622f46f55a9b28e17d0edaf086803e17d",
-        "meshCount": 2,
-        "primitiveCount": 2,
-        "vertices": 99034,
-        "triangles": 184743,
-        "textures": []
-      },
-      "reductionPercent": 40.94,
-      "verification": {
-        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
-        "allVertexAttributeBytesExact": true,
-        "triangleOrderWindingCornersExact": true,
-        "textureChecks": []
-      }
-    },
-    {
       "file": "roman_gladius.glb",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
       "source": "https://sketchfab.com/3d-models/roman-gladius-d192d804036b4a5c9b2a7a5d1b18114a",

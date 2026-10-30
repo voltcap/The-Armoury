@@ -1,14 +1,14 @@
 # The Armoury
 
-An interactive collection of thirteen weapon models, presented as an illuminated manuscript. Take a sword apart, inspect its fittings, compare its silhouette with another weapon, and explore historical illustrations and museum records.
+An interactive collection of twelve weapon models, presented as an illuminated manuscript. Take a sword apart, inspect its fittings, compare its silhouette with another weapon, and explore historical illustrations and museum records.
 
 ![The Armoury entrance in dark mode](docs/home.png)
 
 ## Explore
 
-- **Home:** a six-pose illustrated sword-drawing entrance, with illuminated blackletter lettering, light/dark palettes, floating gold dust and direct entry. Reduced-motion preferences skip the sequence. The 3D application loads only after leaving Home.
-- **Study:** animated separation and reassembly, individual piece isolation, 77 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
-- **Archive:** eight zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
+- **Home:** a six-pose illustrated sword-drawing entrance, with illuminated blackletter lettering, light/dark palettes, floating gold dust and direct entry. Reduced-motion preferences disable decorative effects; the Enter button still plays the six illustrated poses. The 3D application loads only after leaving Home.
+- **Study:** animated separation and reassembly, individual piece isolation, 71 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
+- **Archive:** eleven zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
 - **Compare:** two selectable models with linked rotation and zoom, independent viewing, and a reset control.
 - **Craft:** six sourced studies of hilt assembly, quillons, decoration, Japanese mountings, yatagan grips and carrying fittings, plus a reading room.
 
@@ -43,13 +43,13 @@ The browser loads its code, models, fonts and images from this project. There ar
 | Toggle separation                    | Space, when a control is not focused       |
 | Leave isolation / close image viewer | Escape                                     |
 
-The Home page’s **Draw the sword** button plays the entrance and opens Study. **Enter directly** bypasses the sequence; Home remains available from the navigation. Links to `#study`, `#archive`, `#compare` and `#craft` still open those sections directly.
+The Home page’s **Enter The Armoury** button plays the entrance and opens Study. **Skip animation** bypasses the sequence; Home remains available from the navigation. Links to `#study`, `#archive`, `#compare` and `#craft` still open those sections directly.
 
 Comparison has its own **Reset views** button. Clear **Link rotation & zoom** to orbit either model independently. The comparison normalizes the models to the same viewing span; it does not claim a shared physical scale.
 
 ## Collection
 
-The collection includes a longsword replica, Italian arming sword, Roman gladius, Arabic saber, Ottoman yatagan, fantasy dragon katana, Irish Guards sword, Anglo-Saxon T-axe and steel mace, alongside four historical specimen scans by the Oakeshott Institute:
+The collection includes a longsword replica, Italian arming sword, Roman gladius, Arabic saber, Ottoman yatagan, fantasy dragon katana, Irish Guards sword and steel mace, alongside four historical specimen scans by the Oakeshott Institute:
 
 | Specimen | Documented date | Collection context |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ The collection includes a longsword replica, Italian arming sword, Roman gladius
 | [Milanese rapier](https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2) | 1560–1580 | Private collection |
 | [English hanger OC059](https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d) | London hallmark, 1795, on the hilt | Oakeshott Collection |
 
-The T-axe is contextualized as a woodworking tool. The Arabic-titled model is sheathed. The dragon katana is a fantasy design using historical Japanese terminology. The historical scans are identified separately from modern replicas and fictional designs; their object descriptions are attributed to the Institute.
+The Arabic-titled model is sheathed. The dragon katana is a fantasy design using historical Japanese terminology. The historical scans are identified separately from modern replicas and fictional designs; their object descriptions are attributed to the Institute.
 
 ## Historical sources
 
@@ -74,6 +74,8 @@ See [Sources and further reading](docs/SOURCES.md) and [Historical method](docs/
 
 The app keeps source components where available. Merged surfaces are divided with planar triangle clipping, preserving interpolated texture coordinates and normals. Closed intersection contours receive neutral cut faces. Incomplete contours remain open.
 
+Curved guards use compound surface boundaries so their quillons remain intact. The gladius hilt boundaries follow its canted grip axis. Parts clear lengthwise before spreading into display lanes; attached suspension fittings travel with their scabbards.
+
 These are educational surface separations. They cannot reveal hidden tangs, fasteners, cores or authentic manufacturing joints that are absent from a model. Features such as fullers, quillons and grip wrapping remain regions of their parent piece.
 
 **Import model** accepts self-contained binary glTF files (`.glb`, up to 150 MB). It estimates a sword's long axis and four surface regions. Adjust the hilt boundary or reverse the orientation as needed. This provisional segmentation is intended for sword-shaped models, not arbitrary objects. External resource references are rejected.
@@ -82,7 +84,7 @@ These are educational surface separations. They cannot reveal hidden tangs, fast
 
 Models load on selection. A shared cache reuses downloaded and decoded scenes across Study and Compare, evicts unused models when the cache exceeds three entries, and protects any model still in use by a viewer. Comparison code loads only when its tab is opened. Both comparison windows and Study share the same surrounding lights, environment and camera fill lights.
 
-The thirteen display GLBs total **43,124,492 bytes**, down from **72,397,272 bytes** for their source files (**40.43% smaller**). The original nine models alone are **39.42% smaller**. Compression preserves sword vertex data, topology and world transforms. Base color images use quality-90 WebP; normal and packed material maps use lossless WebP. No sword geometry was simplified or texture resolution reduced. Unused annotation and scale helpers were removed from the Bronze Age and Moonbrand scans.
+The twelve display GLBs total **39,005,724 bytes**, down from **65,423,180 bytes** for their source files (**40.38% smaller**). Compression preserves sword vertex data, topology and world transforms. Base color images use quality-90 WebP; normal and packed material maps use lossless WebP. No sword geometry was simplified or texture resolution reduced. Unused annotation and scale helpers were removed from the Bronze Age and Moonbrand scans.
 
 The decoder is vendored locally. [Optimization records](dist/models/optimization.json) include before/after sizes, hashes and verification details. Optional reproducible preparation scripts live in [tools/model-optimization](tools/model-optimization/README.md); they are not required to run the website. Transfer savings are measured file-size changes, not a claim about a particular device’s loading time.
 
@@ -93,6 +95,7 @@ dist/                    Static application; publish this directory
   main.js                Lightweight entrance and deferred exhibit loading
   home.js / home.css     Six-pose entrance animation and manuscript layout
   camera-state.js        Camera/projection tracking for synchronized redraws
+  disassembly.js         Staged joint clearance and attached fitting movement
   app.js                 Study viewer and part interaction
   catalog.json           Editable collection names and visible parts
   model-assets.js        Shared GLB loader and resource ownership

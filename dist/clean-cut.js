@@ -27,6 +27,31 @@ function clip(poly, plane) {
 }
 export const lower = (x) => [-1, 0, 0, x];
 export const upper = (x) => [1, 0, 0, -x];
+function boundarySegments(a, b, plane, region, regions) {
+  const neighbors = regions.filter((r) => r !== region && r.part === region.part);
+  if (!neighbors.length) return [[a, b]];
+  const at = (t) => a.map((x, i) => x + (b[i] - x) * t);
+  const distance = (point, p) => point.reduce((sum, x, i) => sum + x * p[i], p[3]);
+  const splits = [0, 1];
+  for (const r of neighbors) for (const p of r.planes) {
+    const da = distance(a, p), db = distance(b, p);
+    if (da * db < 0) {
+      const t = da / (da - db);
+      if (t > EPS && t < 1 - EPS) splits.push(t);
+    }
+  }
+  splits.sort((a, b) => a - b);
+  const n = Math.hypot(...plane.slice(0, 3)), result = [];
+  for (let i = 1; i < splits.length; i++) {
+    if (splits[i] - splits[i - 1] < EPS) continue;
+    const outside = at((splits[i] + splits[i - 1]) / 2)
+      .map((x, j) => x - plane[j] / n * EPS * 20);
+    // A boundary inside another region of the same part needs no cut face.
+    if (neighbors.some((r) => r.planes.every((p) => distance(outside, p) >= -EPS))) continue;
+    result.push([at(splits[i - 1]), at(splits[i])]);
+  }
+  return result;
+}
 export function partitionGeometry(geometry, regions) {
   const keys = Object.keys(geometry.attributes).filter((k) =>
     ["position", "normal", "uv", "color", "tangent"].includes(k),
@@ -90,7 +115,7 @@ export function partitionGeometry(geometry, regions) {
             Math.abs(value(a, plane)) < EPS * 5 &&
             Math.abs(value(b, plane)) < EPS * 5
           )
-            out.cuts.get(key).segments.push([a.position, b.position]);
+            out.cuts.get(key).segments.push(...boundarySegments(a.position, b.position, plane, r, regions));
         }
       }
     }

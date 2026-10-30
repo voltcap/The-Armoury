@@ -26,8 +26,9 @@ function sources(refs) {
   for (const s of refs) assert.match(s.url, /^https:\/\//);
 }
 test("all specimens have sourced histories and features", () => {
-  assert.equal(Object.keys(modelConfig).length, 13);
+  assert.equal(Object.keys(modelConfig).length, 12);
   assert.deepEqual(new Set(modelCatalog.map((w) => w.id)), new Set(Object.keys(modelConfig)));
+  assert.ok(!modelCatalog.some((x) => x.id === "axe"));
   let featureCount = 0;
   for (const id of Object.keys(modelConfig)) {
     sources(modelHistory[id].sources);
@@ -44,7 +45,7 @@ test("all specimens have sourced histories and features", () => {
       assert.ok(f.position.every(Number.isFinite));
     }
   }
-  assert.equal(featureCount, 77);
+  assert.equal(featureCount, 71);
   for (const weapon of modelCatalog) {
     assert.deepEqual(weapon.parts, modelHistory[weapon.id].parts.map((p) => p.name));
     assert.ok(modelAnatomy[weapon.id].features.every((f) => weapon.parts.includes(f.parent)));
@@ -64,7 +65,7 @@ test("craftsmanship links resolve to actual feature landmarks", () => {
 });
 
 test("archive images exist and retain reusable licenses and attribution", async () => {
-  assert.equal(archive.length, 8);
+  assert.equal(archive.length, 11);
   assert.ok(archive.some((x) => x.id === "algerian-nimcha"));
   assert.ok(!archive.some((x) => x.id === "rustam"));
   await assert.rejects(fs.access(new URL("assets/archive/rustam.webp", root)));
@@ -86,7 +87,7 @@ test("archive images exist and retain reusable licenses and attribution", async 
 
 test("model derivatives are self-contained and match their credited checksums", async () => {
   const credits = await read("models/credits.json");
-  assert.equal(credits.length, 13);
+  assert.equal(credits.length, 12);
   const optimization = await read("models/optimization.json");
   assert.equal(optimization.models.length, credits.length);
   for (const cfg of Object.values(modelConfig)) {

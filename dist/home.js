@@ -3,7 +3,7 @@ export function initHome(enter) {
   const frames = [...page.querySelectorAll(".knight-frame")];
   const button = document.getElementById("drawSword");
   const order = [2, 1, 0, 3, 4, 5];
-  const timing = [380, 420, 440, 440, 420, 650];
+  const timing = [520, 520, 600, 600, 650, 900];
   let timer, generation = 0, ready;
   function frame(index) {
     frames.forEach((image, i) => image.classList.toggle("is-active", i === index));
@@ -21,7 +21,7 @@ export function initHome(enter) {
     clearTimeout(timer);
     page.classList.remove("drawing", "crowned");
     button.disabled = false;
-    button.textContent = "Draw the sword";
+    button.textContent = "Enter The Armoury";
     frame(order[0]);
   }
   button.onclick = async () => {
@@ -30,10 +30,6 @@ export function initHome(enter) {
     button.textContent = "Drawing the sword…";
     await prepare();
     if (current !== generation) return;
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      enter();
-      return;
-    }
     page.classList.add("drawing");
     let step = 0;
     const advance = () => {

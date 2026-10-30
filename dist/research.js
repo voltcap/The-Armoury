@@ -61,26 +61,6 @@ export const archive = [
     "imageChanges": "Resized and converted to WebP; full composition retained."
   },
   {
-    "id": "fiore-pollaxe",
-    "title": "Combat with Pollaxe",
-    "date": "c. 1410",
-    "origin": "Venice or Padua, Italy",
-    "creator": "Fiore Furlan dei Liberi da Premariacco; illustrator unknown",
-    "shelfmark": "Getty Museum, Ms. Ludwig XV 13 (83.MR.183), fol. 36v",
-    "source": "https://www.getty.edu/art/collection/object/108HP6",
-    "license": "CC0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "credit": "The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.",
-    "description": "Fiore's manuscript includes illustrated pollaxe combat alongside sword, dagger and mounted material. The museum identifies this leaf as Combat with Pollaxe.",
-    "relation": "The pollaxe shown here is a different implement from the supplied Anglo-Saxon woodworking T-axe.",
-    "weapons": [
-      "axe",
-      "mace"
-    ],
-    "image": "./assets/archive/fiore-pollaxe.webp",
-    "imageChanges": "Resized and converted to WebP; full composition retained."
-  },
-  {
     "id": "algerian-nimcha",
     "title": "Algerian nimcha with scabbard",
     "date": "Hilt and scabbard: late 17th–early 18th century; blade: 16th–17th century",
@@ -155,6 +135,87 @@ export const archive = [
     ],
     "image": "./assets/archive/museum-mace.webp",
     "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "bronze-riveted-sword",
+    "title": "Bronze sword with riveted grip",
+    "date": "13th century BCE",
+    "origin": "Probably Central Europe",
+    "creator": "Maker unrecorded",
+    "shelfmark": "The Metropolitan Museum of Art, 54.46.8",
+    "source": "https://www.metmuseum.org/art/collection/search/27513",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Metropolitan Museum of Art, New York; Bequest of Alan Rutherfurd Stuyvesant, 1954. Resized and converted to WebP; full photograph retained.",
+    "description": "This bronze sword consists of separately cast blade and grip elements joined with rivets. Spirals decorate the grip and pommel. The museum dates this particular object to the thirteenth century BCE.",
+    "relation": "A separate Bronze Age comparison for OC078, showing riveted construction and ornament. It is not the scanned sword, and its date does not replace OC078’s documented date.",
+    "weapons": [
+      "bronze"
+    ],
+    "image": "./assets/archive/bronze-riveted-sword.webp",
+    "alt": "A bronze sword laid horizontally, with a spiral-decorated grip at the left and a long tapering blade at the right.",
+    "imageChanges": "Resized and converted to WebP; full photograph retained."
+  },
+  {
+    "id": "french-medieval-sword",
+    "title": "A thirteenth-century French sword",
+    "date": "13th century",
+    "origin": "France",
+    "creator": "Maker unrecorded",
+    "shelfmark": "The Metropolitan Museum of Art, 25.188.12",
+    "source": "https://www.metmuseum.org/art/collection/search/32782",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Metropolitan Museum of Art, New York; Gift of George D. Pratt, 1925. Resized and converted to WebP; full photograph retained.",
+    "description": "The Met identifies this iron sword as French and dates it to the thirteenth century. Its straight crossguard, disc-shaped pommel and tapering blade provide a surviving example of the medieval cruciform silhouette.",
+    "relation": "Compare the guard and pommel profiles with Moonbrand. This is a different sword; the museum’s French attribution and date apply to this object alone.",
+    "weapons": [
+      "moonbrand",
+      "arming"
+    ],
+    "image": "./assets/archive/french-medieval-sword.webp",
+    "alt": "A corroded medieval sword displayed upright, with a round pommel, short straight crossguard and long pointed blade.",
+    "imageChanges": "Resized and converted to WebP; full photograph retained."
+  },
+  {
+    "id": "italian-rapier",
+    "title": "Italian rapier: the protective hilt",
+    "date": "Late 16th century (hilt)",
+    "origin": "Italy (hilt)",
+    "creator": "Maker unrecorded",
+    "shelfmark": "The Metropolitan Museum of Art, 14.25.1136",
+    "source": "https://www.metmuseum.org/art/collection/search/27920",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Metropolitan Museum of Art, New York; Gift of William H. Riggs, 1913. Resized and converted to WebP; full museum detail photograph retained.",
+    "description": "Curving branches and rings surround the handhold beneath an ornamented pommel. The museum notes that rapier dates and attributions in its record normally refer to the hilt, while blades may have different origins.",
+    "relation": "A separate comparison for the Milanese scan’s complex guard and wrapped grip. This museum photograph documents another rapier, rather than the scanned private-collection specimen.",
+    "weapons": [
+      "rapier"
+    ],
+    "image": "./assets/archive/italian-rapier.webp",
+    "alt": "Detail of an Italian rapier hilt, showing an ornamented pommel, wire-bound grip, knuckle guard and several curved side rings.",
+    "imageChanges": "Resized and converted to WebP; full museum detail photograph retained."
+  },
+  {
+    "id": "london-hunting-sword",
+    "title": "London hunting sword and scabbard",
+    "date": "1778–79",
+    "origin": "London, England",
+    "creator": "Hilt by William Kinman",
+    "shelfmark": "Cleveland Museum of Art, 1916.1685",
+    "source": "https://www.clevelandart.org/art/1916.1685",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Cleveland Museum of Art; Gift of Mr. and Mrs. John L. Severance, 1916.1685. Resized and converted to WebP; full photograph retained.",
+    "description": "This London hunting sword is dated 1778–79, with its hilt credited to William Kinman. Blued and gilded steel, a silver-and-wood hilt and a fitted scabbard bring together decorative metalwork and carrying equipment.",
+    "relation": "A late-eighteenth-century English comparison for hanger OC059. The two swords are distinct objects; this photograph does not establish the maker or date of OC059’s blade.",
+    "weapons": [
+      "hanger"
+    ],
+    "image": "./assets/archive/london-hunting-sword.webp",
+    "alt": "A curved English hunting sword with a silver hilt and gilded blade decoration, displayed above its leather scabbard and silver mounts.",
+    "imageChanges": "Resized and converted to WebP; full photograph retained."
   }
 ];
 
@@ -289,10 +350,10 @@ export const bibliography = [
     "note": "Museum essay distinguishing techniques such as engraving, etching and inlay; surface appearance alone is not a material analysis."
   },
   {
-    "title": "Wood and Woodworking in Anglo-Scandinavian and Medieval York",
-    "authors": "C. A. Morris",
-    "year": 2000,
-    "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-    "note": "York Archaeological Trust monograph, The Archaeology of York 17/13. Includes archaeological discussion of woodworking axes and their forms."
+    "title": "Moonbrand",
+    "authors": "The Oakeshott Institute",
+    "year": 2021,
+    "url": "https://www.patreon.com/oakeshott/posts/moonbrand-46319770",
+    "note": "Detailed study of the scanned medieval sword, including its fullers, marks, surviving grip and corrosion."
   }
 ];

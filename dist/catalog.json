@@ -173,19 +173,6 @@
     "sign": 1
   },
   {
-    "id": "axe",
-    "title": "The T-axe",
-    "short": "Anglo-Saxon T-axe",
-    "place": "Early medieval England",
-    "sub": "The anatomy of a working tool, shaped for timber.",
-    "parts": [
-      "Head",
-      "Haft"
-    ],
-    "method": "Clean planar cutaway · original textured scan",
-    "sign": -1
-  },
-  {
     "id": "mace",
     "title": "The steel mace",
     "short": "Steel mace",

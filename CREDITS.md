@@ -12,7 +12,6 @@ The code license does not replace the licenses of these assets. Credit the liste
 | [Italian Arming Sword](https://sketchfab.com/3d-models/italian-arming-sword-bc94205221904de8a82471f389c1562e)                                               | The Oakeshott Institute (https://sketchfab.com/oakeshott)             | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Medieval Steel Mace (Game Model)](https://sketchfab.com/3d-models/medieval-steel-mace-game-model-70f78341e5124b4b895dd40389d34eb9)                         | Michael Makivic (https://sketchfab.com/makivic)                       | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Oakeshott Type XIIa Longsword (Albion Baron)](https://sketchfab.com/3d-models/oakeshott-type-xiia-longsword-albion-baron-b2a37689b7054a93b3a4ce12e48e54f4) | leeeck (https://sketchfab.com/leeeck)                                 | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
-| [Replica Anglo-Saxon T-Axe](https://sketchfab.com/3d-models/replica-anglo-saxon-t-axe-f10adc47456d427fa19fb3a90db18460)                                     | The Sutton Hoo Ships Company (https://sketchfab.com/thesuttonhooship) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Roman Gladius](https://sketchfab.com/3d-models/roman-gladius-d192d804036b4a5c9b2a7a5d1b18114a)                                                             | Ahsan.Faraz (https://sketchfab.com/Ahsan.Faraz)                       | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Yatagan Sword (Ottoman)](https://sketchfab.com/3d-models/yatagan-sword-ottoman-ad0b79e358f24b96a44fd7cf3b89f71d)                                           | MustafaYerebasmaz (https://sketchfab.com/Mustafa97)                   | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Moonbrand (Early 14th C Arming Sword)](https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec) | The Oakeshott Institute (https://sketchfab.com/oakeshott) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) |
@@ -41,12 +40,6 @@ Fiore Furlan dei Liberi da Premariacco; illustrator unknown. Getty Museum, Ms. L
 Fiore Furlan dei Liberi da Premariacco; illustrator unknown. Getty Museum, Ms. Ludwig XV 13 (83.MR.183), fol. 43v. c. 1410.
 
 [The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.](https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700007569) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
-### Combat with Pollaxe
-
-Fiore Furlan dei Liberi da Premariacco; illustrator unknown. Getty Museum, Ms. Ludwig XV 13 (83.MR.183), fol. 36v. c. 1410.
-
-[The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.](https://www.getty.edu/art/collection/object/108HP6) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ### Algerian nimcha with scabbard
 
@@ -90,3 +83,29 @@ The four additional historical scans were retrieved from the published Objaverse
 ## Entrance illustrations
 
 Six illustrations supplied for The Armoury, prepared as transparent animation frames, scaled to 1100 pixels in height and converted to quality-90 WebP with full-quality alpha. These are decorative entrance artwork, separate from the Archive’s historical source images. They do not inherit the application code’s MIT license.
+
+## Additional Archive photographs
+
+### Bronze sword with riveted grip
+
+Maker unrecorded. The Metropolitan Museum of Art, 54.46.8. 13th century BCE; probably Central European.
+
+[The Metropolitan Museum of Art, New York; Bequest of Alan Rutherfurd Stuyvesant, 1954. Resized and converted to WebP; full photograph retained.](https://www.metmuseum.org/art/collection/search/27513) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+### A thirteenth-century French sword
+
+Maker unrecorded. The Metropolitan Museum of Art, 25.188.12. 13th century; French.
+
+[The Metropolitan Museum of Art, New York; Gift of George D. Pratt, 1925. Resized and converted to WebP; full photograph retained.](https://www.metmuseum.org/art/collection/search/32782) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+### Italian rapier: the protective hilt
+
+Maker unrecorded. The Metropolitan Museum of Art, 14.25.1136. Late 16th century, Italian hilt.
+
+[The Metropolitan Museum of Art, New York; Gift of William H. Riggs, 1913. Resized and converted to WebP; full museum detail photograph retained.](https://www.metmuseum.org/art/collection/search/27920) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+### London hunting sword and scabbard
+
+Hilt by William Kinman. Cleveland Museum of Art, 1916.1685. 1778–79; London, England.
+
+[The Cleveland Museum of Art; Gift of Mr. and Mrs. John L. Severance. Resized and converted to WebP; full photograph retained.](https://www.clevelandart.org/art/1916.1685) — [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

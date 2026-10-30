@@ -1,12 +1,13 @@
-import { createCameraTracker } from "./camera-state.js?v=1.2.0";
-import { layoutCallouts } from "./label-layout.js?v=1.2.0";
-import { initSuite } from "./suite.js?v=1.2.0";
+import { createDisassembly } from "./disassembly.js?v=1.2.1";
+import { createCameraTracker } from "./camera-state.js?v=1.2.1";
+import { layoutCallouts } from "./label-layout.js?v=1.2.1";
+import { initSuite } from "./suite.js?v=1.2.1";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.0";
-import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.2.0";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.1";
+import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.2.1";
 import { partitionGeometry, buildCutCaps, lower, upper } from "./clean-cut.js";
-import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.2.0";
+import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.2.1";
 
 const roman = (n) =>
   ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][n] ||
@@ -32,6 +33,7 @@ let config = modelConfig,
   selected = 0,
   isolated = false,
   parts = [],
+  disassembly = null,
   labels = [],
   requestId = 0,
   amount = 0,
@@ -289,6 +291,9 @@ function regionsFor(id, mi, box) {
   const cfg = config[id];
   if (cfg?.meshParts && cfg.meshParts[mi] !== undefined)
     return native(cfg.meshParts[mi]);
+  if (id === "arming" && mi === 1 && size.z > .2 && box.min.x > 3.1 && box.max.x < 3.41)
+    return native(1);
+  if (cfg?.regions) return cfg.regions;
   if (cfg?.cuts) return ranges(cfg.cuts, cfg.partIndices);
   if (id === "longsword")
     return native(
@@ -301,7 +306,7 @@ function regionsFor(id, mi, box) {
     if (mi === 0) return native(size.x > 5 ? 4 : 5);
     if (size.x > 5) return native(0);
     if (box.min.x > 4.75) return native(3);
-    return ranges([3.15, 4.4], [1, 2, 3]);
+    return cfg.hiltRegions;
   }
   if (id === "arabic")
     return native(
@@ -322,16 +327,6 @@ function regionsFor(id, mi, box) {
     if (c.x < 2.72) return native(3);
     if (c.x > 4.44) return native(5);
     return native(4);
-  }
-  if (id === "axe") {
-    const h = [-1, 0.4, 0, -2.1],
-      nh = [1, -0.4, 0, 2.1];
-    return [
-      { part: 0, planes: [h] },
-      { part: 0, planes: [nh, lower(1.2), [0, -1, 0, -0.42]] },
-      { part: 1, planes: [nh, upper(1.2)] },
-      { part: 1, planes: [nh, lower(1.2), [0, 1, 0, 0.42]] },
-    ];
   }
   if (id === "mace") {
     if (size.x > 7) return ranges([-2.9, 1.5, 4.5], [0, 1, 2, 3]);
@@ -367,6 +362,7 @@ function addSurfaces(root, cfg) {
     if (
       [
         "longsword",
+        "arming",
         "gladius",
         "arabic",
         "guards",
@@ -407,7 +403,7 @@ function addSurfaces(root, cfg) {
         regionsFor(active.id, mi, group.box),
       )) {
         const k = out.part,
-          mat = exhibitMaterial(original, { wireframe: wire, dim: active.id === "axe" ? 0.66 : 1 });
+          mat = exhibitMaterial(original, { wireframe: wire });
         const obj = new T.Mesh(out.geometry, mat);
         obj.userData.part = k;
         parts[k].group.add(obj);
@@ -480,33 +476,10 @@ function finishParts() {
     });
     p.box.setFromObject(p.group, true);
     p.box.getCenter(p.center);
-    p.offset.set(
-      i * 0.65 - (parts.length - 1) * 0.28,
-      i % 2 === 0 ? 0.8 : -0.85,
-      ((i % 3) - 1) * 0.3,
-    );
-    if (i === 0) p.offset.x = -0.8;
-    if (active.id === "katana")
-      p.offset.set(
-        i === 0 ? -1.3 : i === 6 ? -1.1 : (i - 1) * 0.65 - 0.6,
-        i === 6 ? 1.1 : i % 2 === 0 ? 0.7 : -0.7,
-        0,
-      );
-    if (active.id === "axe") {
-      p.offset.set(i === 0 ? -1.1 : 0.3, i === 0 ? -1 : 0.55, 0);
-    }
-    if (active.id === "yatagan") {
-      const offsets = [
-        [-0.85, -0.65, 0],
-        [0.1, 0.65, 0],
-        [1, -0.85, -0.6],
-        [1.4, 0.95, 0.6],
-        [-0.15, 1.6, 0.2],
-      ];
-      p.offset.set(...offsets[i]);
-    }
     labels.push(createCallout(p.name, () => selectPart(i), { partIndex: i }));
   });
+  disassembly = createDisassembly(parts.map((p) => ({ name: p.name, min: p.box.min.toArray(), max: p.box.max.toArray() })), config[active.id]?.hiltAxis);
+  parts.forEach((p, i) => p.offset.set(...disassembly.position(i, 1)));
   $("loading").hidden = true;
   setReady(true);
   selected = 0;
@@ -806,12 +779,15 @@ function fitBox(box, canonical = false, padding = 1.3) {
     : camera.position.clone().sub(controls.target).normalize();
   moveCamera(center, center.clone().addScaledVector(direction, distance));
 }
+function partPosition(part, progress) {
+  return new T.Vector3(...disassembly.position(part.index, progress));
+}
 function frameSelected() {
   cameraIntent = "part";
   const p = parts[selected];
   if (!p) return;
   fitBox(
-    p.box.clone().translate(p.offset.clone().multiplyScalar(targetAmount)),
+    p.box.clone().translate(partPosition(p, targetAmount)),
     false,
     1.55,
   );
@@ -823,7 +799,7 @@ function frameFeature() {
   const p = parts[f.parentIndex],
     size = p.box.getSize(new T.Vector3()),
     radius = Math.min(1.3, Math.max(0.3, size.length() * 0.14)),
-    center = f.anchor.clone().addScaledVector(p.offset, targetAmount);
+    center = f.anchor.clone().add(partPosition(p, targetAmount));
   fitBox(
     new T.Box3(
       center.clone().addScalar(-radius),
@@ -840,7 +816,7 @@ function resetCamera() {
   for (const p of parts)
     if (p.group.visible)
       box.union(
-        p.box.clone().translate(p.offset.clone().multiplyScalar(targetAmount)),
+        p.box.clone().translate(partPosition(p, targetAmount)),
       );
   fitBox(box, true, 1.28);
 }
@@ -1085,16 +1061,16 @@ function animate(t) {
   const previousAmount = amount;
   if (touring) {
     const elapsed = (t - tourStart) / 1000;
-    targetAmount = (1 - Math.cos((elapsed * Math.PI) / 5)) / 2;
+    targetAmount = (1 - Math.cos((elapsed * Math.PI) / 4.25)) / 2;
     syncAmount();
   }
   amount = reduced
     ? targetAmount
     : Math.abs(amount - targetAmount) < 0.0001
       ? targetAmount
-      : T.MathUtils.lerp(amount, targetAmount, 0.12);
+      : T.MathUtils.lerp(amount, targetAmount, 0.14);
   for (const p of parts) {
-    p.group.position.copy(p.offset).multiplyScalar(amount);
+    p.group.position.copy(partPosition(p, amount));
     p.group.traverse((o) => {
       if (o.userData.cutFace) o.visible = isolated || amount > 0.01;
     });

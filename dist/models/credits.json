@@ -66,17 +66,6 @@
     "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
-    "file": "replica_anglo-saxon_t-axe.glb",
-    "title": "Replica Anglo-Saxon T-Axe",
-    "author": "The Sutton Hoo Ships Company (https://sketchfab.com/thesuttonhooship)",
-    "source": "https://sketchfab.com/3d-models/replica-anglo-saxon-t-axe-f10adc47456d427fa19fb3a90db18460",
-    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "60744079e5c8b13209af62dabec0554622f46f55a9b28e17d0edaf086803e17d",
-    "sourceSha256": "083bada6086cab78857b821018ca0bd69624aa67a8b0015533b05b0b90a65672",
-    "bytes": 4118768,
-    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
-  },
-  {
     "file": "roman_gladius.glb",
     "title": "Roman Gladius",
     "author": "Ahsan.Faraz (https://sketchfab.com/Ahsan.Faraz)",

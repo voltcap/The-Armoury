@@ -173,19 +173,6 @@ export const modelCatalog = [
     "sign": 1
   },
   {
-    "id": "axe",
-    "title": "The T-axe",
-    "short": "Anglo-Saxon T-axe",
-    "place": "Early medieval England",
-    "sub": "The anatomy of a working tool, shaped for timber.",
-    "parts": [
-      "Head",
-      "Haft"
-    ],
-    "method": "Clean planar cutaway · original textured scan",
-    "sign": -1
-  },
-  {
     "id": "mace",
     "title": "The steel mace",
     "short": "Steel mace",
@@ -260,7 +247,222 @@ export const modelConfig = {
       -0.0019705835430016277,
       0.003902801992122562
     ],
-    "length": 2.267912816694512
+    "length": 2.267912816694512,
+    "regions": [
+      {
+        "part": 0,
+        "planes": [
+          [
+            -1,
+            0,
+            0,
+            3.18
+          ]
+        ]
+      },
+      {
+        "part": 0,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.18
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.405
+          ],
+          [
+            0,
+            1,
+            0,
+            0.215
+          ],
+          [
+            0,
+            -1,
+            0,
+            0.215
+          ],
+          [
+            0,
+            0,
+            1,
+            0.025
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.18
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.6
+          ],
+          [
+            0,
+            1,
+            0,
+            -0.215
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.18
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.6
+          ],
+          [
+            0,
+            -1,
+            0,
+            -0.215
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.18
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.405
+          ],
+          [
+            0,
+            1,
+            0,
+            0.215
+          ],
+          [
+            0,
+            -1,
+            0,
+            0.215
+          ],
+          [
+            0,
+            0,
+            -1,
+            -0.025
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.405
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.505
+          ],
+          [
+            0,
+            1,
+            0,
+            0.215
+          ],
+          [
+            0,
+            -1,
+            0,
+            0.215
+          ]
+        ]
+      },
+      {
+        "part": 2,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.505
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.6
+          ],
+          [
+            0,
+            1,
+            0,
+            0.215
+          ],
+          [
+            0,
+            -1,
+            0,
+            0.215
+          ]
+        ]
+      },
+      {
+        "part": 2,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.6
+          ],
+          [
+            -1,
+            0,
+            0,
+            4.54
+          ]
+        ]
+      },
+      {
+        "part": 3,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -4.54
+          ]
+        ]
+      }
+    ]
   },
   "gladius": {
     "file": "roman_gladius.glb",
@@ -289,7 +491,53 @@ export const modelConfig = {
       0.0344803416732517,
       0.0005266012038689614
     ],
-    "length": 1.0561241773819612
+    "length": 1.0561241773819612,
+    "hiltRegions": [
+      {
+        "part": 1,
+        "planes": [
+          [
+            -0.9796535910916672,
+            0.2006958419105637,
+            0.00014318173859375377,
+            2.915204083182217
+          ]
+        ]
+      },
+      {
+        "part": 2,
+        "planes": [
+          [
+            0.9796535910916672,
+            -0.2006958419105637,
+            -0.00014318173859375377,
+            -2.915204083182217
+          ],
+          [
+            -0.9796665215565218,
+            0.2006326603659168,
+            0.00020527016274964532,
+            4.0898961746795965
+          ]
+        ]
+      },
+      {
+        "part": 3,
+        "planes": [
+          [
+            0.9796665215565218,
+            -0.2006326603659168,
+            -0.00020527016274964532,
+            -4.0898961746795965
+          ]
+        ]
+      }
+    ],
+    "hiltAxis": [
+      0.9796665215565218,
+      -0.2006326603659168,
+      -0.00020527016274964532
+    ]
   },
   "arabic": {
     "file": "arabic_sword.glb",
@@ -377,35 +625,6 @@ export const modelConfig = {
       -0.008387279879933134
     ],
     "length": 1.9911586984723855
-  },
-  "axe": {
-    "file": "replica_anglo-saxon_t-axe.glb",
-    "center": [
-      -1.6307505720901594,
-      1.0633540475732552,
-      -2.792854393669902
-    ],
-    "u": [
-      -0.003311328501904945,
-      0.9808467490063588,
-      -0.19475289488788017
-    ],
-    "v": [
-      0.22993717370620523,
-      0.19028238711799345,
-      0.9544220813144889
-    ],
-    "w": [
-      0.9731998413746044,
-      -0.04162052518091672,
-      -0.22616321679731607
-    ],
-    "mid": [
-      -0.14069038659149857,
-      0.018910393771590983,
-      -0.009176211954788606
-    ],
-    "length": 4.620817309671504
   },
   "mace": {
     "file": "medieval_steel_mace_game_model.glb",
@@ -535,16 +754,109 @@ export const modelConfig = {
     "includeMeshes": [
       0
     ],
-    "cuts": [
-      2.85,
-      3.25,
-      4.18
-    ],
-    "partIndices": [
-      0,
-      1,
-      2,
-      3
+    "regions": [
+      {
+        "part": 0,
+        "planes": [
+          [
+            -1,
+            0,
+            0,
+            3.055
+          ],
+          [
+            0,
+            1,
+            0,
+            0.405
+          ],
+          [
+            0,
+            -1,
+            0,
+            0.405
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            -1,
+            0,
+            0,
+            3.055
+          ],
+          [
+            0,
+            1,
+            0,
+            -0.405
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            -1,
+            0,
+            0,
+            3.055
+          ],
+          [
+            0,
+            -1,
+            0,
+            -0.405
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.055
+          ],
+          [
+            -1,
+            0,
+            0,
+            3.19
+          ]
+        ]
+      },
+      {
+        "part": 2,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -3.19
+          ],
+          [
+            -1,
+            0,
+            0,
+            4.2
+          ]
+        ]
+      },
+      {
+        "part": 3,
+        "planes": [
+          [
+            1,
+            0,
+            0,
+            -4.2
+          ]
+        ]
+      }
     ]
   },
   "hanger": {
@@ -1243,61 +1555,6 @@ export const modelHistory = {
           {
             "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
             "url": "https://www.metmuseum.org/art/collection/search/24378"
-          }
-        ]
-      }
-    ],
-    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
-  },
-  "axe": {
-    "period": "Anglo-Saxon woodworking comparison",
-    "culture": "England / replica model title",
-    "context": "The British Museum presents T-shaped axes from the Hurbuck hoard within an Anglo-Saxon woodworking toolkit, dated to the AD 800s–1000s. Archaeological discussion also associates T-shaped axes with shaping timber. The supplied replica is studied as a woodworking tool; its title alone does not make it a battlefield weapon.",
-    "modelNote": "Replica, as identified by the supplied filename. The date is for the museum comparison, not a verified dating of this model.",
-    "sources": [
-      {
-        "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-        "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-        "locator": "Printed p. 297, Woodworking"
-      },
-      {
-        "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-        "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-        "locator": "Section on shaping axes, printed p. 2106"
-      }
-    ],
-    "parts": [
-      {
-        "name": "Head",
-        "term": "Axe head",
-        "function": "The head carries the socket and broad cutting edge.",
-        "sources": [
-          {
-            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-            "locator": "Printed p. 297, Woodworking"
-          },
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ]
-      },
-      {
-        "name": "Haft",
-        "term": "Haft",
-        "function": "The handle fits into the head’s socket.",
-        "sources": [
-          {
-            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-            "locator": "Printed p. 297, Woodworking"
-          },
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
           }
         ]
       }
@@ -2876,142 +3133,6 @@ export const modelAnatomy = {
       {
         "title": "Royal Museums Greenwich · Sword Scabbard, WPN1022.1",
         "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-534736"
-      }
-    ]
-  },
-  "axe": {
-    "features": [
-      {
-        "name": "Eye",
-        "term": "Haft socket",
-        "description": "The eye is the opening that receives the haft. The fit between head and handle is the crucial junction through which a swing is transmitted into the metal head.",
-        "parent": "Head",
-        "position": [
-          -2.15,
-          1,
-          0.18
-        ],
-        "sources": [
-          {
-            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-            "locator": "Printed p. 297, Woodworking"
-          },
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ],
-        "evidence": "Visible model landmark; the linked record supplies historical comparison or terminology."
-      },
-      {
-        "name": "Neck",
-        "term": "Narrow bridge beneath the socket",
-        "description": "The narrow region connects the socket area to the broad blade. Archaeological descriptions of T-shaped axes use the neck as a morphological feature of the head.",
-        "parent": "Head",
-        "position": [
-          -2.25,
-          0.05,
-          0.18
-        ],
-        "sources": [
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ],
-        "evidence": "Visible model landmark; the linked record supplies historical comparison or terminology."
-      },
-      {
-        "name": "Cheek",
-        "term": "Broad face of the head",
-        "description": "This label marks the broad side face of the axe head between its socket area and cutting profile. It is a region of the head, not an added plate.",
-        "parent": "Head",
-        "position": [
-          -2.6,
-          -0.68,
-          0.2
-        ],
-        "sources": [
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ],
-        "evidence": "Visible model landmark; the linked record supplies historical comparison or terminology."
-      },
-      {
-        "name": "Bit",
-        "term": "Working cutting edge",
-        "description": "The bit is the working cutting edge. The broad edge and thin profile are useful features to compare with archaeological woodworking axes.",
-        "parent": "Head",
-        "position": [
-          -1.5,
-          -1.2,
-          0.15
-        ],
-        "sources": [
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ],
-        "evidence": "Visible model landmark; the linked record supplies historical comparison or terminology."
-      },
-      {
-        "name": "Toe",
-        "term": "Outer end of the cutting profile",
-        "description": "This landmark marks an outer end of the cutting profile. Follow the edge to compare the broad blade with the narrow neck.",
-        "parent": "Head",
-        "position": [
-          -4.8,
-          0.24,
-          0.16
-        ],
-        "sources": [
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ],
-        "evidence": "Visible model landmark; the linked record supplies historical comparison or terminology."
-      },
-      {
-        "name": "Haft end",
-        "term": "Terminal of the handle",
-        "description": "The haft provides the reach and leverage for the tool. Its cross-section and any swelling near the end help define the handhold; a wedge inside the eye is not exposed in this model.",
-        "parent": "Haft",
-        "position": [
-          4.75,
-          -0.2,
-          0.2
-        ],
-        "sources": [
-          {
-            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-            "locator": "Printed p. 297, Woodworking"
-          }
-        ],
-        "evidence": "Visible model landmark; the linked record supplies historical comparison or terminology."
-      }
-    ],
-    "components": {},
-    "sources": [
-      {
-        "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-        "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-        "locator": "Printed p. 297, Woodworking"
-      },
-      {
-        "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-        "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-        "locator": "Section on shaping axes, printed p. 2106"
       }
     ]
   },

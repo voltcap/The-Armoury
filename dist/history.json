@@ -615,61 +615,6 @@
     ],
     "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
   },
-  "axe": {
-    "period": "Anglo-Saxon woodworking comparison",
-    "culture": "England / replica model title",
-    "context": "The British Museum presents T-shaped axes from the Hurbuck hoard within an Anglo-Saxon woodworking toolkit, dated to the AD 800s–1000s. Archaeological discussion also associates T-shaped axes with shaping timber. The supplied replica is studied as a woodworking tool; its title alone does not make it a battlefield weapon.",
-    "modelNote": "Replica, as identified by the supplied filename. The date is for the museum comparison, not a verified dating of this model.",
-    "sources": [
-      {
-        "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-        "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-        "locator": "Printed p. 297, Woodworking"
-      },
-      {
-        "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-        "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-        "locator": "Section on shaping axes, printed p. 2106"
-      }
-    ],
-    "parts": [
-      {
-        "name": "Head",
-        "term": "Axe head",
-        "function": "The head carries the socket and broad cutting edge.",
-        "sources": [
-          {
-            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-            "locator": "Printed p. 297, Woodworking"
-          },
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ]
-      },
-      {
-        "name": "Haft",
-        "term": "Haft",
-        "function": "The handle fits into the head’s socket.",
-        "sources": [
-          {
-            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
-            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
-            "locator": "Printed p. 297, Woodworking"
-          },
-          {
-            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
-            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
-            "locator": "Section on shaping axes, printed p. 2106"
-          }
-        ]
-      }
-    ],
-    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
-  },
   "mace": {
     "period": "Medieval and Renaissance mace traditions",
     "culture": "European comparison / game model",

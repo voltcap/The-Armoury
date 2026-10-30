@@ -1,4 +1,4 @@
-import { archive, craft, bibliography } from "./research.js?v=1.2.0";
+import { archive, craft, bibliography } from "./research.js?v=1.2.1";
 
 const $ = (id) => document.getElementById(id);
 const escape = (s) =>
@@ -39,7 +39,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
     onStudyVisibility(page === "study");
     dispatchEvent(new CustomEvent("armoury:page", { detail: page }));
     if (page === "compare") {
-      comparisonModule ??= import("./compare.js?v=1.2.0");
+      comparisonModule ??= import("./compare.js?v=1.2.1");
       const { createComparison } = await comparisonModule;
       if (page !== "compare") return;
       comparison ??= createComparison(catalog, history);

@@ -1,6 +1,6 @@
 import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
 import { MeshoptDecoder } from "./vendor/libs/meshopt_decoder.mjs";
-import { createModelCache } from "./model-cache.js?v=1.2.0";
+import { createModelCache } from "./model-cache.js?v=1.2.1";
 
 export const createModelLoader = () => new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 
