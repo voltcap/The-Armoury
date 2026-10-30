@@ -6,7 +6,7 @@ An interactive collection of nine weapon models, presented as an illuminated man
 
 ## Explore
 
-- **Study:** animated separation and reassembly, individual piece isolation, 54 finer-detail landmarks, labels, mesh view and automatic rotation.
+- **Study:** animated separation and reassembly, individual piece isolation, 54 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
 - **Archive:** eight zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
 - **Compare:** two selectable models with linked rotation and zoom, independent viewing, and a reset control.
 - **Craft:** six sourced studies of hilt assembly, quillons, decoration, Japanese mountings, yatagan grips and carrying fittings, plus a reading room.
@@ -74,6 +74,7 @@ These are educational surface separations. They cannot reveal hidden tangs, fast
 dist/                    Static application; publish this directory
   app.js                 Study viewer and part interaction
   clean-cut.js           Planar surface clipping and cut caps
+  label-layout.js        Collision-aware callout placement
   compare.js             Paired 3D viewers
   suite.js               Archive, navigation and craft
   *.json                 Editable historical and display content

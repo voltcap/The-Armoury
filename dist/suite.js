@@ -1,4 +1,4 @@
-import { archive, craft, bibliography } from "./research.js?v=1.0.2";
+import { archive, craft, bibliography } from "./research.js?v=1.0.3";
 import { createComparison } from "./compare.js";
 
 const $ = (id) => document.getElementById(id);

@@ -827,3 +827,26 @@ body {
     --frame-width: 32px;
   }
 }
+
+/* Full technical callouts for every visible piece or detail. */
+#labels .part-label {
+  display: grid;
+  place-items: center;
+  padding: 3px 7px;
+  font-size: 11px;
+  line-height: 1.15;
+  white-space: normal;
+  text-align: center;
+  overflow-wrap: normal;
+}
+#leaders polyline {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 0.8;
+  opacity: 0.8;
+}
+#leaders circle {
+  fill: var(--gold);
+  stroke: var(--paper);
+  stroke-width: 0.5;
+}

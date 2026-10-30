@@ -1,4 +1,5 @@
-import { initSuite } from "./suite.js?v=1.0.2";
+import { layoutCallouts } from "./label-layout.js?v=1.0.3";
+import { initSuite } from "./suite.js?v=1.0.3";
 import * as T from "./vendor/three.module.js";
 import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
@@ -299,7 +300,6 @@ function removeModel() {
   parts = [];
   labels = [];
   activeFeatures = [];
-  $("featureLabel").hidden = true;
   $("labels").replaceChildren();
   $("leaders").replaceChildren();
 }
@@ -595,6 +595,31 @@ function addSurfaces(root, cfg) {
   }
   finishParts();
 }
+function createCallout(name, onClick, info) {
+  const button = document.createElement("button");
+  button.className = "part-label";
+  button.textContent = name;
+  button.onclick = onClick;
+  $("labels").append(button);
+  const leader = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  const line = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "polyline",
+  );
+  const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  dot.setAttribute("r", "2");
+  leader.append(line, dot);
+  $("leaders").append(leader);
+  return {
+    button,
+    leader,
+    line,
+    dot,
+    ...info,
+    width: Math.min(136, Math.max(54, name.length * 5.3 + 18)),
+    height: name.length > 18 ? 34 : 26,
+  };
+}
 function finishParts() {
   parts = parts.filter((p) => p.count > 0);
   parts.forEach((p, i) => {
@@ -632,20 +657,22 @@ function finishParts() {
       ];
       p.offset.set(...offsets[i]);
     }
-    const l = document.createElement("button");
-    l.className = "part-label";
-    l.textContent = p.name;
-    l.onclick = () => selectPart(i);
-    $("labels").append(l);
-    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    $("leaders").append(line);
-    labels.push(l);
+    labels.push(createCallout(p.name, () => selectPart(i), { partIndex: i }));
   });
   $("loading").hidden = true;
   setReady(true);
   selected = 0;
   featureIndex = 0;
   prepareFeatures();
+  activeFeatures.forEach((f, i) =>
+    labels.push(
+      createCallout(f.name, () => selectFeature(i), {
+        partIndex: f.parentIndex,
+        featureIndex: i,
+        anchor: f.anchor,
+      }),
+    ),
+  );
   renderParts();
   updateHistory();
   resetCamera();
@@ -833,7 +860,14 @@ function showInfo() {
         `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.title)}" aria-label="${esc(s.title)}">${esc(s.title.split(" · ")[0])}</a>`,
     )
     .join("");
-  labels.forEach((l, i) => l.classList.toggle("active", i === selected));
+  labels.forEach((l) =>
+    l.button.classList.toggle(
+      "active",
+      detail
+        ? l.featureIndex === featureIndex
+        : l.featureIndex === undefined && l.partIndex === selected,
+    ),
+  );
   applyIsolation();
 }
 function selectPart(index, reframe = true) {
@@ -1273,93 +1307,54 @@ function animate(t) {
       .distanceTo(controls.target)
       .toFixed(3);
   }
-  const r = $("viewport").getBoundingClientRect();
-  const positioned = [];
-  labels.forEach((l, i) => {
-    const p = parts[i],
-      line = $("leaders").children[i];
-    if (
-      !showLabels ||
-      !p.group.visible ||
-      studyMode === "details" ||
-      (i !== selected && (amount < 0.12 || camera.aspect < 1.25))
-    ) {
-      l.style.display = "none";
-      line.style.display = "none";
-      return;
-    }
-    const anchor = p.center.clone().add(p.group.position).project(camera);
+  const r = $("viewport").getBoundingClientRect(),
+    visible = [];
+  labels.forEach((label, id) => {
+    const p = parts[label.partIndex],
+      details = label.featureIndex !== undefined;
+    const show =
+      showLabels && p.group.visible && details === (studyMode === "details");
+    label.button.style.display = show ? "grid" : "none";
+    label.leader.style.display = show ? "block" : "none";
+    if (!show) return;
+    const anchor = (label.anchor || p.center)
+      .clone()
+      .add(p.group.position)
+      .project(camera);
     if (
       anchor.z > 1 ||
       Math.abs(anchor.x) > 1.02 ||
       Math.abs(anchor.y) > 1.02
     ) {
-      l.style.display = "none";
-      line.style.display = "none";
+      label.button.style.display = "none";
+      label.leader.style.display = "none";
       return;
     }
-    const ax = (anchor.x * 0.5 + 0.5) * r.width,
-      ay = (-anchor.y * 0.5 + 0.5) * r.height,
-      lane = amount > 0.12 ? (p.offset.y >= 0 ? 0 : 1) : i % 2;
-    const width = l.textContent.length * 5.1 + 27;
-    positioned.push({
-      l,
-      line,
-      i,
-      ax,
-      ay,
-      width,
-      x: Math.max(width / 2 + 12, Math.min(r.width - width / 2 - 12, ax)),
-      y: Math.max(70, Math.min(r.height - 65, ay + (lane === 0 ? -40 : 40))),
-      lane,
+    visible.push({
+      id,
+      ax: (anchor.x * 0.5 + 0.5) * r.width,
+      ay: (-anchor.y * 0.5 + 0.5) * r.height,
+      lane: amount > 0.12 ? (p.offset.y >= 0 ? 0 : 1) : id % 2,
+      width: label.width,
+      height: label.height,
     });
   });
-  for (const lane of [0, 1]) {
-    const row = positioned
-      .filter((p) => p.lane === lane)
-      .sort((a, b) => a.x - b.x);
-    for (let i = 1; i < row.length; i++)
-      row[i].x = Math.max(
-        row[i].x,
-        row[i - 1].x + (row[i - 1].width + row[i].width) / 2 + 9,
-      );
-    if (row.length) {
-      const last = row.at(-1),
-        over = last.x + last.width / 2 + 12 - r.width;
-      if (over > 0) row.forEach((p) => (p.x -= over));
-    }
+  for (const item of layoutCallouts(visible, r.width, r.height)) {
+    const l = labels[item.id],
+      endY = item.y + (item.lane === 0 ? item.height / 2 : -item.height / 2),
+      elbowY = endY + (item.lane === 0 ? 8 : -8);
+    l.button.style.left = item.x + "px";
+    l.button.style.top = item.y + "px";
+    l.button.style.width = item.width + "px";
+    l.button.style.height = item.height + "px";
+    l.button.style.opacity = "1";
+    l.line.setAttribute(
+      "points",
+      `${item.ax},${item.ay} ${item.ax},${elbowY} ${item.x},${endY}`,
+    );
+    l.dot.setAttribute("cx", item.ax);
+    l.dot.setAttribute("cy", item.ay);
   }
-  positioned.forEach((p) => {
-    p.l.style.display = "block";
-    p.line.style.display = "block";
-    p.l.style.left = p.x + "px";
-    p.l.style.top = p.y + "px";
-    const opacity = isolated || amount > 0.08 ? "1" : ".65";
-    p.l.style.opacity = opacity;
-    p.line.style.opacity = opacity;
-    p.line.setAttribute("x1", p.ax);
-    p.line.setAttribute("y1", p.ay);
-    p.line.setAttribute("x2", p.x);
-    p.line.setAttribute("y2", p.y + (p.lane === 0 ? 12 : -12));
-  });
-  const feature = activeFeatures[featureIndex],
-    fl = $("featureLabel");
-  if (studyMode === "details" && feature && showLabels) {
-    const point = feature.anchor
-      .clone()
-      .add(parts[feature.parentIndex].group.position)
-      .project(camera);
-    fl.hidden = point.z > 1;
-    fl.textContent = feature.name;
-    fl.style.left =
-      Math.max(60, Math.min(r.width - 60, (point.x * 0.5 + 0.5) * r.width)) +
-      "px";
-    fl.style.top =
-      Math.max(
-        65,
-        Math.min(r.height - 60, (-point.y * 0.5 + 0.5) * r.height - 27),
-      ) + "px";
-  } else fl.hidden = true;
 }
 
 requestAnimationFrame(animate);
