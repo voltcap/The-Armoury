@@ -1,0 +1,865 @@
+{
+  "longsword": {
+    "period": "European medieval swords",
+    "culture": "Western Europe",
+    "context": "Long grips could accommodate one or both hands. Cleveland’s hand-and-a-half sword, dated about 1500, is one surviving example. Medieval European hilts brought a guard, grip and pommel together around the blade tang. The model filename names a modern Albion Baron representation; it does not establish an archaeological provenance.",
+    "modelNote": "Digital representation of a modern replica, as named in the supplied file. Historical context describes the sword family, not the age or provenance of the mesh.",
+    "sources": [
+      {
+        "title": "Cleveland Museum of Art · Hand-and-a-Half Sword, 1921.1253",
+        "url": "https://www.clevelandart.org/art/1921.1253"
+      },
+      {
+        "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+        "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+        "locator": "Printed p. 133, opening discussion of construction and remounting"
+      },
+      {
+        "title": "Fitzwilliam Museum · Hand-and-a-half sword, HEN.M.185-1933",
+        "url": "https://data.fitzmuseum.cam.ac.uk/id/object/18814"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Blade",
+        "term": "Blade",
+        "function": "The blade is the main continuous metal surface.",
+        "sources": [
+          {
+            "title": "Cleveland Museum of Art · Hand-and-a-Half Sword, 1921.1253",
+            "url": "https://www.clevelandart.org/art/1921.1253"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Crossguard",
+        "term": "Crossguard",
+        "function": "The two projecting guard arms are called quillons.",
+        "sources": [
+          {
+            "title": "Cleveland Museum of Art · Hand-and-a-Half Sword, 1921.1253",
+            "url": "https://www.clevelandart.org/art/1921.1253"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Grip",
+        "term": "Grip",
+        "function": "The handhold lies between guard and pommel.",
+        "sources": [
+          {
+            "title": "Cleveland Museum of Art · Hand-and-a-Half Sword, 1921.1253",
+            "url": "https://www.clevelandart.org/art/1921.1253"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Pommel",
+        "term": "Pommel",
+        "function": "The terminal fitting completes the hilt.",
+        "sources": [
+          {
+            "title": "Cleveland Museum of Art · Hand-and-a-Half Sword, 1921.1253",
+            "url": "https://www.clevelandart.org/art/1921.1253"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Peened cap",
+        "term": "Peened terminal",
+        "function": "This source piece marks the outer end of the tang assembly.",
+        "sources": [
+          {
+            "title": "Cleveland Museum of Art · Hand-and-a-Half Sword, 1921.1253",
+            "url": "https://www.clevelandart.org/art/1921.1253"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "arming": {
+    "period": "Medieval European swords",
+    "culture": "Western Europe / Italian model title",
+    "context": "The Met’s sword of about 1450, possibly Italian, provides a comparison for the cruciform hilt, quillons and disc-shaped pommel. Its copper-inlaid blade marks also show that a working blade could carry identifying decoration. This museum object is a comparison, not an identification of the supplied scan.",
+    "modelNote": "The filename supplies the Italian attribution. The museum comparison is contextual and does not identify the modeled original.",
+    "sources": [
+      {
+        "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+        "url": "https://www.metmuseum.org/art/collection/search/27458"
+      },
+      {
+        "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+        "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+        "locator": "Printed p. 133, opening discussion of construction and remounting"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Blade",
+        "term": "Blade",
+        "function": "The broad blade narrows toward its point.",
+        "sources": [
+          {
+            "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+            "url": "https://www.metmuseum.org/art/collection/search/27458"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Crossguard",
+        "term": "Crossguard",
+        "function": "The guard crosses the blade at the hand.",
+        "sources": [
+          {
+            "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+            "url": "https://www.metmuseum.org/art/collection/search/27458"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Grip",
+        "term": "Grip",
+        "function": "The grip is the sword’s handhold.",
+        "sources": [
+          {
+            "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+            "url": "https://www.metmuseum.org/art/collection/search/27458"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      },
+      {
+        "name": "Pommel",
+        "term": "Pommel",
+        "function": "The fitting at the end completes the hilt.",
+        "sources": [
+          {
+            "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+            "url": "https://www.metmuseum.org/art/collection/search/27458"
+          },
+          {
+            "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+            "locator": "Printed p. 133, opening discussion of construction and remounting"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "gladius": {
+    "period": "Roman sword traditions",
+    "culture": "Roman world",
+    "context": "Roman sword blades and hilts varied. The British Museum’s Hod Hill sword combines a Roman blade with fittings of Celtic design, illustrating the limits of rigid typologies. A separate bone gladius handle in that collection and an ivory sword handle from London demonstrate surviving organic hilt materials. Neither identifies the material or original of this model.",
+    "modelNote": "A supplied digital model. The Roman date refers to the weapon tradition, not a verified date for this representation.",
+    "sources": [
+      {
+        "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+        "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+      },
+      {
+        "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+        "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+      },
+      {
+        "title": "London Museum · Ivory sword handle, CID90[2781]<1748>a",
+        "url": "https://www.londonmuseum.org.uk/collections/v/object-752536/handle-sword-handle/"
+      },
+      {
+        "title": "Royal Armouries · Roman Britain: gladius and inscriptions",
+        "url": "https://royalarmouries.org/schools/learning-resources/roman-britain"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Blade",
+        "term": "Double-edged blade",
+        "function": "Two edges converge at the point.",
+        "sources": [
+          {
+            "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+            "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+          },
+          {
+            "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+            "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+          }
+        ]
+      },
+      {
+        "name": "Guard",
+        "term": "Guard",
+        "function": "The guard separates handhold from blade.",
+        "sources": [
+          {
+            "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+            "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+          },
+          {
+            "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+            "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+          }
+        ]
+      },
+      {
+        "name": "Grip",
+        "term": "Grip",
+        "function": "The shaped handhold is represented with finger ridges.",
+        "sources": [
+          {
+            "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+            "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+          },
+          {
+            "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+            "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+          }
+        ]
+      },
+      {
+        "name": "Pommel",
+        "term": "Pommel",
+        "function": "The enlarged terminal finishes the handhold.",
+        "sources": [
+          {
+            "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+            "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+          },
+          {
+            "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+            "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+          }
+        ]
+      },
+      {
+        "name": "Scabbard",
+        "term": "Scabbard",
+        "function": "The sheath encloses the blade.",
+        "sources": [
+          {
+            "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+            "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+          },
+          {
+            "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+            "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+          }
+        ]
+      },
+      {
+        "name": "Scabbard mounts",
+        "term": "Scabbard mounts",
+        "function": "Visible metal fittings are grouped for study.",
+        "sources": [
+          {
+            "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+            "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+          },
+          {
+            "title": "British Museum · Bone gladius handle, 1856,0701.1308.a",
+            "url": "https://www.britishmuseum.org/collection/object/H_1856-0701-1308-a"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "arabic": {
+    "period": "Arabian sword comparison · date unknown",
+    "culture": "Arab world / supplied model title",
+    "context": "The Australian War Memorial records an Arabian sword with a curved single-edged blade, crossguard and wooden grips. Its manufacture date is unknown; the museum associates this type with the First World War. The shared general form does not identify the model’s particular region, date or maker.",
+    "modelNote": "The supplied model shows a curved, sheathed sword. The outer sheath is retained as a single surface; a separate hidden blade is not present in the teardown.",
+    "sources": [
+      {
+        "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+        "url": "https://www.awm.gov.au/collection/C227261"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Sheathed blade",
+        "term": "Sheath exterior",
+        "function": "The blade is shown enclosed; no separate inner blade is supplied.",
+        "sources": [
+          {
+            "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+            "url": "https://www.awm.gov.au/collection/C227261"
+          }
+        ]
+      },
+      {
+        "name": "Guard",
+        "term": "Crossguard",
+        "function": "The arms project to either side of the blade line.",
+        "sources": [
+          {
+            "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+            "url": "https://www.awm.gov.au/collection/C227261"
+          }
+        ]
+      },
+      {
+        "name": "Grip",
+        "term": "Grip",
+        "function": "The handhold includes a curved terminal.",
+        "sources": [
+          {
+            "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+            "url": "https://www.awm.gov.au/collection/C227261"
+          }
+        ]
+      },
+      {
+        "name": "Upper suspension mount",
+        "term": "Upper sheath mount",
+        "function": "This external mount provides a carrying attachment.",
+        "sources": [
+          {
+            "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+            "url": "https://www.awm.gov.au/collection/C227261"
+          }
+        ]
+      },
+      {
+        "name": "Lower suspension mount",
+        "term": "Lower sheath mount",
+        "function": "This is the second visible carrying mount.",
+        "sources": [
+          {
+            "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+            "url": "https://www.awm.gov.au/collection/C227261"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "guards": {
+    "period": "British military swords · model undated",
+    "culture": "Britain / Irish Guards model title",
+    "context": "The Irish Guards regiment was formed in 1900. National Army Museum records include swords and hilt patterns associated with the regiment. British military swords could combine engraved blades, protective guards and separate scabbards. The supplied model has not been matched to a particular museum object, owner or pattern.",
+    "modelNote": "The filename identifies an Irish Guards sword. No exact pattern, maker, owner or date is assigned from the filename.",
+    "sources": [
+      {
+        "title": "National Army Museum · The Irish Guards",
+        "url": "https://www.nam.ac.uk/explore/irish-guards"
+      },
+      {
+        "title": "National Army Museum · Irish Guards collection records",
+        "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+      },
+      {
+        "title": "Royal Collection · Officer of the Scots Guards, sword and scabbard, RCIN 71758",
+        "url": "https://www.rct.uk/collection/71758/officer-of-the-scots-guards-sword-and-scabbard"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Blade",
+        "term": "Blade",
+        "function": "The blade carries a longitudinal fuller.",
+        "sources": [
+          {
+            "title": "National Army Museum · The Irish Guards",
+            "url": "https://www.nam.ac.uk/explore/irish-guards"
+          },
+          {
+            "title": "National Army Museum · Irish Guards collection records",
+            "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+          }
+        ]
+      },
+      {
+        "name": "Guard",
+        "term": "Hilt guard",
+        "function": "The enclosing fitting surrounds part of the hand.",
+        "sources": [
+          {
+            "title": "National Army Museum · The Irish Guards",
+            "url": "https://www.nam.ac.uk/explore/irish-guards"
+          },
+          {
+            "title": "National Army Museum · Irish Guards collection records",
+            "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+          }
+        ]
+      },
+      {
+        "name": "Grip",
+        "term": "Grip",
+        "function": "The modeled handhold has a repeated binding texture.",
+        "sources": [
+          {
+            "title": "National Army Museum · The Irish Guards",
+            "url": "https://www.nam.ac.uk/explore/irish-guards"
+          },
+          {
+            "title": "National Army Museum · Irish Guards collection records",
+            "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+          }
+        ]
+      },
+      {
+        "name": "Backstrap & pommel",
+        "term": "Backpiece and terminal",
+        "function": "The metal fitting follows the rear of the grip.",
+        "sources": [
+          {
+            "title": "National Army Museum · The Irish Guards",
+            "url": "https://www.nam.ac.uk/explore/irish-guards"
+          },
+          {
+            "title": "National Army Museum · Irish Guards collection records",
+            "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+          }
+        ]
+      },
+      {
+        "name": "Scabbard",
+        "term": "Scabbard",
+        "function": "The separate sheath protects the blade.",
+        "sources": [
+          {
+            "title": "National Army Museum · The Irish Guards",
+            "url": "https://www.nam.ac.uk/explore/irish-guards"
+          },
+          {
+            "title": "National Army Museum · Irish Guards collection records",
+            "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+          }
+        ]
+      },
+      {
+        "name": "Suspension rings",
+        "term": "Carrying rings",
+        "function": "The rings connect the scabbard to carrying straps.",
+        "sources": [
+          {
+            "title": "National Army Museum · The Irish Guards",
+            "url": "https://www.nam.ac.uk/explore/irish-guards"
+          },
+          {
+            "title": "National Army Museum · Irish Guards collection records",
+            "url": "https://collection.nam.ac.uk/inventory/objects/results.php?associatedName=&campaign=&event=&flag=0&keyword=&page=1&placeNotes=&productionNotes=&shortDescription=&unit=irish+guards"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "katana": {
+    "period": "Japanese mounting vocabulary · fantasy design",
+    "culture": "Japan-inspired",
+    "context": "Japanese sword mountings include specialized collars, guards, hilt caps and scabbards. Their dates may differ from those of the blades: a Met example combines a sixteenth-century blade with nineteenth-century mountings. Oni Koroshi is fantasy artwork; historical terms here identify corresponding visible features rather than authenticate the design.",
+    "modelNote": "Fantasy dragon katana, not an authenticated historic Japanese sword. Terms describe corresponding visible regions; unmodeled internal fittings are not inferred.",
+    "sources": [
+      {
+        "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+        "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+      },
+      {
+        "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+        "url": "https://www.metmuseum.org/art/collection/search/24378"
+      },
+      {
+        "title": "Watanabe Museum of Art · Exhibition of Dismantled Parts of a Japanese Sword",
+        "url": "https://wata-samurai.jp/?attachment_id=393&lang=en"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Blade",
+        "term": "Blade",
+        "function": "The point and edge are regions of the blade.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      },
+      {
+        "name": "Habaki",
+        "term": "Habaki",
+        "function": "The blade collar helps seat the sword in its scabbard.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      },
+      {
+        "name": "Tsuba",
+        "term": "Tsuba",
+        "function": "The guard lies between blade and hilt.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      },
+      {
+        "name": "Fuchi",
+        "term": "Fuchi",
+        "function": "The collar finishes the guard end of the grip.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      },
+      {
+        "name": "Tsuka",
+        "term": "Tsuka",
+        "function": "The hilt is the sword’s handhold.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      },
+      {
+        "name": "Kashira",
+        "term": "Kashira",
+        "function": "The cap finishes the rear of the hilt.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      },
+      {
+        "name": "Saya",
+        "term": "Saya",
+        "function": "The scabbard encloses the blade.",
+        "sources": [
+          {
+            "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+            "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+          },
+          {
+            "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/24378"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "axe": {
+    "period": "Anglo-Saxon woodworking comparison",
+    "culture": "England / replica model title",
+    "context": "The British Museum presents T-shaped axes from the Hurbuck hoard within an Anglo-Saxon woodworking toolkit, dated to the AD 800s–1000s. Archaeological discussion also associates T-shaped axes with shaping timber. The supplied replica is studied as a woodworking tool; its title alone does not make it a battlefield weapon.",
+    "modelNote": "Replica, as identified by the supplied filename. The date is for the museum comparison, not a verified dating of this model.",
+    "sources": [
+      {
+        "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
+        "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
+        "locator": "Printed p. 297, Woodworking"
+      },
+      {
+        "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
+        "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
+        "locator": "Section on shaping axes, printed p. 2106"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Head",
+        "term": "Axe head",
+        "function": "The head carries the socket and broad cutting edge.",
+        "sources": [
+          {
+            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
+            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
+            "locator": "Printed p. 297, Woodworking"
+          },
+          {
+            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
+            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
+            "locator": "Section on shaping axes, printed p. 2106"
+          }
+        ]
+      },
+      {
+        "name": "Haft",
+        "term": "Haft",
+        "function": "The handle fits into the head’s socket.",
+        "sources": [
+          {
+            "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
+            "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
+            "locator": "Printed p. 297, Woodworking"
+          },
+          {
+            "title": "C. A. Morris · Wood and Woodworking in Anglo-Scandinavian and Medieval York (2000)",
+            "url": "https://www.collections.yorkarchaeologicaltrust.co.uk/files/original/74502/GB2837-PUB-AY-17-13_Wood-and-Woodworking-in-Anglo-Scandinavian-and-Medieval-York_C-A-Morris_web.pdf",
+            "locator": "Section on shaping axes, printed p. 2106"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "mace": {
+    "period": "Medieval and Renaissance mace traditions",
+    "culture": "European comparison / game model",
+    "context": "A mace has a substantial head on a shaft; flanged examples carry projecting plates around the head. Museum examples could be weapons and symbols of rank. The Walters’ Italian mace of about 1550 and Cleveland’s decorated seven-flanged mace of about 1540–50 provide comparisons for the form, not a provenance for this game model.",
+    "modelNote": "Game model, as identified by its filename. Surface appearance and decorative details do not establish an original date.",
+    "sources": [
+      {
+        "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+        "url": "https://art.thewalters.org/object/51.529/"
+      },
+      {
+        "title": "Cleveland Museum of Art · Seven-Flanged Mace, 1916.1589",
+        "url": "https://www.clevelandart.org/art/1916.1589"
+      },
+      {
+        "title": "The Met · Mace, ca. 1575–1600, 32.75.203",
+        "url": "https://www.metmuseum.org/art/collection/search/32223"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Head",
+        "term": "Flanged head",
+        "function": "Projecting plates surround the central head body.",
+        "sources": [
+          {
+            "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+            "url": "https://art.thewalters.org/object/51.529/"
+          },
+          {
+            "title": "Cleveland Museum of Art · Seven-Flanged Mace, 1916.1589",
+            "url": "https://www.clevelandart.org/art/1916.1589"
+          }
+        ]
+      },
+      {
+        "name": "Shaft",
+        "term": "Shaft",
+        "function": "The stem connects the head with the handhold.",
+        "sources": [
+          {
+            "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+            "url": "https://art.thewalters.org/object/51.529/"
+          },
+          {
+            "title": "Cleveland Museum of Art · Seven-Flanged Mace, 1916.1589",
+            "url": "https://www.clevelandart.org/art/1916.1589"
+          }
+        ]
+      },
+      {
+        "name": "Grip",
+        "term": "Grip",
+        "function": "The repeated ridges mark the handhold.",
+        "sources": [
+          {
+            "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+            "url": "https://art.thewalters.org/object/51.529/"
+          },
+          {
+            "title": "Cleveland Museum of Art · Seven-Flanged Mace, 1916.1589",
+            "url": "https://www.clevelandart.org/art/1916.1589"
+          }
+        ]
+      },
+      {
+        "name": "Butt cap",
+        "term": "Terminal fitting",
+        "function": "The flared end completes the handle.",
+        "sources": [
+          {
+            "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+            "url": "https://art.thewalters.org/object/51.529/"
+          },
+          {
+            "title": "Cleveland Museum of Art · Seven-Flanged Mace, 1916.1589",
+            "url": "https://www.clevelandart.org/art/1916.1589"
+          }
+        ]
+      },
+      {
+        "name": "Shaft collars",
+        "term": "Shaft collars",
+        "function": "The smaller bands are grouped source surfaces.",
+        "sources": [
+          {
+            "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+            "url": "https://art.thewalters.org/object/51.529/"
+          },
+          {
+            "title": "Cleveland Museum of Art · Seven-Flanged Mace, 1916.1589",
+            "url": "https://www.clevelandart.org/art/1916.1589"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  },
+  "yatagan": {
+    "period": "Ottoman yatagan traditions",
+    "culture": "Anatolia and the Balkans",
+    "context": "A yatagan typically has a single-edged blade curving inward and a guardless hilt with flared ears. The Met’s Balkan example is dated 1802–3. A nineteenth-century Albanian example at the British Museum has two grip plaques riveted to the tang. These historical comparisons explain the form without dating this digital model.",
+    "modelNote": "The supplied yatagan model has separate blade, hilt-frame, grip-scale and ornamental surfaces.",
+    "sources": [
+      {
+        "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+        "url": "https://www.metmuseum.org/art/collection/search/23379"
+      },
+      {
+        "title": "British Museum · Yatagan, Eu1980,12.13",
+        "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+      }
+    ],
+    "parts": [
+      {
+        "name": "Blade",
+        "term": "Incurved blade",
+        "function": "The single cutting edge curves inward.",
+        "sources": [
+          {
+            "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/23379"
+          },
+          {
+            "title": "British Museum · Yatagan, Eu1980,12.13",
+            "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+          }
+        ]
+      },
+      {
+        "name": "Hilt frame",
+        "term": "Hilt furniture",
+        "function": "The metal frame follows the grip and blade base.",
+        "sources": [
+          {
+            "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/23379"
+          },
+          {
+            "title": "British Museum · Yatagan, Eu1980,12.13",
+            "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+          }
+        ]
+      },
+      {
+        "name": "Left grip scale",
+        "term": "Grip plaque",
+        "function": "One shaped scale forms a side of the handhold.",
+        "sources": [
+          {
+            "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/23379"
+          },
+          {
+            "title": "British Museum · Yatagan, Eu1980,12.13",
+            "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+          }
+        ]
+      },
+      {
+        "name": "Right grip scale",
+        "term": "Grip plaque",
+        "function": "The opposite scale completes the paired handhold.",
+        "sources": [
+          {
+            "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/23379"
+          },
+          {
+            "title": "British Museum · Yatagan, Eu1980,12.13",
+            "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+          }
+        ]
+      },
+      {
+        "name": "Ornamental studs",
+        "term": "Surface ornaments",
+        "function": "Circular ornaments are grouped as separate source surfaces.",
+        "sources": [
+          {
+            "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+            "url": "https://www.metmuseum.org/art/collection/search/23379"
+          },
+          {
+            "title": "British Museum · Yatagan, Eu1980,12.13",
+            "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+          }
+        ]
+      }
+    ],
+    "evidenceNote": "Dates and materials in museum comparisons apply to those objects. Model materials, concealed construction and original provenance have not been independently established."
+  }
+}

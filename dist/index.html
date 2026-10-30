@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#171b23" />
+    <meta
+      name="description"
+      content="Explore the construction and history of swords, an axe and a mace."
+    />
+    <title>The Armoury</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("armoury-theme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="suite.css" />
+  </head>
+  <body>
+    <div class="folio-frame" aria-hidden="true"></div>
+    <div class="volume">
+      <header>
+        <a class="brand" href="./" aria-label="The Armoury">The Armoury</a>
+        <div class="header-actions">
+          <button id="themeBtn" aria-pressed="false">Dark mode</button
+          ><button id="importBtn">Import model</button
+          ><input type="file" id="file" accept=".glb" hidden />
+        </div>
+      </header>
+      <nav class="book-nav" aria-label="Explore The Armoury">
+        <button data-page="study" class="selected">Study</button
+        ><button data-page="archive">Archive</button
+        ><button data-page="compare">Compare</button
+        ><button data-page="chronology">Chronology</button
+        ><button data-page="craft">Craft</button>
+      </nav>
+      <main id="studyPage">
+        <aside class="collection">
+          <div id="weapons" aria-label="Weapon collection"></div>
+        </aside>
+        <section class="workbench" aria-label="3D viewer">
+          <div class="specimen-heading"><h1 id="title">Longsword</h1></div>
+          <div class="stage-toolbar">
+            <button
+              id="isolateBtn"
+              class="isolate-control primary"
+              aria-pressed="false"
+              disabled
+            >
+              Isolate blade</button
+            ><button id="resetPosition" disabled>Reset position</button
+            ><label class="focus-option"
+              ><input id="focusToggle" type="checkbox" checked />Close-up on
+              selection</label
+            >
+          </div>
+          <div id="viewport">
+            <canvas
+              id="scene"
+              tabindex="0"
+              aria-label="3D weapon model. Drag to rotate, scroll to zoom. Select a part to inspect it."
+            ></canvas
+            ><svg id="leaders" aria-hidden="true"></svg>
+            <div id="labels"></div>
+            <div id="featureLabel" hidden></div>
+            <div class="loading" id="loading" role="status">
+              <span class="spinner"></span>
+              <p>Loading model…</p>
+            </div>
+          </div>
+          <div class="view-controls">
+            <button id="labelsBtn" class="active" aria-pressed="true">
+              Labels</button
+            ><button id="wireBtn" aria-pressed="false">Mesh</button
+            ><button id="rotateBtn" aria-pressed="false">Rotate</button>
+          </div>
+          <div class="assembly">
+            <div class="assembly-head">
+              <label for="explode">Separate pieces</label
+              ><output id="percent" for="explode">0%</output>
+            </div>
+            <input
+              type="range"
+              id="explode"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+              aria-label="Separate pieces"
+              disabled
+            />
+            <div class="assembly-actions">
+              <button id="assembleBtn" disabled>Reassemble</button
+              ><button id="tourBtn" disabled>Animate</button
+              ><button id="explodeBtn" disabled>Separate all</button>
+            </div>
+          </div>
+        </section>
+        <aside class="inspector">
+          <div class="inspector-tabs">
+            <button class="selected" data-tab="anatomy">Parts</button
+            ><button data-tab="history">History</button>
+          </div>
+          <div id="anatomyPanel">
+            <div class="study-modes" role="group" aria-label="Study mode">
+              <button id="piecesMode" class="selected" aria-pressed="true">
+                Pieces <span id="pieceTotal"></span></button
+              ><button id="detailsMode" aria-pressed="false">
+                Details <span id="featureTotal"></span>
+              </button>
+            </div>
+            <div id="parts"></div>
+            <article id="partDetail" aria-live="polite">
+              <h2 id="partTitle">Blade</h2>
+              <button
+                id="isolateMobile"
+                class="isolate-control primary"
+                aria-pressed="false"
+                disabled
+              >
+                Isolate blade
+              </button>
+              <p id="partDescription"></p>
+              <div id="partSources"></div>
+              <div class="part-navigation">
+                <button id="prevPart" aria-label="Previous part" disabled>
+                  Previous</button
+                ><span id="partPosition">1 / 5</span
+                ><button id="nextPart" aria-label="Next part" disabled>
+                  Next
+                </button>
+              </div>
+            </article>
+            <div id="customTuning" hidden>
+              <label for="hiltBoundary">Hilt boundary</label
+              ><input
+                id="hiltBoundary"
+                type="range"
+                min="0"
+                max="75"
+                value="28"
+              /><button id="flipModel">Reverse blade and hilt</button>
+            </div>
+          </div>
+          <div id="historyPanel" hidden>
+            <h2 id="historyTitle"></h2>
+            <p id="historyContext"></p>
+            <p id="modelNote" class="history-note"></p>
+            <div id="sources"></div>
+          </div>
+        </aside>
+      </main>
+      <section
+        id="archivePage"
+        class="folio-page"
+        hidden
+        aria-labelledby="archiveHeading"
+      >
+        <div class="page-heading">
+          <h1 id="archiveHeading">The Archive</h1>
+          <label
+            >Weapon
+            <select id="archiveFilter" aria-label="Weapon"></select
+          ></label>
+        </div>
+        <p class="page-note">
+          Period illustrations and surviving objects. These are historical
+          comparisons, not portraits or provenance records of the 3D models.
+        </p>
+        <p id="archiveCount" class="count"></p>
+        <div id="archiveGrid" class="archive-grid"></div>
+      </section>
+      <section
+        id="comparePage"
+        class="folio-page"
+        hidden
+        aria-labelledby="compareHeading"
+      >
+        <div class="page-heading">
+          <h1 id="compareHeading">Compare</h1>
+          <div class="compare-options">
+            <label
+              ><input id="linkViews" type="checkbox" checked />Link rotation
+              &amp; zoom</label
+            ><button id="compareReset">Reset views</button>
+          </div>
+        </div>
+        <p class="page-note">
+          Compare shape and construction. Each model fills the same viewing
+          span; their relative size here is not a physical measurement.
+        </p>
+        <div class="compare-grid">
+          <article class="compare-card">
+            <label
+              >Left weapon<select
+                id="compareSelectLeft"
+                aria-label="Left weapon"
+              ></select
+            ></label>
+            <div class="compare-stage">
+              <canvas
+                id="compareLeft"
+                aria-label="Left comparison model. Drag to rotate, scroll to zoom."
+              ></canvas>
+              <p id="compareStatusLeft" role="status">Loading model…</p>
+            </div>
+            <div id="compareInfoLeft" class="compare-info"></div>
+          </article>
+          <article class="compare-card">
+            <label
+              >Right weapon<select
+                id="compareSelectRight"
+                aria-label="Right weapon"
+              ></select
+            ></label>
+            <div class="compare-stage">
+              <canvas
+                id="compareRight"
+                aria-label="Right comparison model. Drag to rotate, scroll to zoom."
+              ></canvas>
+              <p id="compareStatusRight" role="status">Loading model…</p>
+            </div>
+            <div id="compareInfoRight" class="compare-info"></div>
+          </article>
+        </div>
+      </section>
+      <section
+        id="chronologyPage"
+        class="folio-page"
+        hidden
+        aria-labelledby="chronologyHeading"
+      >
+        <div class="page-heading">
+          <h1 id="chronologyHeading">Chronology</h1>
+          <div class="filters">
+            <label
+              >Period<select id="eraFilter" aria-label="Period"></select></label
+            ><label
+              >Region<select id="regionFilter" aria-label="Region"></select
+            ></label>
+          </div>
+        </div>
+        <p class="page-note">
+          Dates belong to cited historical comparisons or documented traditions.
+          They do not date the supplied digital models or modern replicas.
+        </p>
+        <div id="chronologyList"></div>
+      </section>
+      <section
+        id="craftPage"
+        class="folio-page"
+        hidden
+        aria-labelledby="craftHeading"
+      >
+        <div class="page-heading">
+          <h1 id="craftHeading">Marks &amp; craftsmanship</h1>
+        </div>
+        <div id="craftGrid" class="craft-grid"></div>
+        <details class="bibliography">
+          <summary>Reading room</summary>
+          <ol id="bibliographyList"></ol>
+        </details>
+      </section>
+    </div>
+    <dialog id="archiveZoom" aria-labelledby="archiveZoomTitle">
+      <div class="dialog-toolbar">
+        <h2 id="archiveZoomTitle"></h2>
+        <button id="zoomClose">Close</button>
+      </div>
+      <label class="zoom-controls"
+        >Magnification<input
+          id="zoomLevel"
+          type="range"
+          min="1"
+          max="3"
+          step=".25"
+          value="1"
+      /></label>
+      <div id="zoomSurface" class="zoom-surface">
+        <img id="archiveZoomImage" alt="" />
+      </div>
+      <p id="archiveZoomCredit" class="credit"></p>
+    </dialog>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

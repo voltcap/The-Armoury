@@ -1,0 +1,262 @@
+import * as T from "./vendor/three.module.js";
+import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
+import { OrbitControls } from "./vendor/controls/OrbitControls.js";
+import { RoomEnvironment } from "./vendor/environments/RoomEnvironment.js";
+import { modelConfig } from "./data.js";
+
+// Each model uses the study viewer's ten-unit span, not an inferred physical scale.
+export function createComparison(catalog, history) {
+  const views = [],
+    panel = document.getElementById("comparePage");
+  let syncing = false,
+    visible = false,
+    frame = 0;
+  const linked = document.getElementById("linkViews");
+  for (const side of ["Left", "Right"]) {
+    const canvas = document.getElementById("compare" + side);
+    const renderer = new T.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+    });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+    renderer.outputColorSpace = T.SRGBColorSpace;
+    renderer.toneMapping = T.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+    const scene = new T.Scene(),
+      camera = new T.PerspectiveCamera(31, 1, 0.01, 200);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.minDistance = 2;
+    controls.maxDistance = 50;
+    const generator = new T.PMREMGenerator(renderer),
+      room = new RoomEnvironment();
+    const environment = generator.fromScene(room, 0.02).texture;
+    scene.environment = environment;
+    generator.dispose();
+    room.dispose();
+    scene.add(new T.AmbientLight(0xffffff, 0.8));
+    for (const p of [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 1, 0],
+      [0, -1, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+    ]) {
+      const light = new T.DirectionalLight(0xffffff, 1.1);
+      light.position.set(...p);
+      scene.add(light);
+    }
+    scene.add(camera);
+    const light = new T.DirectionalLight(0xfff7eb, 3),
+      target = new T.Object3D();
+    target.position.z = -8;
+    camera.add(target);
+    light.target = target;
+    light.position.set(-3, 4, 4);
+    camera.add(light);
+    const group = new T.Group();
+    scene.add(group);
+    const view = {
+      side,
+      canvas,
+      renderer,
+      scene,
+      camera,
+      controls,
+      group,
+      request: 0,
+      dirty: true,
+    };
+    views.push(view);
+    controls.addEventListener("change", () => {
+      view.dirty = true;
+      if (!linked.checked || syncing || !visible) return;
+      syncing = true;
+      for (const other of views)
+        if (other !== view) {
+          other.camera.position.copy(camera.position);
+          other.controls.target.copy(controls.target);
+          other.controls.update();
+          other.dirty = true;
+        }
+      syncing = false;
+    });
+    const select = document.getElementById("compareSelect" + side);
+    for (const w of catalog) select.add(new Option(w.short, w.id));
+    select.value = side === "Left" ? "longsword" : "yatagan";
+    select.onchange = () => load(view, select.value);
+    new ResizeObserver(() => resize(view)).observe(canvas.parentElement);
+  }
+  function resize(v) {
+    const r = v.canvas.parentElement.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    v.renderer.setSize(r.width, r.height, false);
+    v.camera.aspect = r.width / r.height;
+    v.camera.updateProjectionMatrix();
+    v.dirty = true;
+  }
+  function reset() {
+    syncing = true;
+    for (const v of views) {
+      resize(v);
+      v.controls.target.set(0, 0, 0);
+      const distance = Math.max(
+        9,
+        (5 /
+          Math.max(0.25, v.camera.aspect) /
+          Math.tan(T.MathUtils.degToRad(15.5))) *
+          1.2,
+      );
+      v.camera.position.set(0.04 * distance, 0.13 * distance, distance);
+      v.controls.update();
+      v.dirty = true;
+    }
+    // Matching camera and projection make linked orbiting predictable.
+    syncing = false;
+  }
+  function dispose(root) {
+    const textures = new Set();
+    root.traverse((o) => {
+      if (!o.isMesh) return;
+      o.geometry.dispose();
+      for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
+        Object.values(m).forEach((x) => {
+          if (x?.isTexture) textures.add(x);
+        });
+        m.dispose();
+      }
+    });
+    textures.forEach((t) => t.dispose());
+  }
+  async function load(v, id) {
+    const token = ++v.request,
+      state = document.getElementById("compareStatus" + v.side);
+    state.hidden = false;
+    state.textContent = "Loading model…";
+    try {
+      const root = (
+        await new GLTFLoader().loadAsync("./models/" + modelConfig[id].file)
+      ).scene;
+      if (token !== v.request) {
+        dispose(root);
+        return;
+      }
+      v.group.children.slice().forEach((o) => {
+        dispose(o);
+        v.group.remove(o);
+      });
+      root.updateMatrixWorld(true);
+      const cfg = modelConfig[id],
+        sign = catalog.find((w) => w.id === id).sign;
+      const c = new T.Vector3(...cfg.center),
+        u = new T.Vector3(...cfg.u),
+        a = new T.Vector3(...cfg.v),
+        w = new T.Vector3(...cfg.w),
+        mid = new T.Vector3(...cfg.mid),
+        scale = 10 / cfg.length;
+      root.traverse((mesh) => {
+        if (!mesh.isMesh) return;
+        const g = mesh.geometry.clone().applyMatrix4(mesh.matrixWorld),
+          p = g.attributes.position,
+          n = g.attributes.normal;
+        for (let i = 0; i < p.count; i++) {
+          const x = new T.Vector3().fromBufferAttribute(p, i).sub(c);
+          p.setXYZ(
+            i,
+            (x.dot(u) - mid.x) * scale * sign,
+            (x.dot(a) - mid.y) * scale,
+            (x.dot(w) - mid.z) * scale * sign,
+          );
+          if (n) {
+            const x = new T.Vector3().fromBufferAttribute(n, i);
+            n.setXYZ(i, x.dot(u) * sign, x.dot(a), x.dot(w) * sign);
+          }
+        }
+        g.computeBoundingSphere();
+        const material = (
+          Array.isArray(mesh.material) ? mesh.material[0] : mesh.material
+        ).clone();
+        material.side = T.DoubleSide;
+        if ("roughness" in material)
+          material.roughness = Math.max(0.35, material.roughness);
+        if ("envMapIntensity" in material) material.envMapIntensity = 1.45;
+        v.group.add(new T.Mesh(g, material));
+      });
+      // Materials now used by the normalized meshes share the source textures.
+      root.traverse((o) => {
+        if (o.isMesh) {
+          o.geometry.dispose();
+          (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) =>
+            m.dispose(),
+          );
+        }
+      });
+      const info = document.getElementById("compareInfo" + v.side),
+        h = history[id];
+      info.replaceChildren();
+      const title = document.createElement("h2");
+      title.textContent = catalog.find((w) => w.id === id).short;
+      const text = document.createElement("p");
+      text.textContent = h.context;
+      info.append(title, text);
+      for (const source of (h.sources || []).slice(0, 2)) {
+        const link = document.createElement("a");
+        link.textContent = source.title;
+        link.href = source.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        info.append(link);
+      }
+      state.hidden = true;
+      v.canvas.dataset.model = id;
+      v.dirty = true;
+    } catch (e) {
+      if (token === v.request) {
+        state.textContent = "Unable to load. Select the weapon again to retry.";
+      }
+    }
+  }
+  function tick() {
+    if (!visible) return;
+    for (const v of views) {
+      const changed = v.controls.update();
+      if (changed || v.dirty) {
+        v.renderer.render(v.scene, v.camera);
+        v.canvas.dataset.cameraPosition = v.camera.position
+          .toArray()
+          .map((x) => x.toFixed(4))
+          .join(",");
+        v.canvas.dataset.cameraTarget = v.controls.target
+          .toArray()
+          .map((x) => x.toFixed(4))
+          .join(",");
+        v.dirty = false;
+      }
+    }
+    frame = requestAnimationFrame(tick);
+  }
+  document.getElementById("compareReset").onclick = reset;
+  linked.onchange = () => {
+    if (linked.checked) reset();
+  };
+  return {
+    show() {
+      visible = true;
+      reset();
+      if (!panel.dataset.initialized) {
+        panel.dataset.initialized = "true";
+        views.forEach((v) =>
+          load(v, document.getElementById("compareSelect" + v.side).value),
+        );
+      }
+      cancelAnimationFrame(frame);
+      tick();
+    },
+    hide() {
+      visible = false;
+      cancelAnimationFrame(frame);
+    },
+  };
+}

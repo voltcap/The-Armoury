@@ -1,0 +1,159 @@
+[
+  {
+    "id": "i33",
+    "title": "Sword and buckler: manuscript I.33",
+    "date": "c. 1330",
+    "origin": "Germany",
+    "creator": "Unknown scribes and artists",
+    "shelfmark": "Royal Armouries, MSS I.33 (RAR.0033)",
+    "source": "https://royalarmouries.org/objects-and-stories/up-close-online-exhibition/medieval-german-fencing-manual",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "credit": "Royal Armouries. Resized and converted to WebP; full composition retained.",
+    "description": "This early-fourteenth-century German fight book depicts fencing with a sword and buckler. The author and precise place of production remain unknown.",
+    "relation": "A contemporary illustrated source for the study of sword-and-buckler fencing; it does not identify the supplied arming-sword model.",
+    "weapons": [
+      "arming",
+      "longsword"
+    ],
+    "image": "./assets/archive/i33.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "fiore-sword",
+    "title": "Combat with Sword",
+    "date": "c. 1410",
+    "origin": "Venice or Padua, Italy",
+    "creator": "Fiore Furlan dei Liberi da Premariacco; illustrator unknown",
+    "shelfmark": "Getty Museum, Ms. Ludwig XV 13 (83.MR.183), fol. 20v",
+    "source": "https://www.getty.edu/art/collection/object/108HND",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.",
+    "description": "A leaf from Fiore's illustrated fight book, made in Italy around 1410. Ink and tempera figures share the parchment with explanatory text.",
+    "relation": "A period example of how fighting knowledge was recorded; not documentation of the supplied replica.",
+    "weapons": [
+      "arming",
+      "longsword"
+    ],
+    "image": "./assets/archive/fiore-sword.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "fiore-mounted",
+    "title": "Equestrian Combat with Sword",
+    "date": "c. 1410",
+    "origin": "Venice or Padua, Italy",
+    "creator": "Fiore Furlan dei Liberi da Premariacco; illustrator unknown",
+    "shelfmark": "Getty Museum, Ms. Ludwig XV 13 (83.MR.183), fol. 43v",
+    "source": "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700007569",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.",
+    "description": "This folio belongs to the mounted-combat sections of Fiore's Flower of Battle. Its swords are represented in a specific illustrated teaching context.",
+    "relation": "A comparison for the representation of swords in an Italian fight book, rather than a model-identification source.",
+    "weapons": [
+      "longsword",
+      "arming"
+    ],
+    "image": "./assets/archive/fiore-mounted.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "fiore-pollaxe",
+    "title": "Combat with Pollaxe",
+    "date": "c. 1410",
+    "origin": "Venice or Padua, Italy",
+    "creator": "Fiore Furlan dei Liberi da Premariacco; illustrator unknown",
+    "shelfmark": "Getty Museum, Ms. Ludwig XV 13 (83.MR.183), fol. 36v",
+    "source": "https://www.getty.edu/art/collection/object/108HP6",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The J. Paul Getty Museum, Los Angeles. Digital image courtesy of Getty’s Open Content Program. Resized and converted to WebP; full composition retained.",
+    "description": "Fiore's manuscript includes illustrated pollaxe combat alongside sword, dagger and mounted material. The museum identifies this leaf as Combat with Pollaxe.",
+    "relation": "The pollaxe shown here is a different implement from the supplied Anglo-Saxon woodworking T-axe.",
+    "weapons": [
+      "axe",
+      "mace"
+    ],
+    "image": "./assets/archive/fiore-pollaxe.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "rustam",
+    "title": "Rustam's Fourth Course, He Cleaves a Witch",
+    "date": "c. 1525",
+    "origin": "Iran",
+    "creator": "Painting attributed to Qadimi; text by Abu'l Qasim Firdausi",
+    "shelfmark": "The Metropolitan Museum of Art, 1970.301.17; fol. 120v",
+    "source": "https://www.metmuseum.org/art/collection/search/452126",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Metropolitan Museum of Art, New York; Gift of Arthur A. Houghton Jr., 1970. Resized and converted to WebP; full composition retained.",
+    "description": "An early-sixteenth-century Iranian illustration of an episode in Firdausi's Shahnama. The sword belongs to a legendary narrative, not an eyewitness record of the ancient events.",
+    "relation": "An example of sword imagery in Persian manuscript painting. It does not establish an Arabian or Ottoman identity for the supplied curved-sword model.",
+    "weapons": [
+      "arabic",
+      "yatagan"
+    ],
+    "image": "./assets/archive/rustam.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "museum-katana",
+    "title": "Blade and mounting for a katana",
+    "date": "blade, 16th century; mounting, 19th century",
+    "origin": "Japan",
+    "creator": "Fittings inscribed by Takamoto Hidemune",
+    "shelfmark": "The Metropolitan Museum of Art, 36.25.1728a, b",
+    "source": "https://www.metmuseum.org/art/collection/search/24378",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Metropolitan Museum of Art, New York; Bequest of George C. Stone, 1935. Resized and converted to WebP; full composition retained.",
+    "description": "The museum dates the blade to the sixteenth century and its mounting to the nineteenth century. The fittings and blade therefore belong to different periods.",
+    "relation": "A historical comparison for sword mountings. The supplied dragon katana is fantasy artwork, not a reproduction of this object.",
+    "weapons": [
+      "katana"
+    ],
+    "image": "./assets/archive/museum-katana.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "museum-yatagan",
+    "title": "Yatagan with scabbard",
+    "date": "dated 1802–3",
+    "origin": "Balkans, probably Prizren",
+    "creator": "Maker unrecorded",
+    "shelfmark": "The Metropolitan Museum of Art, 32.75.261a, b",
+    "source": "https://www.metmuseum.org/art/collection/search/23379",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Metropolitan Museum of Art, New York; The Collection of Giovanni P. Morosini, presented by his daughter Giulia, 1932. Resized and converted to WebP; full composition retained.",
+    "description": "Dated 1802–3, this example has an inward-curving, single-edged blade and a guardless hilt with two flared pommel wings.",
+    "relation": "A documented comparison for the yatagan tradition, not an identification or date for the supplied model.",
+    "weapons": [
+      "yatagan"
+    ],
+    "image": "./assets/archive/museum-yatagan.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  },
+  {
+    "id": "museum-mace",
+    "title": "Italian mace",
+    "date": "c. 1550",
+    "origin": "Italy",
+    "creator": "Unknown Italian maker",
+    "shelfmark": "The Walters Art Museum, 51.529",
+    "source": "https://art.thewalters.org/object/51.529/",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "The Walters Art Museum; Acquired by Henry Walters, 1924. Resized and converted to WebP; full composition retained.",
+    "description": "A steel mace catalogued as Italian, about 1550. Its documented length is 62.2 cm.",
+    "relation": "An actual historical object for comparison with the supplied game model, whose date and maker are not authenticated.",
+    "weapons": [
+      "mace"
+    ],
+    "image": "./assets/archive/museum-mace.webp",
+    "imageChanges": "Resized and converted to WebP; full composition retained."
+  }
+]

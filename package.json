@@ -1,0 +1,18 @@
+{
+  "name": "the-armoury",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive study of weapon construction, historical imagery and craftsmanship.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check dist/app.js && node --check dist/suite.js && node --check dist/compare.js && node --check dist/clean-cut.js && node --check dist/data.js && node --check dist/research.js",
+    "test": "node --test tests/*.test.mjs",
+    "content": "node scripts/build-data.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

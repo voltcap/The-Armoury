@@ -1,0 +1,142 @@
+{
+  "gladius": {
+    "dateLabel": "1st century CE · Hod Hill comparison",
+    "dateStart": 1,
+    "dateEnd": 99,
+    "era": "Ancient",
+    "region": "Roman world",
+    "status": "Digital model",
+    "description": "The British Museum dates the Hod Hill comparison to the first century CE.",
+    "sources": [
+      {
+        "title": "British Museum · Sword from Hod Hill, 1892,0901.452",
+        "url": "https://www.britishmuseum.org/collection/object/H_1892-0901-452"
+      }
+    ]
+  },
+  "axe": {
+    "dateLabel": "AD 800s–1000s · Hurbuck comparison",
+    "dateStart": 800,
+    "dateEnd": 1099,
+    "era": "Early medieval",
+    "region": "England",
+    "status": "Modern replica",
+    "description": "The British Museum assigns this range to the Hurbuck woodworking tools.",
+    "sources": [
+      {
+        "title": "British Museum · Room 41 guide: Hurbuck woodworking tools",
+        "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
+        "locator": "Printed p. 297, Woodworking"
+      }
+    ]
+  },
+  "longsword": {
+    "dateLabel": "13th century · Fitzwilliam comparison",
+    "dateStart": 1225,
+    "dateEnd": 1300,
+    "era": "Medieval",
+    "region": "Western Europe",
+    "status": "Modern replica",
+    "description": "Fitzwilliam catalogues its hand-and-a-half sword within the thirteenth century; the model is a modern replica representation.",
+    "sources": [
+      {
+        "title": "Fitzwilliam Museum · Hand-and-a-half sword, HEN.M.185-1933",
+        "url": "https://data.fitzmuseum.cam.ac.uk/id/object/18814"
+      }
+    ]
+  },
+  "arming": {
+    "dateLabel": "ca. 1450 · Met comparison",
+    "dateStart": 1450,
+    "dateEnd": 1450,
+    "era": "Medieval",
+    "region": "Western Europe",
+    "status": "Digital model",
+    "description": "The Met comparison is Western European, possibly Italian, about 1450.",
+    "sources": [
+      {
+        "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+        "url": "https://www.metmuseum.org/art/collection/search/27458"
+      }
+    ]
+  },
+  "mace": {
+    "dateLabel": "ca. 1550 · Walters comparison",
+    "dateStart": 1550,
+    "dateEnd": 1550,
+    "era": "Early modern",
+    "region": "Europe",
+    "status": "Game model",
+    "description": "The Walters comparison is an Italian steel mace dated about 1550.",
+    "sources": [
+      {
+        "title": "The Walters Art Museum · Mace, ca. 1550, 51.529",
+        "url": "https://art.thewalters.org/object/51.529/"
+      }
+    ]
+  },
+  "yatagan": {
+    "dateLabel": "1802–3 · Met comparison",
+    "dateStart": 1802,
+    "dateEnd": 1803,
+    "era": "Modern",
+    "region": "Ottoman world / Balkans",
+    "status": "Digital model",
+    "description": "The dated comparison is Balkan, probably Prizren; this does not date the model.",
+    "sources": [
+      {
+        "title": "The Met · Yatagan with Scabbard, dated 1802–3, 32.75.261a, b",
+        "url": "https://www.metmuseum.org/art/collection/search/23379"
+      }
+    ]
+  },
+  "guards": {
+    "dateLabel": "1900 · regiment formed; model undated",
+    "dateStart": 1900,
+    "dateEnd": 1900,
+    "era": "Modern",
+    "region": "Britain",
+    "status": "Digital model",
+    "description": "The date marks the formation of the Irish Guards, not the manufacture of this model’s original.",
+    "sources": [
+      {
+        "title": "National Army Museum · The Irish Guards",
+        "url": "https://www.nam.ac.uk/explore/irish-guards"
+      }
+    ]
+  },
+  "arabic": {
+    "dateLabel": "Undated · Arabian sword comparison",
+    "dateStart": null,
+    "dateEnd": null,
+    "era": "Undated",
+    "region": "Arab world",
+    "status": "Digital model",
+    "description": "The AWM comparison has no manufacture date and was associated with First World War use.",
+    "sources": [
+      {
+        "title": "Australian War Memorial · Arabian Scimitar Sword, REL/10204",
+        "url": "https://www.awm.gov.au/collection/C227261"
+      }
+    ]
+  },
+  "katana": {
+    "dateLabel": "Undated · fantasy design",
+    "dateStart": null,
+    "dateEnd": null,
+    "era": "Fantasy",
+    "region": "Japan-inspired",
+    "status": "Fantasy",
+    "description": "Historical Japanese vocabulary is used for a fantasy design; no historical manufacture date is assigned.",
+    "sources": [
+      {
+        "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+        "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+      },
+      {
+        "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+        "url": "https://www.metmuseum.org/art/collection/search/24378"
+      }
+    ]
+  }
+}

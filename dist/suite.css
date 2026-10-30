@@ -1,0 +1,450 @@
+[hidden] {
+  display: none !important;
+}
+.book-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  border-bottom: 1px solid var(--line);
+  padding: 0 16px;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, transparent, #a7803210, transparent);
+}
+.book-nav button {
+  padding: 13px 4px 10px;
+  font-size: 16px;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+}
+.book-nav button.selected {
+  border-color: var(--gold);
+  color: var(--red);
+}
+.folio-page {
+  padding: 32px clamp(18px, 4vw, 65px) 50px;
+  min-height: 70svh;
+}
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.page-heading h1 {
+  font-size: 46px;
+}
+.page-heading label,
+.filters label {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+select {
+  font: 15px var(--serif);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--gold);
+  border-radius: 0;
+  padding: 9px 30px 9px 12px;
+  max-width: 100%;
+  min-height: 42px;
+}
+.page-note {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 900px;
+  margin: 0 0 26px;
+  line-height: 1.8;
+}
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+.archive-card {
+  border: 3px double var(--gold);
+  background: var(--stage);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.archive-image {
+  display: block;
+  width: 100%;
+  height: 320px;
+  padding: 15px;
+  background: #b7985914;
+  border-bottom: 1px solid var(--line);
+}
+.archive-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px #0002);
+}
+.archive-image:hover img {
+  filter: drop-shadow(0 3px 8px #704c2760);
+}
+.card-copy {
+  padding: 22px 25px 26px;
+}
+.card-copy h2,
+.timeline-entry h2,
+.craft-card h2 {
+  font: 32px/1.15 var(--gothic);
+  color: var(--blue);
+  margin: 8px 0 15px;
+  font-weight: 400;
+}
+.card-copy p,
+.craft-card p,
+.timeline-entry p {
+  line-height: 1.8;
+}
+.dateline {
+  font-size: 12px;
+  color: var(--red);
+  margin: 0;
+}
+.credit {
+  font-size: 11px;
+  color: var(--muted);
+}
+.source-links {
+  display: flex;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+.source-links a,
+.compare-info > a {
+  font-size: 12px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
+  line-height: 1.6;
+}
+.related-weapons {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.related-weapons button {
+  font-size: 12px;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+}
+.text-button {
+  color: var(--red);
+  border-bottom: 1px solid var(--gold);
+  padding: 6px 0;
+  margin-top: 13px;
+  font-size: 14px;
+}
+.count {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+dialog {
+  color: var(--ink);
+  background: var(--paper);
+  border: 3px double var(--gold);
+  padding: 20px;
+  width: min(1100px, 95vw);
+  max-height: 94svh;
+  box-shadow: 0 10px 80px #0009;
+}
+dialog::backdrop {
+  background: #05080bd9;
+}
+.dialog-toolbar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.dialog-toolbar h2 {
+  font: 27px var(--gothic);
+  margin: 0;
+}
+.dialog-toolbar button {
+  border: 1px solid var(--gold);
+  padding: 6px 16px;
+}
+.zoom-controls {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 13px;
+}
+.zoom-controls input {
+  width: 170px;
+}
+.zoom-surface {
+  max-height: 65svh;
+  overflow: auto;
+  text-align: center;
+  background: #9c7f3e14;
+}
+.zoom-surface img {
+  display: block;
+  margin: auto;
+  width: calc(100% * var(--zoom, 1));
+  max-width: none;
+  height: auto;
+}
+.filters {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-top: 1px solid var(--line);
+  padding: 26px 0;
+  gap: 35px;
+  max-width: 1100px;
+  margin: auto;
+}
+.timeline-date {
+  color: var(--red);
+  font-size: 22px;
+  border-left: 3px double var(--gold);
+  padding-left: 18px;
+}
+.timeline-date span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.timeline-entry p {
+  margin-top: 8px;
+}
+.craft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.craft-card {
+  position: relative;
+  border-top: 3px double var(--gold);
+  padding: 20px 6px;
+}
+.chapter-number {
+  font: 27px var(--gothic);
+  color: var(--gold);
+}
+.bibliography {
+  border-top: 3px double var(--gold);
+  margin-top: 35px;
+  padding-top: 10px;
+}
+.bibliography summary {
+  font: 32px var(--gothic);
+  color: var(--blue);
+  cursor: pointer;
+  padding: 15px 0;
+}
+.bibliography ol {
+  padding-left: 20px;
+  columns: 2;
+  column-gap: 45px;
+}
+.bibliography li {
+  break-inside: avoid;
+  padding: 0 0 18px 8px;
+}
+.bibliography a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+.bibliography li span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.bibliography li p {
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+.compare-options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.compare-options label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.compare-options input {
+  accent-color: var(--gold);
+}
+.compare-options button {
+  border: 1px solid var(--gold);
+  padding: 8px 15px;
+  font-size: 13px;
+}
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.compare-card {
+  min-width: 0;
+}
+.compare-card > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.compare-stage {
+  height: 360px;
+  position: relative;
+  margin-top: 18px;
+  border: 3px double var(--gold);
+  background: radial-gradient(ellipse, var(--stage), transparent);
+}
+.compare-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+.compare-stage p {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+  font-size: 13px;
+  margin: 0;
+}
+.compare-info h2 {
+  font: 32px var(--gothic);
+  color: var(--blue);
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+.compare-info p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.compare-info > a {
+  display: block;
+  margin-top: 10px;
+}
+#partSources {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+#partSources a {
+  font-size: 11px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+@media (max-width: 1000px) {
+  .craft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .archive-image {
+    height: 270px;
+  }
+  .compare-stage {
+    height: 300px;
+  }
+  .book-nav {
+    gap: 22px;
+  }
+}
+@media (max-width: 660px) {
+  .book-nav {
+    gap: 7px;
+    justify-content: space-between;
+    padding: 0 11px;
+    flex-wrap: nowrap;
+  }
+  .book-nav button {
+    font-size: 12px;
+    padding: 13px 1px 10px;
+  }
+  .folio-page {
+    padding: 24px 14px 32px;
+  }
+  .page-heading h1 {
+    font-size: 36px;
+  }
+  .archive-grid,
+  .craft-grid,
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+  .archive-image {
+    height: 300px;
+  }
+  .card-copy {
+    padding: 18px;
+  }
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 0;
+  }
+  .timeline-date {
+    font-size: 19px;
+  }
+  .timeline-date span {
+    display: inline;
+    margin-left: 12px;
+  }
+  .filters {
+    gap: 12px;
+  }
+  .filters label {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .filters select {
+    font-size: 13px;
+  }
+  .bibliography ol {
+    columns: 1;
+  }
+  .compare-stage {
+    height: 275px;
+  }
+  .compare-options {
+    gap: 12px;
+  }
+  .page-note {
+    font-size: 13px;
+  }
+  .card-copy h2,
+  .craft-card h2 {
+    font-size: 29px;
+  }
+  .dialog-toolbar h2 {
+    font-size: 21px;
+  }
+  .zoom-controls input {
+    width: 120px;
+  }
+}

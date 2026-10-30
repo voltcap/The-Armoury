@@ -1,0 +1,79 @@
+[
+  {
+    "title": "The tang and the assembled hilt",
+    "text": "La Rocca describes a common European assembly: guard, grip and pommel fitted around the tang, with its projecting tip hammered over. The exploded surfaces show visible pieces; they cannot establish hidden joints or a full tang where none was modeled.",
+    "weapon": "longsword",
+    "feature": "Peened terminal",
+    "sources": [
+      {
+        "title": "Donald J. La Rocca · Sword and Dagger Pommels Associated with the Crusades, Part I (2011)",
+        "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_Journal_v_46_2011.pdf#page=134",
+        "locator": "Printed p. 133, opening discussion of construction and remounting"
+      }
+    ]
+  },
+  {
+    "title": "Quillons and blade marks",
+    "text": "On the Met’s sword of about 1450, the guard’s arms are quillons. Its blade carries copper-inlaid marks, including a running wolf associated with Passau. Such marks belong to a particular object; they should not be assigned to this model without visible evidence.",
+    "weapon": "arming",
+    "feature": "Quillon ends",
+    "sources": [
+      {
+        "title": "The Met · Sword, possibly Italian, ca. 1450, 14.25.1096",
+        "url": "https://www.metmuseum.org/art/collection/search/27458"
+      }
+    ]
+  },
+  {
+    "title": "A pommel as a decorated surface",
+    "text": "A Met pommel dated to the twelfth–thirteenth century carries an enamelled lion and heraldic shield. This offers a historical example of decoration on the hilt terminal, rather than a reading of this model’s uninscribed pommel.",
+    "weapon": "arming",
+    "feature": "Pommel face",
+    "sources": [
+      {
+        "title": "The Met · Sword Pommel, 2015.696",
+        "url": "https://www.metmuseum.org/art/collection/search/665677"
+      }
+    ]
+  },
+  {
+    "title": "Japanese blades and their mountings",
+    "text": "A blade and its mounting need not be contemporary. The Met’s comparison combines a sixteenth-century blade with nineteenth-century fittings. Worcester’s disassembled katana identifies a habaki, fuchi and kashira, illustrating distinct areas of specialist metalwork.",
+    "weapon": "katana",
+    "feature": "Habaki",
+    "sources": [
+      {
+        "title": "The Met · Blade and Mounting for a Sword (Katana), 36.25.1728a, b",
+        "url": "https://www.metmuseum.org/art/collection/search/24378"
+      },
+      {
+        "title": "Worcester Art Museum · Parts for a katana sword, 2014.336.4",
+        "url": "https://worcester.emuseum.com/objects/59435/parts-for-a-katana-sword"
+      }
+    ]
+  },
+  {
+    "title": "Paired plaques and the yatagan’s ears",
+    "text": "The British Museum’s nineteenth-century Albanian yatagan has two bone grip plaques riveted to its tang. Their flared ends make the characteristic ears. The supplied model’s scales can be isolated, but their digital surfaces do not prove bone or the hidden fastening method.",
+    "weapon": "yatagan",
+    "feature": "Grip plaques",
+    "sources": [
+      {
+        "title": "British Museum · Yatagan, Eu1980,12.13",
+        "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
+      }
+    ]
+  },
+  {
+    "title": "Carrying fittings have their own craft",
+    "text": "Royal Museums Greenwich records a leather Royal Marines scabbard dated 1830 with gilt lockets, rings and a chape. These fittings reinforce and decorate the sheath and support suspension. It is a comparison for carrying furniture, not an identification of the Irish Guards model.",
+    "weapon": "guards",
+    "feature": "Suspension rings",
+    "sources": [
+      {
+        "title": "Royal Museums Greenwich · Sword Scabbard, WPN1022.1",
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-534736"
+      }
+    ]
+  }
+]
