@@ -1,0 +1,2982 @@
+{
+  "toolVersions": {
+    "gltfTransform": "4.5.1",
+    "meshoptimizer": "1.3.0",
+    "sharp": "0.35.5"
+  },
+  "method": {
+    "meshopt": "lossless, no quantization or filtering",
+    "color": "WebP quality 90",
+    "data": "WebP lossless",
+    "maximumTextureDimension": 2048,
+    "meshOrder": "preserved",
+    "nodeTransforms": "preserved"
+  },
+  "models": [
+    {
+      "file": "arabic_sword.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/arabic-sword-7c81e1ac5a55446cafa39b3c628361db",
+      "before": {
+        "file": "arabic_sword.glb",
+        "bytes": 1859280,
+        "sha256": "d3810f4a6c30006633597b576e952265d8adf36014fc99d4ace09cba7201c538",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 2214,
+        "triangles": 1896,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 280217,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 592152,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 854849,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "arabic_sword.glb",
+        "bytes": 1327472,
+        "sha256": "c7be3bc1c37847453e6863755fdd001836b66b94a7ccaaf95978c1b213076a2e",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 2214,
+        "triangles": 1896,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 73792,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 472246,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 701620,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 28.6,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "bronze_age_sword_oc078.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa",
+      "before": {
+        "file": "bronze_age_sword_oc078.glb",
+        "bytes": 4891040,
+        "sha256": "b56dc070f3f59f2eb67c4dfae37740a0d7b8cb3241cfff158c6075be82ea4d8e",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 52438,
+        "triangles": 100460,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 23714,
+            "width": 1024,
+            "height": 1024,
+            "channels": 4,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 8205,
+            "width": 1024,
+            "height": 1024,
+            "channels": 2,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1416793,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 552795,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "bronze_age_sword_oc078.glb",
+        "bytes": 2440728,
+        "sha256": "af1aebff8321394ef8ceec09cd87984376a9c55ba9226ba3208952570322ecb2",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 52386,
+        "triangles": 100434,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 183174,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 520350,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 50.1,
+      "verification": {
+        "retainedSwordGeometryAttributesByteExact": true,
+        "retainedSwordTriangleOrderWindingCornersExact": true,
+        "retainedSwordWorldTransformExact": true,
+        "retainedSwordComparedDirectlyWithOriginalSource": true,
+        "retainedMaterialsAndTexturesUnchanged": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024,
+            "sourceTextureIndex": 2,
+            "retainedEncodedBytesExact": true
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024,
+            "sourceTextureIndex": 3,
+            "retainedEncodedBytesExact": true
+          }
+        ]
+      },
+      "afterBeforeHelperRemoval": {
+        "file": "bronze_age_sword_oc078.glb",
+        "bytes": 2470316,
+        "sha256": "0a42e055980faee909fa1943159747aa4df54e87f0d5fa896148e3e0756a0bd2",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 52438,
+        "triangles": 100460,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 16608,
+            "width": 1024,
+            "height": 1024,
+            "channels": 4,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 6762,
+            "width": 1024,
+            "height": 1024,
+            "channels": 4,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 183174,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 520350,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "modifications": {
+        "helperRemoval": {
+          "sourceSwordMesh": 0,
+          "retainedNode": "Celtic_Bronze_Leaf_0",
+          "removedMeshCount": 3,
+          "removedNodeNames": [
+            "Scale_Cube_0",
+            "Cube_0",
+            "Cube.001_0"
+          ],
+          "removedUnusedResources": true,
+          "retainedVertexCount": 52386,
+          "retainedWorldMatrix": [
+            0.016763283820204627,
+            0.48230282872419683,
+            -0.8758484996758504,
+            0,
+            0.03042997228922723,
+            0.8753191887467978,
+            0.48259328381492667,
+            0,
+            0.9994008112544324,
+            -0.03474191933829428,
+            -2.8287239386778774e-06,
+            0,
+            4.297476114158629,
+            10.058222183041574,
+            1.4936577588653561,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "file": "dragon_katana_oni_koroshi.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/dragon-katana-oni-koroshi-778d3dfe4cc549dd93c9bdc5ad78a420",
+      "before": {
+        "file": "dragon_katana_oni_koroshi.glb",
+        "bytes": 7077916,
+        "sha256": "9b43b6251d58d0f0e31ab2df747e2b15cedb98f0278ac616c579bff55a96e22d",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 49718,
+        "triangles": 79986,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 688858,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1350798,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1689024,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "dragon_katana_oni_koroshi.glb",
+        "bytes": 4852608,
+        "sha256": "c3e82253dec084e703a16483eca9676b979dbcb612345035a690dbb34d4cb48f",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 49718,
+        "triangles": 79986,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 187842,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1134938,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1508590,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 31.44,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "english_hanger_oc059.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d",
+      "before": {
+        "file": "english_hanger_oc059.glb",
+        "bytes": 6321440,
+        "sha256": "69162447e460b11a1f412ff645ff70e6b1d2ff15f59b242681823e3aea2ccbdc",
+        "meshCount": 6,
+        "primitiveCount": 6,
+        "vertices": 40473,
+        "triangles": 72268,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1138798,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 795351,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1525162,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 591814,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "english_hanger_oc059.glb",
+        "bytes": 2783388,
+        "sha256": "0bdf5ba54fd6f80217fd422d5099156441bcf39c240b9d50c21f6d3b4905ee8a",
+        "meshCount": 6,
+        "primitiveCount": 6,
+        "vertices": 40473,
+        "triangles": 72268,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 133958,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 561910,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 240934,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 540516,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 55.97,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 3,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "irish_guards_sword.glb",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+      "source": "https://sketchfab.com/3d-models/irish-guards-sword-e46c8756e47e41a4a272e697819d4574",
+      "before": {
+        "file": "irish_guards_sword.glb",
+        "bytes": 1894780,
+        "sha256": "f878a45c147c1d004ac0a03a7873d02169ef956bb1efd4836c76280105b9d188",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 8395,
+        "triangles": 11936,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 424475,
+            "width": 512,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 491679,
+            "width": 512,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 425931,
+            "width": 512,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "irish_guards_sword.glb",
+        "bytes": 1158876,
+        "sha256": "0bff64d27fec00877000358cdb3d06b7d96623e54c9ae98c99b0ba4c0a463b55",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 8395,
+        "triangles": 11936,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 44604,
+            "width": 512,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 386254,
+            "width": 512,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 354626,
+            "width": 512,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 38.84,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 512,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 512,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 512,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "italian_arming_sword.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/italian-arming-sword-bc94205221904de8a82471f389c1562e",
+      "before": {
+        "file": "italian_arming_sword.glb",
+        "bytes": 8309692,
+        "sha256": "5c1c8e74c759386721a13c5988c3f2f6f63816381aedae703c69b9056af84129",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 73839,
+        "triangles": 125088,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1445109,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 745458,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1069669,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "italian_arming_sword.glb",
+        "bytes": 4275900,
+        "sha256": "ec5585c285ac71de3f906868c4f0387f750416007aa77d0427a243b9d3b22e4b",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 73839,
+        "triangles": 125088,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 254992,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 518952,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 905012,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 48.54,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "medieval_steel_mace_game_model.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/medieval-steel-mace-game-model-70f78341e5124b4b895dd40389d34eb9",
+      "before": {
+        "file": "medieval_steel_mace_game_model.glb",
+        "bytes": 3591696,
+        "sha256": "2840785e1015798549c46399b3957b1b9f5994ea0458414a667b2fc8b0e23c45",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 2086,
+        "triangles": 1516,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1129552,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1112051,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1228727,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "medieval_steel_mace_game_model.glb",
+        "bytes": 2131364,
+        "sha256": "c4c288babdd6959b850f4bc1914a827c81fae6dd7d0866d608eca23db650f5d1",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 2086,
+        "triangles": 1516,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 150226,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 872298,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1039276,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 40.66,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "milanese_rapier.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2",
+      "before": {
+        "file": "milanese_rapier.glb",
+        "bytes": 6882936,
+        "sha256": "901a2455c70e892e16e393631a83796426a5d3f46fdb7103e6929be746d3e928",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 72393,
+        "triangles": 97664,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 533136,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 574042,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 1124802,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "milanese_rapier.glb",
+        "bytes": 4783432,
+        "sha256": "02f80eeede1d9e355622b1b1e77c0548b1f737012c458ca6b395c843fc0f9876",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 72393,
+        "triangles": 97664,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 184300,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 540216,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1523764,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 30.5,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "moonbrand_arming_sword.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec",
+      "before": {
+        "file": "moonbrand_arming_sword.glb",
+        "bytes": 5070392,
+        "sha256": "a919fc8121845ea71e6e7ac1b881b1280d2440b681ce9db39a0021f39728e7e6",
+        "meshCount": 31,
+        "primitiveCount": 31,
+        "vertices": 24713,
+        "triangles": 44864,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 649726,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 962097,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 797314,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 149645,
+            "width": 1024,
+            "height": 1024,
+            "channels": 4,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "emissiveTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 88093,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 12868,
+            "width": 1024,
+            "height": 1024,
+            "channels": 2,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          }
+        ]
+      },
+      "after": {
+        "file": "moonbrand_arming_sword.glb",
+        "bytes": 3290776,
+        "sha256": "0458875ebcee79f830d51094a2df82c7e0df49f1caadcfebd597edbbbaa55386",
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "vertices": 24149,
+        "triangles": 44582,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 281626,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 685874,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1286590,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 35.1,
+      "verification": {
+        "retainedSwordGeometryAttributesByteExact": true,
+        "retainedSwordTriangleOrderWindingCornersExact": true,
+        "retainedSwordWorldTransformExact": true,
+        "retainedSwordComparedDirectlyWithOriginalSource": true,
+        "retainedMaterialsAndTexturesUnchanged": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024,
+            "sourceTextureIndex": 0,
+            "retainedEncodedBytesExact": true
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024,
+            "sourceTextureIndex": 1,
+            "retainedEncodedBytesExact": true
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024,
+            "sourceTextureIndex": 2,
+            "retainedEncodedBytesExact": true
+          }
+        ]
+      },
+      "afterBeforeHelperRemoval": {
+        "file": "moonbrand_arming_sword.glb",
+        "bytes": 3808120,
+        "sha256": "63ae096d93f8af80de82e54cd790e0a55d6c05f4d5af5bf078ebd71e1ec65362",
+        "meshCount": 31,
+        "primitiveCount": 31,
+        "vertices": 24713,
+        "triangles": 44864,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 281626,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 685874,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1286590,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 68406,
+            "width": 1024,
+            "height": 1024,
+            "channels": 4,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "emissiveTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 26162,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 8250,
+            "width": 1024,
+            "height": 1024,
+            "channels": 4,
+            "hasAlpha": true,
+            "isOpaque": false,
+            "alphaRange": [
+              0,
+              255
+            ]
+          }
+        ]
+      },
+      "modifications": {
+        "helperRemoval": {
+          "sourceSwordMesh": 0,
+          "retainedNode": "Object_4",
+          "removedMeshCount": 30,
+          "removedNodeNames": [
+            "Object_6",
+            "Object_8",
+            "Object_10",
+            "Object_12",
+            "Object_14",
+            "Object_16",
+            "Object_18",
+            "Object_20",
+            "Object_22",
+            "Object_24",
+            "Object_26",
+            "Object_28",
+            "Object_30",
+            "Object_32",
+            "Object_34",
+            "Object_36",
+            "Object_38",
+            "Object_40",
+            "Object_42",
+            "Object_44",
+            "Object_46",
+            "Object_48",
+            "Object_50",
+            "Object_52",
+            "mesh_25",
+            "mesh_26",
+            "mesh_27",
+            "mesh_28",
+            "mesh_29",
+            "mesh_30",
+            "Plane_1",
+            "Plane.001_2",
+            "Plane.002_3",
+            "Plane.003_4",
+            "Plane.004_5",
+            "Plane.005_6",
+            "Plane.006_7",
+            "Plane.007_8",
+            "Plane.008_9",
+            "Plane.009_10",
+            "Plane.010_11",
+            "Plane.011_12",
+            "Overall Length_13",
+            "Grip Length.001_14",
+            "Overall Length.001_15",
+            "Plane.012_17",
+            "Plane.013_18",
+            "Plane.014_19",
+            "Plane.015_20",
+            "Plane.016_21",
+            "Plane.017_22",
+            "Plane.018_23",
+            "Plane.019_24",
+            "LEdge.001_27",
+            "UEdge.004_28"
+          ],
+          "removedUnusedResources": true,
+          "retainedVertexCount": 24149,
+          "retainedWorldMatrix": [
+            -4.055057018245377e-10,
+            -0.009780636031543435,
+            -0.0020829742723930227,
+            0,
+            -0.009999981150030913,
+            7.800299490993505e-10,
+            -1.715882759962435e-09,
+            0,
+            1.8407241789628003e-09,
+            0.0020829742723929186,
+            -0.009780636031543293,
+            0,
+            0.45195111352950335,
+            0.0005796151817774239,
+            -0.008625623770058103,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "file": "oakeshott_type_xiia_longsword_albion_baron.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/oakeshott-type-xiia-longsword-albion-baron-b2a37689b7054a93b3a4ce12e48e54f4",
+      "before": {
+        "file": "oakeshott_type_xiia_longsword_albion_baron.glb",
+        "bytes": 8945236,
+        "sha256": "3144dceba7eadf22bb865060fadab106d6a71e9f7325f8fae165ed8218020ad9",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 58394,
+        "triangles": 100364,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 246898,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 393472,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 435251,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 441099,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1561975,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 87617,
+            "width": 512,
+            "height": 512,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 6,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 548110,
+            "width": 512,
+            "height": 512,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 7,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 709239,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 8,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 560257,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "oakeshott_type_xiia_longsword_albion_baron.glb",
+        "bytes": 5538596,
+        "sha256": "ec0421b03c87620bcab63bf5da28e59f76cfd98e3858a712cc41aa3a6aca2a12",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 58394,
+        "triangles": 100364,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 29486,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 350958,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 108964,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 414786,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1363178,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 75394,
+            "width": 512,
+            "height": 512,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 6,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 517714,
+            "width": 512,
+            "height": 512,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 7,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 86194,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 8,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 380050,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 38.08,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 3,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 4,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 5,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 512,
+            "height": 512
+          },
+          {
+            "index": 6,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 512,
+            "height": 512
+          },
+          {
+            "index": 7,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 8,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "replica_anglo-saxon_t-axe.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/replica-anglo-saxon-t-axe-f10adc47456d427fa19fb3a90db18460",
+      "before": {
+        "file": "replica_anglo-saxon_t-axe.glb",
+        "bytes": 6974092,
+        "sha256": "083bada6086cab78857b821018ca0bd69624aa67a8b0015533b05b0b90a65672",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 99034,
+        "triangles": 184743,
+        "textures": []
+      },
+      "after": {
+        "file": "replica_anglo-saxon_t-axe.glb",
+        "bytes": 4118768,
+        "sha256": "60744079e5c8b13209af62dabec0554622f46f55a9b28e17d0edaf086803e17d",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 99034,
+        "triangles": 184743,
+        "textures": []
+      },
+      "reductionPercent": 40.94,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": []
+      }
+    },
+    {
+      "file": "roman_gladius.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/roman-gladius-d192d804036b4a5c9b2a7a5d1b18114a",
+      "before": {
+        "file": "roman_gladius.glb",
+        "bytes": 7110280,
+        "sha256": "51fa8bfb1441156cf67e9faf898f3af58735d9b236b4db1156e28070e82416d1",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 7797,
+        "triangles": 11389,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1170836,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 907306,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1565968,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 1234058,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 791667,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 924613,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "roman_gladius.glb",
+        "bytes": 4043000,
+        "sha256": "75a5eda1d5c2889bd728fdfb95bbcc61745698759302f5a49e6c5db3325b7262",
+        "meshCount": 2,
+        "primitiveCount": 2,
+        "vertices": 7797,
+        "triangles": 11389,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 144110,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 643296,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 1349820,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 232062,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 574478,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 784584,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 43.14,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 3,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 4,
+            "slots": [
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 5,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "file": "yatagan_sword_ottoman.glb",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/yatagan-sword-ottoman-ad0b79e358f24b96a44fd7cf3b89f71d",
+      "before": {
+        "file": "yatagan_sword_ottoman.glb",
+        "bytes": 3468492,
+        "sha256": "802015f99e43e12db16b85e0912b3d278c65f051eecd4af440db7e253049c89b",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 1656,
+        "triangles": 2296,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 78342,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 90427,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 654208,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 253194,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 549555,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 873710,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 6,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/jpeg",
+            "bytes": 127536,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 7,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 43082,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 8,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/png",
+            "bytes": 683374,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "after": {
+        "file": "yatagan_sword_ottoman.glb",
+        "bytes": 2379584,
+        "sha256": "f731de30c021571c4206a23ad42fe21aea7b913aba6731cf958a994fb692f143",
+        "meshCount": 4,
+        "primitiveCount": 4,
+        "vertices": 1656,
+        "triangles": 2296,
+        "textures": [
+          {
+            "index": 0,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 14952,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 1,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 66966,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 2,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 483484,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 3,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 70290,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 4,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 464892,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 5,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 656748,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 6,
+            "name": "",
+            "slots": [
+              "baseColorTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 33968,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 7,
+            "name": "",
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 27258,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          },
+          {
+            "index": 8,
+            "name": "",
+            "slots": [
+              "normalTexture"
+            ],
+            "mime": "image/webp",
+            "bytes": 484764,
+            "width": 1024,
+            "height": 1024,
+            "channels": 3,
+            "hasAlpha": false,
+            "isOpaque": true,
+            "alphaRange": null
+          }
+        ]
+      },
+      "reductionPercent": 31.39,
+      "verification": {
+        "sceneHierarchyTransformsMeshPrimitiveMaterialOrderExact": true,
+        "allVertexAttributeBytesExact": true,
+        "triangleOrderWindingCornersExact": true,
+        "textureChecks": [
+          {
+            "index": 0,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 1,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 2,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 3,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 4,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 5,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 6,
+            "slots": [
+              "baseColorTexture"
+            ],
+            "encoding": "WebP quality 90",
+            "dataPixelsExact": false,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 7,
+            "slots": [
+              "occlusionTexture",
+              "metallicRoughnessTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "index": 8,
+            "slots": [
+              "normalTexture"
+            ],
+            "encoding": "WebP lossless",
+            "dataPixelsExact": true,
+            "alphaExact": true,
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Credits and asset licenses
 
-The code license does not replace the licenses of these assets. Credit the listed creators when redistributing models. No modifications were made to the model files; study cuts and grouping happen at runtime.
+The code license does not replace the licenses of these assets. Credit the listed creators when redistributing models. Display derivatives use lossless mesh compression and WebP textures. Normal and packed material maps retain identical pixels; base color uses quality 90. Sword geometry and world transforms are preserved. Annotation and scale helpers were removed from the Bronze Age and Moonbrand scans. Study cuts and grouping happen at runtime. Original and display checksums, modification notes and provenance are recorded in `dist/models/credits.json` and `dist/models/optimization.json`.
 
 ## Models
 
@@ -15,6 +15,10 @@ The code license does not replace the licenses of these assets. Credit the liste
 | [Replica Anglo-Saxon T-Axe](https://sketchfab.com/3d-models/replica-anglo-saxon-t-axe-f10adc47456d427fa19fb3a90db18460)                                     | The Sutton Hoo Ships Company (https://sketchfab.com/thesuttonhooship) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Roman Gladius](https://sketchfab.com/3d-models/roman-gladius-d192d804036b4a5c9b2a7a5d1b18114a)                                                             | Ahsan.Faraz (https://sketchfab.com/Ahsan.Faraz)                       | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
 | [Yatagan Sword (Ottoman)](https://sketchfab.com/3d-models/yatagan-sword-ottoman-ad0b79e358f24b96a44fd7cf3b89f71d)                                           | MustafaYerebasmaz (https://sketchfab.com/Mustafa97)                   | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)       |
+| [Moonbrand (Early 14th C Arming Sword)](https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec) | The Oakeshott Institute (https://sketchfab.com/oakeshott) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) |
+| [Bronze Age Sword](https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa) | The Oakeshott Institute (https://sketchfab.com/oakeshott) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) |
+| [18th Century English Hanger](https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d) | The Oakeshott Institute (https://sketchfab.com/oakeshott) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) |
+| [Milanese Rapier](https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2) | The Oakeshott Institute (https://sketchfab.com/oakeshott) | CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) |
 
 The Irish Guards sword is restricted to noncommercial use under its asset license. Do not apply the code’s MIT license to this model. SHA-256 checksums are recorded in `dist/models/credits.json`.
 
@@ -76,3 +80,9 @@ Unknown Italian maker. The Walters Art Museum, 51.529. c. 1550.
 - The custom decorative border is provided under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 Historical books linked in the Reading room are not included in the repository. Their availability online does not grant redistribution rights to the entire books or their illustrations.
+
+## Model compression decoder
+
+Meshoptimizer 1.3.0 by Arseny Kapoulkine and contributors. MIT license, retained at `dist/vendor/libs/meshoptimizer-LICENSE.md`.
+
+The four additional historical scans were retrieved from the published Objaverse GLB mirror and matched to the Oakeshott Institute’s creator records and embedded source identifiers. Each model retains its individual CC BY 4.0 attribution.

@@ -5,7 +5,10 @@
     "author": "ksa2030 (https://sketchfab.com/ksa2030)",
     "source": "https://sketchfab.com/3d-models/arabic-sword-7c81e1ac5a55446cafa39b3c628361db",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "d3810f4a6c30006633597b576e952265d8adf36014fc99d4ace09cba7201c538"
+    "sha256": "c7be3bc1c37847453e6863755fdd001836b66b94a7ccaaf95978c1b213076a2e",
+    "sourceSha256": "d3810f4a6c30006633597b576e952265d8adf36014fc99d4ace09cba7201c538",
+    "bytes": 1327472,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "dragon_katana_oni_koroshi.glb",
@@ -13,7 +16,10 @@
     "author": "Sky_Hunter (https://sketchfab.com/Sky_Hunter)",
     "source": "https://sketchfab.com/3d-models/dragon-katana-oni-koroshi-778d3dfe4cc549dd93c9bdc5ad78a420",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "9b43b6251d58d0f0e31ab2df747e2b15cedb98f0278ac616c579bff55a96e22d"
+    "sha256": "c3e82253dec084e703a16483eca9676b979dbcb612345035a690dbb34d4cb48f",
+    "sourceSha256": "9b43b6251d58d0f0e31ab2df747e2b15cedb98f0278ac616c579bff55a96e22d",
+    "bytes": 4852608,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "irish_guards_sword.glb",
@@ -21,7 +27,10 @@
     "author": "Arnold Konrad (https://sketchfab.com/akonrad)",
     "source": "https://sketchfab.com/3d-models/irish-guards-sword-e46c8756e47e41a4a272e697819d4574",
     "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-    "sha256": "f878a45c147c1d004ac0a03a7873d02169ef956bb1efd4836c76280105b9d188"
+    "sha256": "0bff64d27fec00877000358cdb3d06b7d96623e54c9ae98c99b0ba4c0a463b55",
+    "sourceSha256": "f878a45c147c1d004ac0a03a7873d02169ef956bb1efd4836c76280105b9d188",
+    "bytes": 1158876,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "italian_arming_sword.glb",
@@ -29,7 +38,10 @@
     "author": "The Oakeshott Institute (https://sketchfab.com/oakeshott)",
     "source": "https://sketchfab.com/3d-models/italian-arming-sword-bc94205221904de8a82471f389c1562e",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "5c1c8e74c759386721a13c5988c3f2f6f63816381aedae703c69b9056af84129"
+    "sha256": "ec5585c285ac71de3f906868c4f0387f750416007aa77d0427a243b9d3b22e4b",
+    "sourceSha256": "5c1c8e74c759386721a13c5988c3f2f6f63816381aedae703c69b9056af84129",
+    "bytes": 4275900,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "medieval_steel_mace_game_model.glb",
@@ -37,7 +49,10 @@
     "author": "Michael Makivic (https://sketchfab.com/makivic)",
     "source": "https://sketchfab.com/3d-models/medieval-steel-mace-game-model-70f78341e5124b4b895dd40389d34eb9",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "2840785e1015798549c46399b3957b1b9f5994ea0458414a667b2fc8b0e23c45"
+    "sha256": "c4c288babdd6959b850f4bc1914a827c81fae6dd7d0866d608eca23db650f5d1",
+    "sourceSha256": "2840785e1015798549c46399b3957b1b9f5994ea0458414a667b2fc8b0e23c45",
+    "bytes": 2131364,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "oakeshott_type_xiia_longsword_albion_baron.glb",
@@ -45,7 +60,10 @@
     "author": "leeeck (https://sketchfab.com/leeeck)",
     "source": "https://sketchfab.com/3d-models/oakeshott-type-xiia-longsword-albion-baron-b2a37689b7054a93b3a4ce12e48e54f4",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "3144dceba7eadf22bb865060fadab106d6a71e9f7325f8fae165ed8218020ad9"
+    "sha256": "ec0421b03c87620bcab63bf5da28e59f76cfd98e3858a712cc41aa3a6aca2a12",
+    "sourceSha256": "3144dceba7eadf22bb865060fadab106d6a71e9f7325f8fae165ed8218020ad9",
+    "bytes": 5538596,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "replica_anglo-saxon_t-axe.glb",
@@ -53,7 +71,10 @@
     "author": "The Sutton Hoo Ships Company (https://sketchfab.com/thesuttonhooship)",
     "source": "https://sketchfab.com/3d-models/replica-anglo-saxon-t-axe-f10adc47456d427fa19fb3a90db18460",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "083bada6086cab78857b821018ca0bd69624aa67a8b0015533b05b0b90a65672"
+    "sha256": "60744079e5c8b13209af62dabec0554622f46f55a9b28e17d0edaf086803e17d",
+    "sourceSha256": "083bada6086cab78857b821018ca0bd69624aa67a8b0015533b05b0b90a65672",
+    "bytes": 4118768,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "roman_gladius.glb",
@@ -61,7 +82,10 @@
     "author": "Ahsan.Faraz (https://sketchfab.com/Ahsan.Faraz)",
     "source": "https://sketchfab.com/3d-models/roman-gladius-d192d804036b4a5c9b2a7a5d1b18114a",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "51fa8bfb1441156cf67e9faf898f3af58735d9b236b4db1156e28070e82416d1"
+    "sha256": "75a5eda1d5c2889bd728fdfb95bbcc61745698759302f5a49e6c5db3325b7262",
+    "sourceSha256": "51fa8bfb1441156cf67e9faf898f3af58735d9b236b4db1156e28070e82416d1",
+    "bytes": 4043000,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   },
   {
     "file": "yatagan_sword_ottoman.glb",
@@ -69,6 +93,53 @@
     "author": "MustafaYerebasmaz (https://sketchfab.com/Mustafa97)",
     "source": "https://sketchfab.com/3d-models/yatagan-sword-ottoman-ad0b79e358f24b96a44fd7cf3b89f71d",
     "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-    "sha256": "802015f99e43e12db16b85e0912b3d278c65f051eecd4af440db7e253049c89b"
+    "sha256": "f731de30c021571c4206a23ad42fe21aea7b913aba6731cf958a994fb692f143",
+    "sourceSha256": "802015f99e43e12db16b85e0912b3d278c65f051eecd4af440db7e253049c89b",
+    "bytes": 2379584,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
+  },
+  {
+    "file": "moonbrand_arming_sword.glb",
+    "author": "The Oakeshott Institute (https://sketchfab.com/oakeshott)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec",
+    "title": "Moonbrand (Early 14th C Arming Sword)",
+    "sourceSha256": "a919fc8121845ea71e6e7ac1b881b1280d2440b681ce9db39a0021f39728e7e6",
+    "sha256": "0458875ebcee79f830d51094a2df82c7e0df49f1caadcfebd597edbbbaa55386",
+    "bytes": 3290776,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps. Removed annotation and scale helper geometry and its unused resources; retained sword geometry and world transform unchanged."
+  },
+  {
+    "file": "bronze_age_sword_oc078.glb",
+    "author": "The Oakeshott Institute (https://sketchfab.com/oakeshott)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa",
+    "title": "Bronze Age Sword",
+    "sourceSha256": "b56dc070f3f59f2eb67c4dfae37740a0d7b8cb3241cfff158c6075be82ea4d8e",
+    "sha256": "af1aebff8321394ef8ceec09cd87984376a9c55ba9226ba3208952570322ecb2",
+    "bytes": 2440728,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps. Removed annotation and scale helper geometry and its unused resources; retained sword geometry and world transform unchanged."
+  },
+  {
+    "file": "english_hanger_oc059.glb",
+    "author": "The Oakeshott Institute (https://sketchfab.com/oakeshott)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d",
+    "title": "18th Century English Hanger",
+    "sourceSha256": "69162447e460b11a1f412ff645ff70e6b1d2ff15f59b242681823e3aea2ccbdc",
+    "sha256": "0bdf5ba54fd6f80217fd422d5099156441bcf39c240b9d50c21f6d3b4905ee8a",
+    "bytes": 2783388,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
+  },
+  {
+    "file": "milanese_rapier.glb",
+    "author": "The Oakeshott Institute (https://sketchfab.com/oakeshott)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2",
+    "title": "Milanese Rapier",
+    "sourceSha256": "901a2455c70e892e16e393631a83796426a5d3f46fdb7103e6929be746d3e928",
+    "sha256": "02f80eeede1d9e355622b1b1e77c0548b1f737012c458ca6b395c843fc0f9876",
+    "bytes": 4783432,
+    "modifications": "Lossless mesh compression; quality-90 WebP color textures; lossless WebP normal and packed material maps."
   }
 ]

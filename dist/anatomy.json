@@ -1658,5 +1658,439 @@
         "url": "https://www.britishmuseum.org/collection/object/H_Eu1980-12-13"
       }
     ]
+  },
+  "bronze": {
+    "features": [
+      {
+        "name": "Leaf profile",
+        "term": "Broadening blade outline",
+        "description": "The outline expands before tapering to the point, giving the blade its leaf-like silhouette.",
+        "parent": "Blade",
+        "position": [
+          -1.4,
+          0.35,
+          0.06
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Bronze Age sword, OC078",
+            "url": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Lenticular section",
+        "term": "Lens-shaped cross section",
+        "description": "The Institute describes a lens-like section: convex blade faces meet along the edges.",
+        "parent": "Blade",
+        "position": [
+          -0.2,
+          0,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Bronze Age sword, OC078",
+            "url": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Worked edge",
+        "term": "Hammered cutting margin",
+        "description": "The Institute records hammering along much of the cutting edge.",
+        "parent": "Blade",
+        "position": [
+          -2.2,
+          0.22,
+          0.03
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Bronze Age sword, OC078",
+            "url": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Hilt rivets",
+        "term": "Paired attachment rivets",
+        "description": "Two rivets connect the hilt to the blade; they are landmarks, not separately reconstructed fasteners.",
+        "parent": "Hilt",
+        "position": [
+          3.3,
+          0,
+          0.15
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Bronze Age sword, OC078",
+            "url": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Engraved ornament",
+        "term": "Linear and curving decoration",
+        "description": "Incised patterns decorate both hilt and blade, recording attention to finish as well as form.",
+        "parent": "Hilt",
+        "position": [
+          4.0,
+          0,
+          0.14
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Bronze Age sword, OC078",
+            "url": "https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      }
+    ]
+  },
+  "moonbrand": {
+    "features": [
+      {
+        "name": "Four fullers",
+        "term": "Narrow blade channels",
+        "description": "Four narrow channels extend from the blade’s base to below its midpoint; they remain features of the blade surface.",
+        "parent": "Blade",
+        "position": [
+          1.1,
+          0,
+          0.05
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Moonbrand (2021), detailed object study",
+            "url": "https://www.patreon.com/oakeshott/posts/moonbrand-46319770"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Blade taper",
+        "term": "Type XIV outline",
+        "description": "The broad blade narrows toward a pronounced point, characteristic of the Type XIV form discussed by the Institute.",
+        "parent": "Blade",
+        "position": [
+          -3.2,
+          0.14,
+          0.035
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Moonbrand (2021), detailed object study",
+            "url": "https://www.patreon.com/oakeshott/posts/moonbrand-46319770"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Stamped marks",
+        "term": "Dots and crossed lines",
+        "description": "The Institute records rows of dots and paired crosses within the fullers. Their exact workshop attribution remains open.",
+        "parent": "Blade",
+        "position": [
+          1.8,
+          0,
+          0.05
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Moonbrand (2021), detailed object study",
+            "url": "https://www.patreon.com/oakeshott/posts/moonbrand-46319770"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Surviving grip",
+        "term": "Leather over lime wood",
+        "description": "The Institute identifies lime wood beneath a thin leather covering; this is documented object evidence, not a texture-based guess.",
+        "parent": "Grip",
+        "position": [
+          3.9,
+          0,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Moonbrand (2021), detailed object study",
+            "url": "https://www.patreon.com/oakeshott/posts/moonbrand-46319770"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Quillons",
+        "term": "Crossguard arms",
+        "description": "The guard projects to either side of the blade, between blade and handhold.",
+        "parent": "Crossguard",
+        "position": [
+          3.0,
+          0.7,
+          0.06
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Moonbrand, specimen record",
+            "url": "https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Corroded pommel",
+        "term": "Terminal fitting surface",
+        "description": "The Institute discusses vein-like corrosion on the guard and pommel. Such traces form part of the surviving object.",
+        "parent": "Pommel",
+        "position": [
+          4.65,
+          0,
+          0.08
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Moonbrand (2021), detailed object study",
+            "url": "https://www.patreon.com/oakeshott/posts/moonbrand-46319770"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      }
+    ]
+  },
+  "hanger": {
+    "features": [
+      {
+        "name": "Curved blade",
+        "term": "Slightly curved working profile",
+        "description": "The modest curve distinguishes this hanger’s outline from the straight medieval arming sword.",
+        "parent": "Blade",
+        "position": [
+          -1.8,
+          0.1,
+          0.06
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · English hanger, OC059",
+            "url": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Silver hilt",
+        "term": "Decorative mounting",
+        "description": "The Institute identifies sterling silver and a London hallmark of 1795. The date applies specifically to the hilt.",
+        "parent": "Hilt",
+        "position": [
+          3.65,
+          0,
+          0.13
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · English hanger, OC059",
+            "url": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Knuckle guard",
+        "term": "Protective bow",
+        "description": "The curved bow stands ahead of the fingers as part of the hilt; it is not a detached blade component.",
+        "parent": "Hilt",
+        "position": [
+          3.85,
+          -0.5,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · English hanger, OC059",
+            "url": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Handhold",
+        "term": "Grip region",
+        "description": "The handhold sits within the protective hilt. Its visible surface does not independently establish its material.",
+        "parent": "Hilt",
+        "position": [
+          4.05,
+          0,
+          0.12
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · English hanger, OC059",
+            "url": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Scabbard mouth",
+        "term": "Blade entry",
+        "description": "The open end receives the blade. The source scan preserves the scabbard as a separate mesh.",
+        "parent": "Scabbard",
+        "position": [
+          2.7,
+          0,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · English hanger, OC059",
+            "url": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Suspension rings",
+        "term": "Carrying fittings",
+        "description": "Rings and clips connect to the scabbard for carrying; the source distinguishes these from the sword itself.",
+        "parent": "Suspension fittings",
+        "position": [
+          1.7,
+          0,
+          0.15
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · English hanger, OC059",
+            "url": "https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      }
+    ]
+  },
+  "rapier": {
+    "features": [
+      {
+        "name": "Ricasso",
+        "term": "Unsharpened blade base",
+        "description": "The thick blade base lies within the guard. A ricasso is an unsharpened region, not a separate sleeve.",
+        "parent": "Blade",
+        "position": [
+          3.1,
+          0,
+          0.08
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Milanese rapier, 1560–1580",
+            "url": "https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2"
+          },
+          {
+            "title": "The Frick Collection · Northern Italian rapier, ca. 1550/60; ricasso terminology",
+            "url": "https://www.frick.org/exhibitions/moroni/18"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "ANTONIO mark",
+        "term": "Stamped maker-related evidence",
+        "description": "A tower, ANTONIO lettering and a four-circle motif are recorded here. Attribution to Antonio Picinino remains tentative.",
+        "parent": "Blade",
+        "position": [
+          3.25,
+          0,
+          0.08
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Milanese rapier, 1560–1580",
+            "url": "https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Knuckle guard",
+        "term": "Forward protective branch",
+        "description": "A curving branch runs ahead of the grip, extending the protection of the hilt.",
+        "parent": "Guard",
+        "position": [
+          4.05,
+          -0.55,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Met · Rapier by Pietro de Formicano, 1973.27.3; comparative hilt terminology",
+            "url": "https://www.metmuseum.org/art/collection/search/27313"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Side rings",
+        "term": "Lateral hand protection",
+        "description": "Ring-shaped branches extend around the sides of the hand. Compare their form with other surviving Renaissance rapiers.",
+        "parent": "Guard",
+        "position": [
+          3.5,
+          0.45,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Met · Rapier by Pietro de Formicano, 1973.27.3; comparative hilt terminology",
+            "url": "https://www.metmuseum.org/art/collection/search/27313"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Twisted-wire grip",
+        "term": "Wound handhold covering",
+        "description": "Twisted wire wraps an oval grip, a surface treatment explicitly described in the Institute’s record.",
+        "parent": "Grip",
+        "position": [
+          4.2,
+          0,
+          0.12
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Milanese rapier, 1560–1580",
+            "url": "https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      },
+      {
+        "name": "Chased pommel",
+        "term": "Ribbed terminal fitting",
+        "description": "Vertical ribs and grooves articulate the mushroom-shaped pommel. Chasing shapes decoration in the metal surface.",
+        "parent": "Pommel",
+        "position": [
+          4.8,
+          0,
+          0.1
+        ],
+        "sources": [
+          {
+            "title": "The Oakeshott Institute · Milanese rapier, 1560–1580",
+            "url": "https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2"
+          }
+        ],
+        "evidence": "Named surface landmark on the scan. Position is a display anchor; separation does not establish an original construction joint."
+      }
+    ]
   }
 }

@@ -9,6 +9,7 @@ async function bundle(output, entries) {
   await fs.writeFile(new URL(output, root), lines.join("\n\n") + "\n");
 }
 await bundle("data.js", [
+  ["modelCatalog", "catalog.json"],
   ["modelConfig", "models/config.json"],
   ["modelHistory", "history.json"],
   ["modelAnatomy", "anatomy.json"],

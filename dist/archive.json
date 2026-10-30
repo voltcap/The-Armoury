@@ -14,7 +14,8 @@
     "relation": "A contemporary illustrated source for the study of sword-and-buckler fencing; it does not identify the supplied arming-sword model.",
     "weapons": [
       "arming",
-      "longsword"
+      "longsword",
+      "moonbrand"
     ],
     "image": "./assets/archive/i33.webp",
     "imageChanges": "Resized and converted to WebP; full composition retained."

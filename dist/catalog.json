@@ -1,0 +1,204 @@
+[
+  {
+    "id": "longsword",
+    "title": "The longsword",
+    "short": "Longsword",
+    "place": "Medieval Europe",
+    "sub": "A study in steel, balance, and the craft of the hilt.",
+    "parts": [
+      "Blade",
+      "Crossguard",
+      "Grip",
+      "Pommel",
+      "Peened cap"
+    ],
+    "method": "Source components · original textured geometry",
+    "sign": 1
+  },
+  {
+    "id": "bronze",
+    "title": "The Bronze Age sword",
+    "short": "Bronze Age sword",
+    "place": "Oakeshott Collection · OC078",
+    "parts": [
+      "Blade",
+      "Hilt"
+    ],
+    "method": "Historical scan · clean planar study sections",
+    "sign": 1,
+    "sub": ""
+  },
+  {
+    "id": "moonbrand",
+    "title": "Moonbrand",
+    "short": "Moonbrand",
+    "place": "Europe · c. 1270–1320",
+    "parts": [
+      "Blade",
+      "Crossguard",
+      "Grip",
+      "Pommel"
+    ],
+    "method": "Historical scan · clean planar study sections",
+    "sign": -1,
+    "sub": ""
+  },
+  {
+    "id": "hanger",
+    "title": "The English hanger",
+    "short": "English hanger",
+    "place": "Oakeshott Collection · OC059",
+    "parts": [
+      "Blade",
+      "Hilt",
+      "Scabbard",
+      "Suspension fittings"
+    ],
+    "method": "Source scabbard and fittings · planar blade/hilt cut",
+    "sign": 1,
+    "sub": ""
+  },
+  {
+    "id": "rapier",
+    "title": "The Milanese rapier",
+    "short": "Milanese rapier",
+    "place": "Northern Italy · 1560–1580",
+    "parts": [
+      "Blade",
+      "Guard",
+      "Grip",
+      "Pommel"
+    ],
+    "method": "Historical scan · clean planar study sections",
+    "sign": 1,
+    "sub": ""
+  },
+  {
+    "id": "arming",
+    "title": "The arming sword",
+    "short": "Arming sword",
+    "place": "Italian tradition",
+    "sub": "A one-handed blade. A familiar, enduring silhouette.",
+    "parts": [
+      "Blade",
+      "Crossguard",
+      "Grip",
+      "Pommel"
+    ],
+    "method": "Clean planar cutaway · original textured scan",
+    "sign": -1
+  },
+  {
+    "id": "gladius",
+    "title": "The gladius",
+    "short": "Roman gladius",
+    "place": "Ancient Rome",
+    "sub": "A compact blade and the fittings that complete it.",
+    "parts": [
+      "Blade",
+      "Guard",
+      "Grip",
+      "Pommel",
+      "Scabbard",
+      "Scabbard mounts"
+    ],
+    "method": "Source components + clean planar hilt cuts",
+    "sign": -1
+  },
+  {
+    "id": "arabic",
+    "title": "The Arabic saber",
+    "short": "Arabic saber",
+    "place": "Arab sword traditions",
+    "sub": "A curved silhouette, ornamental mounts, and a compact hilt.",
+    "parts": [
+      "Sheathed blade",
+      "Guard",
+      "Grip",
+      "Upper suspension mount",
+      "Lower suspension mount"
+    ],
+    "method": "Connected source surfaces · grouped for study",
+    "sign": 1
+  },
+  {
+    "id": "yatagan",
+    "title": "The yatagan",
+    "short": "Turkish yatagan",
+    "place": "Ottoman tradition",
+    "sub": "An inward-curving edge and a distinctive eared hilt.",
+    "parts": [
+      "Blade",
+      "Hilt frame",
+      "Left grip scale",
+      "Right grip scale",
+      "Ornamental studs"
+    ],
+    "method": "Supplied model · separate source surfaces",
+    "sign": 1
+  },
+  {
+    "id": "katana",
+    "title": "The dragon katana",
+    "short": "Dragon katana",
+    "place": "Fantasy / Japanese influence",
+    "sub": "An imagined sword, explored through traditional terminology.",
+    "parts": [
+      "Blade",
+      "Habaki",
+      "Tsuba",
+      "Fuchi",
+      "Tsuka",
+      "Kashira",
+      "Saya"
+    ],
+    "method": "Connected source pieces · fantasy sword mountings",
+    "sign": -1
+  },
+  {
+    "id": "guards",
+    "title": "The Guards sword",
+    "short": "Irish Guards sword",
+    "place": "British military tradition",
+    "sub": "A ceremonial silhouette with a protective steel hilt.",
+    "parts": [
+      "Blade",
+      "Guard",
+      "Grip",
+      "Backstrap & pommel",
+      "Scabbard",
+      "Suspension rings"
+    ],
+    "method": "Source components · grouped connected surfaces",
+    "sign": 1
+  },
+  {
+    "id": "axe",
+    "title": "The T-axe",
+    "short": "Anglo-Saxon T-axe",
+    "place": "Early medieval England",
+    "sub": "The anatomy of a working tool, shaped for timber.",
+    "parts": [
+      "Head",
+      "Haft"
+    ],
+    "method": "Clean planar cutaway · original textured scan",
+    "sign": -1
+  },
+  {
+    "id": "mace",
+    "title": "The steel mace",
+    "short": "Steel mace",
+    "place": "Medieval tradition",
+    "sub": "A compact head, a long shaft, and concentrated mass.",
+    "parts": [
+      "Head",
+      "Shaft",
+      "Grip",
+      "Butt cap",
+      "Shaft collars"
+    ],
+    "method": "Source flanges + clean planar shaft cuts",
+    "sign": -1
+  }
+]

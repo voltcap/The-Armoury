@@ -254,9 +254,10 @@ header {
 :root[data-page="study"] #weapons {
   height: 100%;
   display: grid;
-  grid-auto-rows: minmax(0, 1fr);
+  grid-auto-rows: minmax(34px, 1fr);
   gap: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 :root[data-page="study"] .weapon {
   min-width: 0;

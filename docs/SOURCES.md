@@ -16,7 +16,7 @@ The app uses museum collection records for specific objects and terminology. Cat
 ## Content files
 
 - `dist/history.json`: contextual copy, individual piece descriptions, object-specific sources.
-- `dist/anatomy.json`: 54 feature landmarks and their sources.
+- `dist/anatomy.json`: 77 feature landmarks and their sources.
 - `dist/craft.json`: six construction and decoration topics.
 - `dist/archive.json`: image records, dates, institutions and licenses.
 - `dist/bibliography.json`: reading-room entries.
@@ -24,3 +24,9 @@ The app uses museum collection records for specific objects and terminology. Cat
 ## Interpreting the illustrations
 
 I.33 and Fiore are evidence for historical fighting-book imagery, not identifications of the supplied sword models. The Algerian nimcha record distinguishes the dates and origins of its fittings from those of its blade. The pollaxe in Fiore is distinct from the woodworking T-axe in the collection.
+
+## Additional collection specimens
+
+The Oakeshott Institute’s own specimen records support the new scans’ identification, dating and documented features: [Bronze Age sword OC078](https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa), [Moonbrand](https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec), [English hanger OC059](https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d), and [Milanese rapier](https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2). The [Institute’s detailed Moonbrand study](https://www.patreon.com/oakeshott/posts/moonbrand-46319770) discusses its Type XIV form, fullers, markings, surviving grip and corrosion.
+
+The hanger’s 1795 London hallmark dates its hilt. The rapier’s proposed attribution to Antonio Picinino is tentative. Neither date is a claim about when that sword family was first invented. Moonbrand is privately owned and in the Institute’s care; the rapier is also from a private collection.

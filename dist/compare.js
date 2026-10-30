@@ -1,8 +1,8 @@
 import * as T from "./vendor/three.module.js";
-import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { RoomEnvironment } from "./vendor/environments/RoomEnvironment.js";
-import { modelConfig } from "./data.js";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.0";
+import { acquireModel, disposeModel } from "./model-assets.js?v=1.1.0";
+import { modelConfig } from "./data.js?v=1.1.0";
 
 // Each model uses the study viewer's ten-unit span, not an inferred physical scale.
 export function createComparison(catalog, history) {
@@ -29,33 +29,7 @@ export function createComparison(catalog, history) {
     controls.enableDamping = true;
     controls.minDistance = 2;
     controls.maxDistance = 50;
-    const generator = new T.PMREMGenerator(renderer),
-      room = new RoomEnvironment();
-    const environment = generator.fromScene(room, 0.02).texture;
-    scene.environment = environment;
-    generator.dispose();
-    room.dispose();
-    scene.add(new T.AmbientLight(0xffffff, 0.8));
-    for (const p of [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 1, 0],
-      [0, -1, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-    ]) {
-      const light = new T.DirectionalLight(0xffffff, 1.1);
-      light.position.set(...p);
-      scene.add(light);
-    }
-    scene.add(camera);
-    const light = new T.DirectionalLight(0xfff7eb, 3),
-      target = new T.Object3D();
-    target.position.z = -8;
-    camera.add(target);
-    light.target = target;
-    light.position.set(-3, 4, 4);
-    camera.add(light);
+    lightExhibit(renderer, scene, camera);
     const group = new T.Group();
     scene.add(group);
     const view = {
@@ -116,37 +90,25 @@ export function createComparison(catalog, history) {
     // Matching camera and projection make linked orbiting predictable.
     syncing = false;
   }
-  function dispose(root) {
-    const textures = new Set();
-    root.traverse((o) => {
-      if (!o.isMesh) return;
-      o.geometry.dispose();
-      for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
-        Object.values(m).forEach((x) => {
-          if (x?.isTexture) textures.add(x);
-        });
-        m.dispose();
-      }
-    });
-    textures.forEach((t) => t.dispose());
-  }
   async function load(v, id) {
     const token = ++v.request,
       state = document.getElementById("compareStatus" + v.side);
     state.hidden = false;
     state.textContent = "Loading model…";
+    let lease;
     try {
-      const root = (
-        await new GLTFLoader().loadAsync("./models/" + modelConfig[id].file)
-      ).scene;
+      lease = await acquireModel("./models/" + modelConfig[id].file + "?v=1.1.0");
+      const root = lease.root;
       if (token !== v.request) {
-        dispose(root);
+        lease.release();
         return;
       }
       v.group.children.slice().forEach((o) => {
-        dispose(o);
+        disposeModel(o, false);
         v.group.remove(o);
       });
+      v.lease?.release();
+      v.lease = lease;
       root.updateMatrixWorld(true);
       const cfg = modelConfig[id],
         sign = catalog.find((w) => w.id === id).sign;
@@ -156,8 +118,11 @@ export function createComparison(catalog, history) {
         w = new T.Vector3(...cfg.w),
         mid = new T.Vector3(...cfg.mid),
         scale = 10 / cfg.length;
+      let meshIndex = 0;
       root.traverse((mesh) => {
         if (!mesh.isMesh) return;
+        const index = meshIndex++;
+        if (cfg.includeMeshes && !cfg.includeMeshes.includes(index)) return;
         const g = mesh.geometry.clone().applyMatrix4(mesh.matrixWorld),
           p = g.attributes.position,
           n = g.attributes.normal;
@@ -175,23 +140,11 @@ export function createComparison(catalog, history) {
           }
         }
         g.computeBoundingSphere();
-        const material = (
-          Array.isArray(mesh.material) ? mesh.material[0] : mesh.material
-        ).clone();
-        material.side = T.DoubleSide;
-        if ("roughness" in material)
-          material.roughness = Math.max(0.35, material.roughness);
-        if ("envMapIntensity" in material) material.envMapIntensity = 1.45;
+        const material = exhibitMaterial(
+          Array.isArray(mesh.material) ? mesh.material[0] : mesh.material,
+          { dim: id === "axe" ? 0.66 : 1 },
+        );
         v.group.add(new T.Mesh(g, material));
-      });
-      // Materials now used by the normalized meshes share the source textures.
-      root.traverse((o) => {
-        if (o.isMesh) {
-          o.geometry.dispose();
-          (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) =>
-            m.dispose(),
-          );
-        }
       });
       const info = document.getElementById("compareInfo" + v.side),
         h = history[id];
@@ -213,6 +166,7 @@ export function createComparison(catalog, history) {
       v.canvas.dataset.model = id;
       v.dirty = true;
     } catch (e) {
+      if (lease && v.lease !== lease) lease.release();
       if (token === v.request) {
         state.textContent = "Unable to load. Select the weapon again to retry.";
       }

@@ -31,6 +31,9 @@ test("static server serves local assets and rejects invalid or escaping paths", 
     const module = await request("/suite.js?version=1");
     assert.equal(module.status, 200);
     assert.match(module.headers["content-type"], /javascript/);
+    const decoder = await request("/vendor/libs/meshopt_decoder.mjs", "HEAD");
+    assert.equal(decoder.status, 200);
+    assert.match(decoder.headers["content-type"], /javascript/);
     const head = await request("/", "HEAD");
     assert.equal(head.status, 200);
     assert.equal(head.body, "");

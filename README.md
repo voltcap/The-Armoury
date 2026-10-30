@@ -1,12 +1,12 @@
 # The Armoury
 
-An interactive collection of nine weapon models, presented as an illuminated manuscript. Take a sword apart, inspect its fittings, compare its silhouette with another weapon, and explore historical illustrations and museum records.
+An interactive collection of thirteen weapon models, presented as an illuminated manuscript. Take a sword apart, inspect its fittings, compare its silhouette with another weapon, and explore historical illustrations and museum records.
 
 ![The Armoury in dark mode](docs/study.png)
 
 ## Explore
 
-- **Study:** animated separation and reassembly, individual piece isolation, 54 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
+- **Study:** animated separation and reassembly, individual piece isolation, 77 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
 - **Archive:** eight zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
 - **Compare:** two selectable models with linked rotation and zoom, independent viewing, and a reset control.
 - **Craft:** six sourced studies of hilt assembly, quillons, decoration, Japanese mountings, yatagan grips and carrying fittings, plus a reading room.
@@ -46,9 +46,16 @@ Comparison has its own **Reset views** button. Clear **Link rotation & zoom** to
 
 ## Collection
 
-Longsword, Italian arming sword, Roman gladius, Arabic saber, Ottoman yatagan, fantasy dragon katana, Irish Guards sword, Anglo-Saxon T-axe and steel mace.
+The collection includes a longsword replica, Italian arming sword, Roman gladius, Arabic saber, Ottoman yatagan, fantasy dragon katana, Irish Guards sword, Anglo-Saxon T-axe and steel mace, alongside four historical specimen scans by the Oakeshott Institute:
 
-The T-axe is contextualized as a woodworking tool. The Arabic-titled model is sheathed. The dragon katana is a fantasy design using historical Japanese terminology. The supplied digital models are not presented as authenticated archaeological objects.
+| Specimen | Documented date | Collection context |
+| --- | --- | --- |
+| [Bronze Age sword OC078](https://sketchfab.com/3d-models/bronze-age-sword-7c0316ffbfd34c2393fbb4e7663e11aa) | 15th century BCE | Oakeshott Collection |
+| [Moonbrand](https://sketchfab.com/3d-models/moonbrand-early-14th-c-arming-sword-80fa91fc8c974fd0acd2a55cc513edec) | Late 13th–early 14th century | Privately owned, in the Institute’s care |
+| [Milanese rapier](https://sketchfab.com/3d-models/milanese-rapier-b6a87326689545728e1725c62693a9a2) | 1560–1580 | Private collection |
+| [English hanger OC059](https://sketchfab.com/3d-models/18th-century-english-hanger-b52dd3d83d44491fadd4261b533a3c4d) | London hallmark, 1795, on the hilt | Oakeshott Collection |
+
+The T-axe is contextualized as a woodworking tool. The Arabic-titled model is sheathed. The dragon katana is a fantasy design using historical Japanese terminology. The historical scans are identified separately from modern replicas and fictional designs; their object descriptions are attributed to the Institute.
 
 ## Historical sources
 
@@ -68,11 +75,23 @@ These are educational surface separations. They cannot reveal hidden tangs, fast
 
 **Import model** accepts self-contained binary glTF files (`.glb`, up to 150 MB). It estimates a sword's long axis and four surface regions. Adjust the hilt boundary or reverse the orientation as needed. This provisional segmentation is intended for sword-shaped models, not arbitrary objects. External resource references are rejected.
 
+## Model loading and optimization
+
+Models load on selection. A shared cache reuses downloaded and decoded scenes across Study and Compare, evicts unused models when the cache exceeds three entries, and protects any model still in use by a viewer. Comparison code loads only when its tab is opened. Both comparison windows and Study share the same surrounding lights, environment and camera fill lights.
+
+The thirteen display GLBs total **43,124,492 bytes**, down from **72,397,272 bytes** for their source files (**40.43% smaller**). The original nine models alone are **39.42% smaller**. Compression preserves sword vertex data, topology and world transforms. Base color images use quality-90 WebP; normal and packed material maps use lossless WebP. No sword geometry was simplified or texture resolution reduced. Unused annotation and scale helpers were removed from the Bronze Age and Moonbrand scans.
+
+The decoder is vendored locally. [Optimization records](dist/models/optimization.json) include before/after sizes, hashes and verification details. Optional reproducible preparation scripts live in [tools/model-optimization](tools/model-optimization/README.md); they are not required to run the website. Transfer savings are measured file-size changes, not a claim about a particular device’s loading time.
+
 ## Project structure
 
 ```text
 dist/                    Static application; publish this directory
   app.js                 Study viewer and part interaction
+  catalog.json           Editable collection names and visible parts
+  model-assets.js        Shared GLB loader and resource ownership
+  model-cache.js         Bounded shared model cache
+  exhibit-lighting.js    Common studio lighting and materials
   clean-cut.js           Planar surface clipping and cut caps
   label-layout.js        Collision-aware callout placement
   compare.js             Paired 3D viewers

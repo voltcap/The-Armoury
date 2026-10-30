@@ -1,6 +1,6 @@
 {
   "name": "the-armoury",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "An interactive study of weapon construction, historical imagery and craftsmanship.",
@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "node server.mjs",
     "start": "node server.mjs",
-    "check": "node --check dist/app.js && node --check dist/suite.js && node --check dist/compare.js && node --check dist/clean-cut.js && node --check dist/data.js && node --check dist/research.js && node --check dist/label-layout.js",
+    "check": "node --check dist/app.js && node --check dist/suite.js && node --check dist/compare.js && node --check dist/clean-cut.js && node --check dist/data.js && node --check dist/research.js && node --check dist/label-layout.js && node --check dist/model-assets.js && node --check dist/model-cache.js && node --check dist/exhibit-lighting.js",
     "test": "node --test tests/*.test.mjs",
     "content": "node scripts/build-data.mjs"
   },

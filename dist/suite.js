@@ -1,5 +1,4 @@
-import { archive, craft, bibliography } from "./research.js?v=1.0.3";
-import { createComparison } from "./compare.js";
+import { archive, craft, bibliography } from "./research.js?v=1.1.0";
 
 const $ = (id) => document.getElementById(id);
 const escape = (s) =>
@@ -20,9 +19,10 @@ const sourceLinks = (sources) =>
 
 export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
   let comparison = null,
-    page = "study";
+    page = "study",
+    comparisonModule = null;
   const names = Object.fromEntries(catalog.map((w) => [w.id, w.short]));
-  function navigate(next) {
+  async function navigate(next) {
     if (!["study", "archive", "compare", "craft"].includes(next))
       next = "study";
     page = next;
@@ -38,6 +38,9 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
       $(id + "Page").hidden = id !== page;
     onStudyVisibility(page === "study");
     if (page === "compare") {
+      comparisonModule ??= import("./compare.js?v=1.1.0");
+      const { createComparison } = await comparisonModule;
+      if (page !== "compare") return;
       comparison ??= createComparison(catalog, history);
       comparison.show();
     } else comparison?.hide();

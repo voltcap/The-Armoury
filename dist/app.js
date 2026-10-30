@@ -1,128 +1,18 @@
-import { layoutCallouts } from "./label-layout.js?v=1.0.3";
-import { initSuite } from "./suite.js?v=1.0.3";
+import { layoutCallouts } from "./label-layout.js?v=1.1.0";
+import { initSuite } from "./suite.js?v=1.1.0";
 import * as T from "./vendor/three.module.js";
-import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { RoomEnvironment } from "./vendor/environments/RoomEnvironment.js";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.0";
+import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.1.0";
 import { partitionGeometry, buildCutCaps, lower, upper } from "./clean-cut.js";
-import { modelConfig, modelHistory, modelAnatomy } from "./data.js";
+import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.1.0";
 
 const roman = (n) =>
   ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][n] ||
   String(n);
 const $ = (id) => document.getElementById(id),
   pad = (n) => String(n).padStart(2, "0");
-const collection = [
-  {
-    id: "longsword",
-    title: "The longsword",
-    short: "Longsword",
-    place: "Medieval Europe",
-    sub: "A study in steel, balance, and the craft of the hilt.",
-    parts: ["Blade", "Crossguard", "Grip", "Pommel", "Peened cap"],
-    method: "Source components · original textured geometry",
-    sign: 1,
-  },
-  {
-    id: "arming",
-    title: "The arming sword",
-    short: "Arming sword",
-    place: "Italian tradition",
-    sub: "A one-handed blade. A familiar, enduring silhouette.",
-    parts: ["Blade", "Crossguard", "Grip", "Pommel"],
-    method: "Clean planar cutaway · original textured scan",
-    sign: -1,
-  },
-  {
-    id: "gladius",
-    title: "The gladius",
-    short: "Roman gladius",
-    place: "Ancient Rome",
-    sub: "A compact blade and the fittings that complete it.",
-    parts: ["Blade", "Guard", "Grip", "Pommel", "Scabbard", "Scabbard mounts"],
-    method: "Source components + clean planar hilt cuts",
-    sign: -1,
-  },
-  {
-    id: "arabic",
-    title: "The Arabic saber",
-    short: "Arabic saber",
-    place: "Arab sword traditions",
-    sub: "A curved silhouette, ornamental mounts, and a compact hilt.",
-    parts: [
-      "Sheathed blade",
-      "Guard",
-      "Grip",
-      "Upper suspension mount",
-      "Lower suspension mount",
-    ],
-    method: "Connected source surfaces · grouped for study",
-    sign: 1,
-  },
-  {
-    id: "yatagan",
-    title: "The yatagan",
-    short: "Turkish yatagan",
-    place: "Ottoman tradition",
-    sub: "An inward-curving edge and a distinctive eared hilt.",
-    parts: [
-      "Blade",
-      "Hilt frame",
-      "Left grip scale",
-      "Right grip scale",
-      "Ornamental studs",
-    ],
-    method: "Supplied model · separate source surfaces",
-    sign: 1,
-  },
-  {
-    id: "katana",
-    title: "The dragon katana",
-    short: "Dragon katana",
-    place: "Fantasy / Japanese influence",
-    sub: "An imagined sword, explored through traditional terminology.",
-    parts: ["Blade", "Habaki", "Tsuba", "Fuchi", "Tsuka", "Kashira", "Saya"],
-    method: "Connected source pieces · fantasy sword mountings",
-    sign: -1,
-  },
-  {
-    id: "guards",
-    title: "The Guards sword",
-    short: "Irish Guards sword",
-    place: "British military tradition",
-    sub: "A ceremonial silhouette with a protective steel hilt.",
-    parts: [
-      "Blade",
-      "Guard",
-      "Grip",
-      "Backstrap & pommel",
-      "Scabbard",
-      "Suspension rings",
-    ],
-    method: "Source components · grouped connected surfaces",
-    sign: 1,
-  },
-  {
-    id: "axe",
-    title: "The T-axe",
-    short: "Anglo-Saxon T-axe",
-    place: "Early medieval England",
-    sub: "The anatomy of a working tool, shaped for timber.",
-    parts: ["Head", "Haft"],
-    method: "Clean planar cutaway · original textured scan",
-    sign: -1,
-  },
-  {
-    id: "mace",
-    title: "The steel mace",
-    short: "Steel mace",
-    place: "Medieval tradition",
-    sub: "A compact head, a long shaft, and concentrated mass.",
-    parts: ["Head", "Shaft", "Grip", "Butt cap", "Shaft collars"],
-    method: "Source flanges + clean planar shaft cuts",
-    sign: -1,
-  },
-];
+const collection = modelCatalog;
 const esc = (s) =>
   String(s).replace(
     /[&<>"']/g,
@@ -150,6 +40,7 @@ let config = modelConfig,
   showLabels = true,
   wire = false,
   currentRaw = null,
+  currentLease = null,
   importedRoot = null,
   needsRender = true,
   autoFocus = true,
@@ -187,37 +78,7 @@ controls.minDistance = 0.2;
 controls.maxDistance = 50;
 controls.autoRotateSpeed = 0.55;
 controls.enablePan = true;
-const pmrem = new T.PMREMGenerator(renderer),
-  environment = new RoomEnvironment();
-environment.add(new T.AmbientLight(0xffffff, 0.8));
-scene.environment = pmrem.fromScene(environment, 0.02).texture;
-scene.add(new T.AmbientLight(0xffffff, 0.65));
-scene.add(new T.HemisphereLight(0xf5f1e9, 0xf5f1e9, 1.5));
-for (const pos of [
-  [1, 0, 0],
-  [-1, 0, 0],
-  [0, 1, 0],
-  [0, -1, 0],
-  [0, 0, 1],
-  [0, 0, -1],
-]) {
-  const light = new T.DirectionalLight(0xffffff, 0.8);
-  light.position.set(...pos).multiplyScalar(10);
-  scene.add(light);
-}
-scene.add(camera);
-for (const [intensity, pos] of [
-  [3.2, [-3, 4, 4]],
-  [2.2, [4, -3, 4]],
-]) {
-  const light = new T.DirectionalLight(0xfff7eb, intensity),
-    target = new T.Object3D();
-  target.position.set(0, 0, -8);
-  camera.add(target);
-  light.target = target;
-  light.position.set(...pos);
-  camera.add(light);
-}
+lightExhibit(renderer, scene, camera);
 const exhibit = new T.Group();
 scene.add(exhibit);
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -272,21 +133,7 @@ function setReady(ready) {
   ])
     $(id).disabled = !ready;
 }
-function releaseRoot(root) {
-  if (!root) return;
-  const textures = new Set();
-  root.traverse((o) => {
-    if (!o.isMesh) return;
-    o.geometry.dispose();
-    for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
-      Object.values(m).forEach((v) => {
-        if (v?.isTexture) textures.add(v);
-      });
-      m.dispose();
-    }
-  });
-  textures.forEach((t) => t.dispose());
-}
+const releaseRoot = disposeModel;
 function removeModel() {
   for (const p of parts) {
     p.group.traverse((o) => {
@@ -433,6 +280,10 @@ function regionsFor(id, mi, box) {
       }));
   const size = box.getSize(new T.Vector3()),
     c = box.getCenter(new T.Vector3());
+  const cfg = config[id];
+  if (cfg?.meshParts && cfg.meshParts[mi] !== undefined)
+    return native(cfg.meshParts[mi]);
+  if (cfg?.cuts) return ranges(cfg.cuts, cfg.partIndices);
   if (id === "longsword")
     return native(
       mi === 0 ? 0 : mi === 2 ? 2 : mi === 3 ? 3 : c.x > 4.7 ? 4 : 1,
@@ -504,6 +355,7 @@ function addSurfaces(root, cfg) {
   let mi = 0;
   root.traverse((mesh) => {
     if (!mesh.isMesh) return;
+    if (cfg.includeMeshes && !cfg.includeMeshes.includes(mi)) { mi++; return; }
     const g = transformGeometry(mesh, cfg, active.sign);
     let groups = [];
     if (
@@ -549,17 +401,7 @@ function addSurfaces(root, cfg) {
         regionsFor(active.id, mi, group.box),
       )) {
         const k = out.part,
-          mat = original.clone();
-        mat.side = T.DoubleSide;
-        mat.wireframe = wire;
-        if (mat.color) {
-          mat.color.r = Math.max(0.025, mat.color.r);
-          mat.color.g = Math.max(0.023, mat.color.g);
-          mat.color.b = Math.max(0.02, mat.color.b);
-          if (active.id === "axe") mat.color.multiplyScalar(0.66);
-        }
-        if ("envMapIntensity" in mat) mat.envMapIntensity = 1.45;
-        if ("roughness" in mat) mat.roughness = Math.max(0.35, mat.roughness);
+          mat = exhibitMaterial(original, { wireframe: wire, dim: active.id === "axe" ? 0.66 : 1 });
         const obj = new T.Mesh(out.geometry, mat);
         obj.userData.part = k;
         parts[k].group.add(obj);
@@ -682,7 +524,7 @@ async function loadSourceModel(url) {
   let lastError;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
-      return (await new GLTFLoader().loadAsync(url)).scene;
+      return await acquireModel(url);
     } catch (error) {
       lastError = error;
       if (attempt < 2)
@@ -699,7 +541,8 @@ async function loadWeapon(id, customRoot = null) {
   setReady(false);
   renderCollection();
   removeModel();
-  if (currentRaw !== importedRoot) releaseRoot(currentRaw);
+  currentLease?.release();
+  currentLease = null;
   currentRaw = null;
   selected = 0;
   studyMode = "pieces";
@@ -716,17 +559,15 @@ async function loadWeapon(id, customRoot = null) {
   $("loading").hidden = false;
   $("loading").innerHTML = '<span class="spinner"></span><p>Loading model…</p>';
   try {
-    const root =
-      customRoot ||
-      (id === "custom"
-        ? importedRoot
-        : await loadSourceModel(
-            new URL("./models/" + config[id].file, import.meta.url).href,
-          ));
+    const lease = id === "custom" ? null : await loadSourceModel(
+      new URL("./models/" + config[id].file + "?v=1.1.0", import.meta.url).href,
+    );
+    const root = lease?.root || customRoot || importedRoot;
     if (token !== requestId) {
-      releaseRoot(root);
+      lease?.release();
       return;
     }
+    currentLease = lease;
     currentRaw = root;
     addSurfaces(root, id === "custom" ? computeConfig(root) : config[id]);
     return true;
@@ -1161,7 +1002,7 @@ $("file").onchange = async (e) => {
       throw Error(
         "Import a self-contained GLB with embedded images and geometry.",
       );
-    const root = (await new GLTFLoader().parseAsync(buffer, "")).scene;
+    const root = (await createModelLoader().parseAsync(buffer, "")).scene;
     let custom = collection.find((w) => w.id === "custom");
     const entry = {
       id: "custom",
@@ -1359,7 +1200,7 @@ function animate(t) {
 
 requestAnimationFrame(animate);
 renderCollection();
-await loadWeapon("longsword");
+setReady(false);
 initSuite({
   catalog: collection,
   history,
@@ -1367,6 +1208,7 @@ initSuite({
     studyVisible = visible;
     if (visible) {
       needsRender = true;
+      if (requestId === 0) loadWeapon(active.id);
       resize();
     }
   },
