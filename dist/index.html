@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-page="study">
+<html lang="en" data-page="home">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -20,9 +20,10 @@
         document.documentElement.dataset.theme = "light";
       }
     </script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="suite.css" />
-    <link rel="stylesheet" href="manuscript.css?v=1.1.1" />
+    <link rel="stylesheet" href="style.css?v=1.2.0" />
+    <link rel="stylesheet" href="suite.css?v=1.2.0" />
+    <link rel="stylesheet" href="manuscript.css?v=1.2.0" />
+    <link rel="stylesheet" href="home.css?v=1.2.0" />
   </head>
   <body>
     <div class="folio-frame" aria-hidden="true"></div>
@@ -38,12 +39,37 @@
         </div>
       </header>
       <nav class="book-nav" aria-label="Explore The Armoury">
-        <button data-page="study" class="selected">Study</button
+        <button data-page="home" class="selected">Home</button
+        ><button data-page="study">Study</button
         ><button data-page="archive">Archive</button
         ><button data-page="compare">Compare</button
         ><button data-page="craft">Craft</button>
       </nav>
-      <main id="studyPage">
+      <main id="homePage" class="home-page">
+        <div class="home-copy">
+          <div class="home-flourish" aria-hidden="true"></div>
+          <h1>Enter The Armoury<br> <span>Brave Knight!</span></h1>
+          <div class="home-actions">
+            <button id="drawSword" class="home-enter">Draw the sword</button>
+            <a id="enterDirectly" href="#study">Enter directly</a>
+          </div>
+          <p id="homeStatus" role="status"></p>
+        </div>
+        <div class="home-illumination" role="img" aria-label="A female knight draws a sword from a stone and raises it beneath golden rays, beside her horse and banner.">
+          <div class="home-arch" aria-hidden="true"></div>
+          <div class="home-dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="knight-poses" aria-hidden="true">
+              <img class="knight-frame" data-src="assets/home/pose-01.webp" alt="" width="900" height="1200" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/pose-02.webp" alt="" width="900" height="1200" decoding="async" />
+              <img class="knight-frame is-active" data-src="assets/home/pose-03.webp" alt="" width="900" height="1200" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/pose-04.webp" alt="" width="900" height="1200" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/pose-05.webp" alt="" width="900" height="1200" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/pose-06.webp" alt="" width="900" height="1200" decoding="async" />
+          </div>
+          <span class="home-star" aria-hidden="true"></span>
+        </div>
+      </main>
+      <main id="studyPage" hidden>
         <aside class="collection">
           <select id="weaponSelect" aria-label="Choose weapon"></select>
           <div id="weapons" aria-label="Weapon collection"></div>
@@ -275,6 +301,6 @@
       </div>
       <p id="archiveZoomCredit" class="credit"></p>
     </dialog>
-    <script type="module" src="app.js?v=1.1.1"></script>
+    <script type="module" src="main.js?v=1.2.0"></script>
   </body>
 </html>

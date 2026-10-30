@@ -2,10 +2,11 @@
 
 An interactive collection of thirteen weapon models, presented as an illuminated manuscript. Take a sword apart, inspect its fittings, compare its silhouette with another weapon, and explore historical illustrations and museum records.
 
-![The Armoury in dark mode](docs/study.png)
+![The Armoury entrance in dark mode](docs/home.png)
 
 ## Explore
 
+- **Home:** a six-pose illustrated sword-drawing entrance, with illuminated blackletter lettering, light/dark palettes, floating gold dust and direct entry. Reduced-motion preferences skip the sequence. The 3D application loads only after leaving Home.
 - **Study:** animated separation and reassembly, individual piece isolation, 77 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
 - **Archive:** eight zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
 - **Compare:** two selectable models with linked rotation and zoom, independent viewing, and a reset control.
@@ -41,6 +42,8 @@ The browser loads its code, models, fonts and images from this project. There ar
 | Next / previous selection            | Right / left arrow                         |
 | Toggle separation                    | Space, when a control is not focused       |
 | Leave isolation / close image viewer | Escape                                     |
+
+The Home page’s **Draw the sword** button plays the entrance and opens Study. **Enter directly** bypasses the sequence; Home remains available from the navigation. Links to `#study`, `#archive`, `#compare` and `#craft` still open those sections directly.
 
 Comparison has its own **Reset views** button. Clear **Link rotation & zoom** to orbit either model independently. The comparison normalizes the models to the same viewing span; it does not claim a shared physical scale.
 
@@ -87,6 +90,9 @@ The decoder is vendored locally. [Optimization records](dist/models/optimization
 
 ```text
 dist/                    Static application; publish this directory
+  main.js                Lightweight entrance and deferred exhibit loading
+  home.js / home.css     Six-pose entrance animation and manuscript layout
+  camera-state.js        Camera/projection tracking for synchronized redraws
   app.js                 Study viewer and part interaction
   catalog.json           Editable collection names and visible parts
   model-assets.js        Shared GLB loader and resource ownership

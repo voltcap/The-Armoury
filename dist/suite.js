@@ -1,4 +1,4 @@
-import { archive, craft, bibliography } from "./research.js?v=1.1.1";
+import { archive, craft, bibliography } from "./research.js?v=1.2.0";
 
 const $ = (id) => document.getElementById(id);
 const escape = (s) =>
@@ -19,26 +19,27 @@ const sourceLinks = (sources) =>
 
 export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
   let comparison = null,
-    page = "study",
+    page = "home",
     comparisonModule = null;
   const names = Object.fromEntries(catalog.map((w) => [w.id, w.short]));
   async function navigate(next) {
-    if (!["study", "archive", "compare", "craft"].includes(next))
-      next = "study";
+    if (!["home", "study", "archive", "compare", "craft"].includes(next))
+      next = "home";
     page = next;
     document.documentElement.dataset.page = page;
-    for (const button of document.querySelectorAll("[data-page]")) {
+    for (const button of document.querySelectorAll(".book-nav button[data-page]")) {
       button.classList.toggle("selected", button.dataset.page === page);
       button.setAttribute(
         "aria-current",
         button.dataset.page === page ? "page" : "false",
       );
     }
-    for (const id of ["study", "archive", "compare", "craft"])
+    for (const id of ["home", "study", "archive", "compare", "craft"])
       $(id + "Page").hidden = id !== page;
     onStudyVisibility(page === "study");
+    dispatchEvent(new CustomEvent("armoury:page", { detail: page }));
     if (page === "compare") {
-      comparisonModule ??= import("./compare.js?v=1.1.1");
+      comparisonModule ??= import("./compare.js?v=1.2.0");
       const { createComparison } = await comparisonModule;
       if (page !== "compare") return;
       comparison ??= createComparison(catalog, history);
@@ -50,7 +51,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
     window.history.replaceState(null, "", "#" + next);
   }
   document
-    .querySelectorAll("[data-page]")
+    .querySelectorAll(".book-nav button[data-page]")
     .forEach((b) => (b.onclick = () => navigate(b.dataset.page)));
   addEventListener("hashchange", () => navigate(location.hash.slice(1)));
   $("archiveFilter").innerHTML =

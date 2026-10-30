@@ -1,8 +1,9 @@
+import { createCameraTracker } from "./camera-state.js?v=1.2.0";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.1";
-import { acquireModel, disposeModel } from "./model-assets.js?v=1.1.1";
-import { modelConfig } from "./data.js?v=1.1.1";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.0";
+import { acquireModel, disposeModel } from "./model-assets.js?v=1.2.0";
+import { modelConfig } from "./data.js?v=1.2.0";
 
 // Each model uses the study viewer's ten-unit span, not an inferred physical scale.
 export function createComparison(catalog, history) {
@@ -40,6 +41,7 @@ export function createComparison(catalog, history) {
       camera,
       controls,
       group,
+      cameraChanged: createCameraTracker(),
       request: 0,
       dirty: true,
     };
@@ -175,7 +177,8 @@ export function createComparison(catalog, history) {
   function tick() {
     if (!visible) return;
     for (const v of views) {
-      const changed = v.controls.update();
+      v.controls.update();
+      const changed = v.cameraChanged(v.camera);
       if (changed || v.dirty) {
         v.renderer.render(v.scene, v.camera);
         v.canvas.dataset.cameraPosition = v.camera.position

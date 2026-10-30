@@ -86,3 +86,7 @@ Historical books linked in the Reading room are not included in the repository. 
 Meshoptimizer 1.3.0 by Arseny Kapoulkine and contributors. MIT license, retained at `dist/vendor/libs/meshoptimizer-LICENSE.md`.
 
 The four additional historical scans were retrieved from the published Objaverse GLB mirror and matched to the Oakeshott Institute’s creator records and embedded source identifiers. Each model retains its individual CC BY 4.0 attribution.
+
+## Entrance illustrations
+
+Six illustrations supplied for The Armoury, prepared as transparent animation frames, scaled to 1100 pixels in height and converted to quality-90 WebP with full-quality alpha. These are decorative entrance artwork, separate from the Archive’s historical source images. They do not inherit the application code’s MIT license.

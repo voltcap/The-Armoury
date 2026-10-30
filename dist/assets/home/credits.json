@@ -1,0 +1,54 @@
+{
+  "credit": "Entrance illustrations supplied for The Armoury. Decorative artwork, not an Archive collection source.",
+  "modifications": "Parchment backgrounds removed; scaled without cropping to 1100 pixels high; quality-90 WebP with full-quality alpha.",
+  "frames": [
+    {
+      "file": "pose-01.webp",
+      "bytes": 307392,
+      "width": 917,
+      "height": 1100,
+      "alpha": true,
+      "sha256": "1f0b231ce9e4b69bc3617bb06f201629387d99f2fe528082e72c5584800514f0"
+    },
+    {
+      "file": "pose-02.webp",
+      "bytes": 321496,
+      "width": 917,
+      "height": 1100,
+      "alpha": true,
+      "sha256": "6bb061d65fb03a3d8be17e653d9e84c969907cbeab9775ded3fc2d603d19eec6"
+    },
+    {
+      "file": "pose-03.webp",
+      "bytes": 306610,
+      "width": 775,
+      "height": 1100,
+      "alpha": true,
+      "sha256": "e1beefe70d021ce865b2c38918c0b70ef7dec9ef5cb46019ad7f97b8fccea188"
+    },
+    {
+      "file": "pose-04.webp",
+      "bytes": 287806,
+      "width": 774,
+      "height": 1100,
+      "alpha": true,
+      "sha256": "c8fff5ca95ac00c264f9bc627663de063d8ce00224fe09bfb85cd9aadffe7fd8"
+    },
+    {
+      "file": "pose-05.webp",
+      "bytes": 379296,
+      "width": 775,
+      "height": 1100,
+      "alpha": true,
+      "sha256": "2605107022d22dc7e00bae60d492a7c8d87aeca2b681bb75a13fd611672b495f"
+    },
+    {
+      "file": "pose-06.webp",
+      "bytes": 400736,
+      "width": 775,
+      "height": 1100,
+      "alpha": true,
+      "sha256": "4463bd4d762e52705dbe179e5900fec59d3569ba3fa59d7ba526de96269cead4"
+    }
+  ]
+}

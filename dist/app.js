@@ -1,11 +1,12 @@
-import { layoutCallouts } from "./label-layout.js?v=1.1.1";
-import { initSuite } from "./suite.js?v=1.1.1";
+import { createCameraTracker } from "./camera-state.js?v=1.2.0";
+import { layoutCallouts } from "./label-layout.js?v=1.2.0";
+import { initSuite } from "./suite.js?v=1.2.0";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
-import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.1.1";
-import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.1.1";
+import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.0";
+import { acquireModel, disposeModel, createModelLoader } from "./model-assets.js?v=1.2.0";
 import { partitionGeometry, buildCutCaps, lower, upper } from "./clean-cut.js";
-import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.1.1";
+import { modelConfig, modelHistory, modelAnatomy, modelCatalog } from "./data.js?v=1.2.0";
 
 const roman = (n) =>
   ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][n] ||
@@ -49,7 +50,7 @@ try {
   autoFocus = localStorage.getItem("armoury-closeups") !== "false";
 } catch {}
 $("focusToggle").checked = autoFocus;
-let studyVisible = true;
+let studyVisible = false;
 let cameraIntent = "whole";
 let renderer;
 try {
@@ -72,6 +73,8 @@ const scene = new T.Scene(),
   camera = new T.PerspectiveCamera(31, 1, 0.01, 200);
 camera.position.set(1.5, 3, 18);
 const controls = new OrbitControls(camera, $("scene"));
+const cameraChanged = createCameraTracker();
+$("scene").addEventListener("webglcontextrestored", () => { needsRender = true; });
 // Wheel and pinch handlers update the camera before the animation loop runs.
 // Their change event must invalidate the canvas even if the next update is idle.
 controls.addEventListener("change", () => (needsRender = true));
@@ -929,20 +932,7 @@ $("focusToggle").onchange = (e) => {
     syncAmount();
   }
 };
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  $("themeBtn").textContent = theme === "dark" ? "Light mode" : "Dark mode";
-  $("themeBtn").setAttribute("aria-pressed", String(theme === "dark"));
-  try {
-    localStorage.setItem("armoury-theme", theme);
-  } catch {}
-  needsRender = true;
-}
-$("themeBtn").onclick = () =>
-  applyTheme(
-    document.documentElement.dataset.theme === "dark" ? "light" : "dark",
-  );
-applyTheme(document.documentElement.dataset.theme || "light");
+addEventListener("armoury:theme", () => { needsRender = true; });
 for (const [id, key] of [
   ["labelsBtn", "labels"],
   ["wireBtn", "wire"],
@@ -1131,16 +1121,12 @@ function animate(t) {
     if (progress === 1) cameraMove = null;
     needsRender = true;
   }
-  const changed = controls.update(),
+  controls.update();
+  const changed = cameraChanged(camera),
     moved = previousAmount !== amount;
-  if (
-    needsRender ||
-    changed ||
-    moved ||
-    cameraMove ||
-    touring ||
-    controls.autoRotate
-  ) {
+  if (renderer.getContext().isContextLost()) return;
+  if (!(needsRender || changed || moved || cameraMove || touring || controls.autoRotate)) return;
+  {
     renderer.render(scene, camera);
     needsRender = false;
     $("scene").dataset.explosion = amount.toFixed(3);
