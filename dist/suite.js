@@ -1,9 +1,4 @@
-import {
-  archive,
-  chronology,
-  craft,
-  bibliography,
-} from "./research.js?v=1.0.1";
+import { archive, craft, bibliography } from "./research.js?v=1.0.2";
 import { createComparison } from "./compare.js";
 
 const $ = (id) => document.getElementById(id);
@@ -28,7 +23,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
     page = "study";
   const names = Object.fromEntries(catalog.map((w) => [w.id, w.short]));
   function navigate(next) {
-    if (!["study", "archive", "compare", "chronology", "craft"].includes(next))
+    if (!["study", "archive", "compare", "craft"].includes(next))
       next = "study";
     page = next;
     document.documentElement.dataset.page = page;
@@ -39,7 +34,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
         button.dataset.page === page ? "page" : "false",
       );
     }
-    for (const id of ["study", "archive", "compare", "chronology", "craft"])
+    for (const id of ["study", "archive", "compare", "craft"])
       $(id + "Page").hidden = id !== page;
     onStudyVisibility(page === "study");
     if (page === "compare") {
@@ -106,48 +101,6 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
   };
   $("archiveFilter").onchange = renderArchive;
   renderArchive();
-  const dated = catalog
-    .filter(
-      (w) =>
-        Number.isFinite(chronology[w.id]?.dateStart) &&
-        ["earliest-attested", "earliest-surviving"].includes(
-          chronology[w.id]?.dateKind,
-        ),
-    )
-    .sort(
-      (a, b) =>
-        (chronology[a.id].dateStart ?? Infinity) -
-        (chronology[b.id].dateStart ?? Infinity),
-    );
-  for (const [field, id, label] of [
-    ["era", "eraFilter", "All periods"],
-    ["region", "regionFilter", "All regions"],
-  ]) {
-    $(id).innerHTML =
-      `<option value="all">${label}</option>` +
-      [...new Set(dated.map((w) => chronology[w.id][field]))]
-        .map((x) => `<option>${escape(x)}</option>`)
-        .join("");
-    $(id).onchange = renderChronology;
-  }
-  function renderChronology() {
-    const entries = dated.filter(
-      (w) =>
-        ($("eraFilter").value === "all" ||
-          chronology[w.id].era === $("eraFilter").value) &&
-        ($("regionFilter").value === "all" ||
-          chronology[w.id].region === $("regionFilter").value),
-    );
-    $("chronologyList").innerHTML =
-      entries
-        .map((w) => {
-          const x = chronology[w.id];
-          return `<article class="timeline-entry"><div class="timeline-date">${escape(x.dateLabel)}<span>${escape(x.region)}</span></div><div><h2>${escape(w.short)}</h2><p class="dateline">${escape(x.status)}</p><p>${escape(x.description)}</p><div class="source-links">${sourceLinks(x.sources)}</div><button class="text-button" data-inspect="${w.id}">Study this weapon</button></div></article>`;
-        })
-        .join("") || "<p>No weapons match these filters.</p>";
-    bindInspect($("chronologyList"));
-  }
-  renderChronology();
   $("craftGrid").innerHTML = craft
     .map(
       (x, i) =>

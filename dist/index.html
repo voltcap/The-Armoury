@@ -22,7 +22,7 @@
     </script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="suite.css" />
-    <link rel="stylesheet" href="manuscript.css?v=1.0.1" />
+    <link rel="stylesheet" href="manuscript.css?v=1.0.2" />
   </head>
   <body>
     <div class="folio-frame" aria-hidden="true"></div>
@@ -41,7 +41,6 @@
         <button data-page="study" class="selected">Study</button
         ><button data-page="archive">Archive</button
         ><button data-page="compare">Compare</button
-        ><button data-page="chronology">Chronology</button
         ><button data-page="craft">Craft</button>
       </nav>
       <main id="studyPage">
@@ -239,29 +238,6 @@
         </div>
       </section>
       <section
-        id="chronologyPage"
-        class="folio-page"
-        hidden
-        aria-labelledby="chronologyHeading"
-      >
-        <div class="page-heading">
-          <h1 id="chronologyHeading">Chronology</h1>
-          <div class="filters">
-            <label
-              >Period<select id="eraFilter" aria-label="Period"></select></label
-            ><label
-              >Region<select id="regionFilter" aria-label="Region"></select
-            ></label>
-          </div>
-        </div>
-        <p class="page-note">
-          Source-reported first appearances. Weapon types without an established
-          first-use period are omitted. Dates do not describe the supplied
-          digital models.
-        </p>
-        <div id="chronologyList"></div>
-      </section>
-      <section
         id="craftPage"
         class="folio-page"
         hidden
@@ -276,6 +252,9 @@
           <ol id="bibliographyList"></ol>
         </details>
       </section>
+      <footer class="site-footer">
+        <small>© Veneris Intelligence 2026 ™</small>
+      </footer>
     </div>
     <dialog id="archiveZoom" aria-labelledby="archiveZoomTitle">
       <div class="dialog-toolbar">
@@ -296,6 +275,6 @@
       </div>
       <p id="archiveZoomCredit" class="credit"></p>
     </dialog>
-    <script type="module" src="app.js?v=1.0.1"></script>
+    <script type="module" src="app.js?v=1.0.2"></script>
   </body>
 </html>

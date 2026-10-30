@@ -1,4 +1,10 @@
 :root {
+  --frame-inset: 4px;
+  --frame-width: 24px;
+  --frame-clearance: 12px;
+  --page-gutter: calc(
+    var(--frame-inset) + var(--frame-width) + var(--frame-clearance)
+  );
   --corner-art: url("assets/foliate-light-corner.svg");
   --flourish-art: url("assets/foliate-light-flourish.svg");
   --paper: #ede0bc;
@@ -9,19 +15,19 @@
   --gold-bright: #ddbe68;
 }
 :root[data-theme="dark"] {
-  --corner-art: url("assets/foliate-dark-corner.svg");
-  --flourish-art: url("assets/foliate-dark-flourish.svg");
-  --paper: #121110;
-  --paper-deep: #201d17;
-  --ink: #e8ddbd;
-  --muted: #baaa83;
-  --blue: #dfc77f;
-  --red: #d2b15e;
-  --gold: #bb9847;
-  --gold-bright: #edcf7a;
-  --line: #b18c4566;
-  --stage: #38301b40;
-  --label: #1b1912f5;
+  --corner-art: url("assets/gilded-corner.svg");
+  --flourish-art: url("assets/gilded-flourish.svg");
+  --paper: #0b141d;
+  --paper-deep: #172b40;
+  --ink: #e0e4e3;
+  --muted: #aebbc5;
+  --blue: #acc8ec;
+  --red: #dcc17a;
+  --gold: #bba064;
+  --gold-bright: #ead18d;
+  --line: #bba06466;
+  --stage: #182e4666;
+  --label: #111f30f5;
 }
 body {
   background-image:
@@ -29,11 +35,8 @@ body {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.45' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.075' filter='url(%23p)'/%3E%3C/svg%3E");
 }
 :root[data-theme="dark"] body {
-  background-image: radial-gradient(
-    ellipse at 50% 12%,
-    #5042231a,
-    transparent 70%
-  );
+  background-color: var(--paper);
+  background-image: url("assets/black-vellum.svg");
 }
 .folio-frame {
   border-image-source: url("assets/illumination.webp");
@@ -42,7 +45,9 @@ body {
   filter: drop-shadow(0 1px 2px #39270f70);
 }
 [data-theme="dark"] .folio-frame {
-  filter: brightness(0.72) saturate(0.95) drop-shadow(0 0 8px #cda95b20);
+  border-image-source: url("assets/lapis-gilded-frame.svg");
+  border-image-slice: 90;
+  filter: drop-shadow(0 1px 2px #0008);
 }
 .volume {
   box-shadow:
@@ -72,6 +77,10 @@ header {
   gap: 1px;
   font-size: 40px;
   overflow: visible;
+  background: none;
+  color: #173f79;
+  -webkit-text-fill-color: #173f79;
+  filter: none;
 }
 .illuminated-initial {
   display: inline-grid;
@@ -83,27 +92,27 @@ header {
   margin-right: 2px;
   color: #e2c779;
   -webkit-text-fill-color: #e2c779;
-  background: #31513a;
+  background: #174582 url("assets/initial-lapis.svg") center/cover no-repeat;
   border: 3px double #b79a50;
   box-shadow:
-    inset 0 0 0 2px #1b3927,
+    inset 0 0 0 2px #0b2d5c,
     0 0 0 1px #755e2c;
-  text-shadow: 1px 1px #1e3021;
+  text-shadow: 1px 1px #081c35;
   filter: none;
 }
 [data-theme="dark"] .illuminated-initial {
-  background: #2e542c;
+  background: #174582 url("assets/initial-lapis.svg") center/cover no-repeat;
   color: #edcf70;
   -webkit-text-fill-color: #edcf70;
   box-shadow:
-    inset 0 0 0 2px #153919,
+    inset 0 0 0 2px #0b2d5c,
     0 0 0 1px #a08238;
 }
 [data-theme="dark"] header {
-  background-color: #0d0d0b;
+  background-color: #101c2a;
 }
 [data-theme="dark"] .book-nav {
-  background: #173e6a;
+  background: #0c1929;
   border-top: 1px solid #bb9847;
   box-shadow:
     inset 0 2px #29608b55,
@@ -129,7 +138,7 @@ header {
   background: var(--flourish-art) center/contain no-repeat;
 }
 [data-theme="dark"] #viewport {
-  background: radial-gradient(ellipse at 50% 40%, #37302058, #0c0d0c 85%);
+  background: radial-gradient(ellipse at 50% 40%, #14283c77, #080f18 85%);
 }
 .stage-florals {
   position: absolute;
@@ -203,20 +212,13 @@ header {
   color: var(--gold);
   background: #ae883917;
 }
-.timeline-date {
-  background-image: var(--flourish-art);
-  background-size: 110px 30px;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 35px;
-}
 
 /* Study occupies the viewport. The other folios retain their document layout. */
 :root[data-page="study"] body {
   height: 100dvh;
   min-height: 0;
   overflow: hidden;
-  padding: clamp(18px, 3.5vh, 36px) clamp(22px, 3.2vw, 44px);
+  padding: var(--page-gutter);
 }
 :root[data-page="study"] .volume {
   height: 100%;
@@ -447,7 +449,7 @@ header {
     width: 125px;
   }
   :root[data-page="study"] body {
-    padding: 17px 18px;
+    padding: var(--page-gutter);
   }
   :root[data-page="study"] header {
     padding: 7px 10px;
@@ -670,5 +672,158 @@ header {
   }
   :root[data-page="study"] .stage-toolbar {
     grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+/* The painted margin and the page share a single geometry contract. */
+body {
+  padding: var(--page-gutter);
+}
+:root .folio-frame {
+  inset: var(--frame-inset);
+  border-width: var(--frame-width);
+  border-image-outset: 0;
+  z-index: 0;
+}
+.volume {
+  position: relative;
+  z-index: 1;
+}
+.site-footer {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 12px;
+  border-top: 3px double var(--gold);
+  color: var(--muted);
+  text-align: center;
+  background: var(--paper);
+}
+.site-footer small {
+  font: 11px/1.4 var(--serif);
+  letter-spacing: 0.045em;
+}
+
+:root[data-theme="dark"] .folio-frame {
+  filter: drop-shadow(0 1px 2px #0008);
+}
+:root[data-theme="dark"] .volume {
+  background: var(--paper) url("assets/black-vellum.svg");
+  box-shadow:
+    0 0 0 3px var(--paper),
+    0 0 0 4px var(--gold),
+    0 0 0 7px var(--paper),
+    0 0 0 8px var(--line);
+}
+:root[data-theme="dark"] .brand {
+  background: none;
+  color: #dfc780;
+  -webkit-text-fill-color: #dfc780;
+  filter: none;
+}
+:root[data-theme="dark"] header {
+  background-image: var(--flourish-art), url("assets/black-vellum.svg");
+  background-size:
+    255px 60px,
+    420px 420px;
+  background-position:
+    52% center,
+    0 0;
+  background-repeat: no-repeat, repeat;
+}
+:root[data-theme="dark"] .book-nav {
+  background: #0d1a2b;
+  box-shadow:
+    inset 0 1px #7892b11a,
+    inset 0 -1px #0008;
+}
+:root[data-theme="dark"] .book-nav button {
+  color: #cbd1d6;
+}
+:root[data-theme="dark"] .book-nav button.selected {
+  color: #ead18d;
+  background: linear-gradient(0deg, #164680, #122e51);
+}
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] #partDetail h2,
+:root[data-theme="dark"] .card-copy h2,
+:root[data-theme="dark"] .craft-card h2,
+:root[data-theme="dark"] .compare-info h2 {
+  color: #ddc481;
+}
+:root[data-theme="dark"] .primary {
+  background: linear-gradient(110deg, #0e2b55, #1c4f91 52%, #123866) !important;
+  color: #eed692 !important;
+  text-shadow: 0 1px #07101c;
+  box-shadow:
+    inset 0 0 0 2px #b79b5759,
+    inset 0 0 18px #020a1833;
+}
+:root[data-theme="dark"] .primary[aria-pressed="true"] {
+  background: linear-gradient(110deg, #143c70, #285ea0, #17437d) !important;
+  color: #fff0bc !important;
+}
+:root[data-theme="dark"] .header-actions button {
+  background: #10233a;
+}
+:root[data-theme="dark"] #resetPosition {
+  background: #101e31;
+}
+:root[data-theme="dark"] .weapon.active,
+:root[data-theme="dark"] .part-row.active {
+  background: linear-gradient(90deg, #214f824d, transparent);
+}
+:root[data-theme="dark"] .part-label.active {
+  background: #173c65;
+  color: #f0d998;
+}
+:root[data-theme="dark"] .archive-image {
+  background-color: #0c1928;
+}
+:root[data-theme="dark"] .chapter-number {
+  background: #11376a;
+}
+:root[data-theme="dark"] .archive-card,
+:root[data-theme="dark"] .compare-stage {
+  background-color: #101e2e;
+}
+:root[data-theme="dark"] .zoom-surface {
+  background: #0c1827;
+}
+:root[data-theme="dark"] input[type="range"]::-webkit-slider-thumb {
+  background: #1f4b86;
+  box-shadow: 0 0 0 1px #061226;
+}
+:root[data-theme="dark"] input[type="range"]::-moz-range-thumb {
+  background: #1f4b86;
+}
+:root[data-theme="dark"] .site-footer {
+  background: #0d1826;
+  color: #c0c9cf;
+}
+
+@media (max-width: 660px) {
+  :root {
+    --frame-inset: 3px;
+    --frame-width: 12px;
+    --frame-clearance: 10px;
+  }
+  :root[data-theme="dark"] header {
+    background-image: none;
+  }
+  .site-footer {
+    min-height: 24px;
+    padding: 3px 8px;
+  }
+  .site-footer small {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 661px) {
+  :root[data-theme="dark"] {
+    --frame-width: 32px;
   }
 }

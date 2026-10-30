@@ -1,4 +1,4 @@
-import { initSuite } from "./suite.js?v=1.0.1";
+import { initSuite } from "./suite.js?v=1.0.2";
 import * as T from "./vendor/three.module.js";
 import { GLTFLoader } from "./vendor/loaders/GLTFLoader.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";

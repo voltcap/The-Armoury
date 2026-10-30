@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { modelConfig, modelHistory, modelAnatomy } from "../dist/data.js";
-import { archive, chronology, craft, bibliography } from "../dist/research.js";
+import { archive, craft, bibliography } from "../dist/research.js";
 const root = new URL("../dist/", import.meta.url);
 const read = async (path) =>
   JSON.parse(await fs.readFile(new URL(path, root), "utf8"));
@@ -14,7 +14,6 @@ test("content modules match the editable JSON sources", async () => {
     ["history.json", modelHistory],
     ["anatomy.json", modelAnatomy],
     ["archive.json", archive],
-    ["chronology.json", chronology],
     ["craft.json", craft],
     ["bibliography.json", bibliography],
   ])
@@ -44,27 +43,6 @@ test("all specimens have sourced histories and features", () => {
     }
   }
   assert.equal(featureCount, 54);
-  for (const [id, entry] of Object.entries(chronology)) {
-    assert.ok(id in modelConfig);
-    assert.ok(
-      Number.isFinite(entry.dateStart) && Number.isFinite(entry.dateEnd),
-    );
-    assert.equal(entry.dateKind, "earliest-attested");
-    assert.equal(entry.dateQualifier, "source-reported-first-appearance");
-    assert.ok(entry.evidence);
-    sources(entry.sources);
-  }
-  for (const id of [
-    "longsword",
-    "arming",
-    "gladius",
-    "arabic",
-    "katana",
-    "guards",
-    "yatagan",
-    "axe",
-  ])
-    assert.equal(chronology[id], undefined);
 });
 
 test("craftsmanship links resolve to actual feature landmarks", () => {

@@ -8,7 +8,7 @@ Labels identify visible surface regions. They do not establish material composit
 
 ## Historical comparisons
 
-Museum records are cited for specific objects and terms. Dates stay attached to those objects. Chronology includes a source-reported first appearance of the flanged mace form. Later comparison objects, regiment-formation dates and undated models are excluded. Records describing a sword as one of the earliest surviving examples do not establish its first use; those swords are excluded too.
+Museum records are cited for specific objects and terms. Dates stay attached to those objects.
 
 The Roman Hod Hill comparison has a complex relationship between its blade and fittings; it is not proof of a single standardized legionary sword. The Anglo-Saxon T-axe is discussed as a woodworking tool. Japanese blade dates and mounting dates can differ.
 

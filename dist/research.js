@@ -157,32 +157,6 @@ export const archive = [
   }
 ];
 
-export const chronology = {
-  "mace": {
-    "dateLabel": "14th century · flanged-head appearance",
-    "dateStart": 1300,
-    "dateEnd": 1399,
-    "era": "Medieval",
-    "region": "Europe",
-    "status": "First appearance of the flanged-head form",
-    "dateKind": "earliest-attested",
-    "dateQualifier": "source-reported-first-appearance",
-    "description": "Royal Collection Trust dates the appearance of this European flanged-head form to the fourteenth century, noting that it remained rare before the fifteenth. This concerns the head form rather than the much older history of maces generally.",
-    "evidence": "Royal Collection Trust’s institutional publication says the flanged head first appeared in the fourteenth century. The record’s own parade mace is dated 1400–1500, which is not used as the first-appearance date.",
-    "sources": [
-      {
-        "title": "Royal Collection Trust · Horseman’s parade mace, RCIN 67259",
-        "url": "https://artsandculture.google.com/asset/horseman-s-parade-mace/IAHldR2dfYwVyQ",
-        "locator": "Opening paragraph, institutional text supplied by Royal Collection Trust"
-      },
-      {
-        "title": "Royal Collection Trust · Collection record, RCIN 67259",
-        "url": "https://www.rct.uk/collection/67259/horsemans-parade-mace"
-      }
-    ]
-  }
-};
-
 export const craft = [
   {
     "title": "The tang and the assembled hilt",

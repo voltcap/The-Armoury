@@ -17,7 +17,6 @@ The app uses museum collection records for specific objects and terminology. Cat
 
 - `dist/history.json`: contextual copy, individual piece descriptions, object-specific sources.
 - `dist/anatomy.json`: 54 feature landmarks and their sources.
-- `dist/chronology.json`: source-reported first appearances; later comparisons and undated entries are excluded.
 - `dist/craft.json`: six construction and decoration topics.
 - `dist/archive.json`: image records, dates, institutions and licenses.
 - `dist/bibliography.json`: reading-room entries.

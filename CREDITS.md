@@ -72,7 +72,7 @@ Unknown Italian maker. The Walters Art Museum, 51.529. c. 1550.
 
 - Three.js r160 and its examples: MIT, see `dist/vendor/LICENSE`.
 - IM Fell English and UnifrakturMaguntia: SIL Open Font License 1.1, see the two license files in `dist/assets/fonts/`. Fonts are stored locally.
-- The local botanical SVG corner and floral ornaments are covered by the project’s MIT license.
+- The local SVG ornaments, illuminated initial and vellum texture are covered by the project’s MIT license.
 - The custom decorative border is provided under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 Historical books linked in the Reading room are not included in the repository. Their availability online does not grant redistribution rights to the entire books or their illustrations.

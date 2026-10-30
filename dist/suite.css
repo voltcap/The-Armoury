@@ -93,7 +93,6 @@ select {
   padding: 22px 25px 26px;
 }
 .card-copy h2,
-.timeline-entry h2,
 .craft-card h2 {
   font: 32px/1.15 var(--gothic);
   color: var(--blue);
@@ -101,8 +100,7 @@ select {
   font-weight: 400;
 }
 .card-copy p,
-.craft-card p,
-.timeline-entry p {
+.craft-card p {
   line-height: 1.8;
 }
 .dateline {
@@ -203,30 +201,6 @@ dialog::backdrop {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
-}
-.timeline-entry {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  border-top: 1px solid var(--line);
-  padding: 26px 0;
-  gap: 35px;
-  max-width: 1100px;
-  margin: auto;
-}
-.timeline-date {
-  color: var(--red);
-  font-size: 22px;
-  border-left: 3px double var(--gold);
-  padding-left: 18px;
-}
-.timeline-date span {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 10px;
-}
-.timeline-entry p {
-  margin-top: 8px;
 }
 .craft-grid {
   display: grid;
@@ -401,18 +375,6 @@ dialog::backdrop {
   }
   .card-copy {
     padding: 18px;
-  }
-  .timeline-entry {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 22px 0;
-  }
-  .timeline-date {
-    font-size: 19px;
-  }
-  .timeline-date span {
-    display: inline;
-    margin-left: 12px;
   }
   .filters {
     gap: 12px;

@@ -15,7 +15,6 @@ await bundle("data.js", [
 ]);
 await bundle("research.js", [
   ["archive", "archive.json"],
-  ["chronology", "chronology.json"],
   ["craft", "craft.json"],
   ["bibliography", "bibliography.json"],
 ]);
