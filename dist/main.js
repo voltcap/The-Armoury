@@ -1,4 +1,4 @@
-import { initHome } from "./home.js?v=1.2.1";
+import { initHome } from "./home.js?v=1.2.2";
 
 const pages = ["home", "study", "archive", "compare", "craft"];
 let exhibit, exhibitReady = false;
@@ -24,7 +24,7 @@ async function open(next) {
   window.history.replaceState(null, "", "#" + page);
   if (page === "home") return;
   try {
-    exhibit ??= import("./app.js?v=1.2.1");
+    exhibit ??= import("./app.js?v=1.2.2");
     await exhibit;
     exhibitReady = true;
   } catch (error) {

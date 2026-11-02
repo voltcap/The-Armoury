@@ -2,14 +2,14 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { initHome } from "../dist/home.js";
 
-test("Enter plays all six poses even with reduced motion, and leaving Home cancels playback", async (t) => {
+test("Enter plays the four numbered frames faster, even with reduced motion, and leaving Home cancels playback", async (t) => {
   t.mock.timers.enable({ apis: ["setTimeout"] });
   const saved = { document: globalThis.document, matchMedia: globalThis.matchMedia };
   const classes = () => {
     const values = new Set();
     return { add: (...items) => items.forEach((x) => values.add(x)), remove: (...items) => items.forEach((x) => values.delete(x)), toggle: (x, on) => on ? values.add(x) : values.delete(x) };
   };
-  const frames = Array.from({ length: 6 }, (_, i) => ({ src: "", dataset: { src: `pose-${i}` }, classList: classes(), decode: async () => {} }));
+  const frames = Array.from({ length: 4 }, (_, i) => ({ src: "", dataset: { src: `frame-${i + 1}` }, classList: classes(), decode: async () => {} }));
   const page = { dataset: {}, classList: classes(), querySelectorAll: () => frames };
   const button = {};
   globalThis.document = { getElementById: (id) => id === "homePage" ? page : button };
@@ -22,13 +22,15 @@ test("Enter plays all six poses even with reduced motion, and leaving Home cance
     assert.equal(entered, 0, "Enter must not skip directly into Study");
     assert.equal(button.disabled, true);
     const poses = [page.dataset.pose];
-    for (const duration of [520, 520, 600, 600, 650]) {
+    for (const duration of [480, 500, 540]) {
       t.mock.timers.tick(duration);
       poses.push(page.dataset.pose);
       assert.equal(entered, 0);
     }
-    assert.deepEqual(poses, ["3", "2", "1", "4", "5", "6"]);
-    t.mock.timers.tick(900);
+    assert.deepEqual(poses, ["1", "2", "3", "4"]);
+    t.mock.timers.tick(779);
+    assert.equal(entered, 0, "hold the final frame before entering");
+    t.mock.timers.tick(1);
     assert.equal(entered, 1);
     home.show(); await button.onclick();
     home.hide(); t.mock.timers.tick(10000);

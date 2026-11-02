@@ -82,7 +82,7 @@ The four additional historical scans were retrieved from the published Objaverse
 
 ## Entrance illustrations
 
-Six illustrations supplied for The Armoury, prepared as transparent animation frames, scaled to 1100 pixels in height and converted to quality-90 WebP with full-quality alpha. These are decorative entrance artwork, separate from the Archive’s historical source images. They do not inherit the application code’s MIT license.
+Four illustrations supplied for The Armoury, kept in numbered order (1–4), padded to a shared canvas and scaled uniformly to 816 × 1100 pixels without cropping or stretching the artwork. Converted to quality-90 WebP with full-quality alpha. The floating flowers reuse the local foliate ornament palette and five-petalled design. These are decorative entrance artwork, separate from the Archive’s historical source images. They do not inherit the application code’s MIT license.
 
 ## Additional Archive photographs
 

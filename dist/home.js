@@ -2,8 +2,8 @@ export function initHome(enter) {
   const page = document.getElementById("homePage");
   const frames = [...page.querySelectorAll(".knight-frame")];
   const button = document.getElementById("drawSword");
-  const order = [2, 1, 0, 3, 4, 5];
-  const timing = [520, 520, 600, 600, 650, 900];
+  const order = [0, 1, 2, 3];
+  const timing = [480, 500, 540, 780];
   let timer, generation = 0, ready;
   function frame(index) {
     frames.forEach((image, i) => image.classList.toggle("is-active", i === index));
@@ -36,7 +36,7 @@ export function initHome(enter) {
       if (current !== generation) return;
       if (step === order.length) { enter(); return; }
       frame(order[step]);
-      if (step >= 4) page.classList.add("crowned");
+      if (step === order.length - 1) page.classList.add("crowned");
       timer = setTimeout(advance, timing[step++]);
     };
     advance();
