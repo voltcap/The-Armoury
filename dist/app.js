@@ -1,7 +1,7 @@
 import { createDisassembly } from "./disassembly.js?v=1.2.1";
 import { createCameraTracker } from "./camera-state.js?v=1.2.1";
 import { layoutCallouts } from "./label-layout.js?v=1.2.1";
-import { initSuite } from "./suite.js?v=1.2.1";
+import { initSuite } from "./suite.js?v=1.2.3";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
 import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.1";
@@ -536,7 +536,7 @@ async function loadWeapon(id, customRoot = null) {
   $("title").textContent = active.short;
   $("customTuning").hidden = id !== "custom";
   $("loading").hidden = false;
-  $("loading").innerHTML = '<span class="spinner"></span><p>Loading model…</p>';
+  $("loading").innerHTML = '<span class="spinner" aria-hidden="true"></span><p>Loading model…</p>';
   try {
     const lease = id === "custom" ? null : await loadSourceModel(
       new URL("./models/" + config[id].file + "?v=1.1.0", import.meta.url).href,

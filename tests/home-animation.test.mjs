@@ -22,13 +22,13 @@ test("Enter plays the four numbered frames faster, even with reduced motion, and
     assert.equal(entered, 0, "Enter must not skip directly into Study");
     assert.equal(button.disabled, true);
     const poses = [page.dataset.pose];
-    for (const duration of [480, 500, 540]) {
+    for (const duration of [400, 420, 450]) {
       t.mock.timers.tick(duration);
       poses.push(page.dataset.pose);
       assert.equal(entered, 0);
     }
     assert.deepEqual(poses, ["1", "2", "3", "4"]);
-    t.mock.timers.tick(779);
+    t.mock.timers.tick(629);
     assert.equal(entered, 0, "hold the final frame before entering");
     t.mock.timers.tick(1);
     assert.equal(entered, 1);

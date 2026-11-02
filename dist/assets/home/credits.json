@@ -12,19 +12,19 @@
     },
     {
       "file": "frame-02.webp",
-      "bytes": 271490,
+      "bytes": 275720,
       "width": 816,
       "height": 1100,
       "alpha": true,
-      "sha256": "750ca1a1727c0ee136a075224d3ae37883b98cc2c0c857e170796c66c698901c"
+      "sha256": "a22dddc2a0fb1afa7969d1f0512b2a11776652f67c42cdbf15a4abb04e7962a4"
     },
     {
       "file": "frame-03.webp",
-      "bytes": 272110,
+      "bytes": 272336,
       "width": 816,
       "height": 1100,
       "alpha": true,
-      "sha256": "d9523f9e72031ebd78ea73b4eb7f6d478e507c453f7a46af319494d8c4ef3b5a"
+      "sha256": "d07abb8e723d75fe27fb197a66bce3554c6273aede9fdff0da07941bec851a2f"
     },
     {
       "file": "frame-04.webp",

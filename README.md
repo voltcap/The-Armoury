@@ -6,7 +6,7 @@ An interactive collection of twelve weapon models, presented as an illuminated m
 
 ## Explore
 
-- **Home:** a four-frame illustrated sword-drawing entrance, with illuminated blackletter lettering, light/dark palettes, floating manuscript flowers and direct entry. Reduced-motion preferences disable decorative effects; the Enter button still plays the four illustrated frames in numbered order (1–4) over 2.3 seconds. The 3D application loads only after leaving Home.
+- **Home:** a four-frame illustrated sword-drawing entrance, with illuminated blackletter lettering, light/dark palettes, floating manuscript flowers and direct entry. Reduced-motion preferences disable decorative effects; the Enter button still plays the four illustrated frames in numbered order (1–4) over 1.9 seconds. The 3D application loads only after leaving Home. A simple rotating sword marks model loading in Study and Compare, with a static version for reduced motion.
 - **Study:** animated separation and reassembly, individual piece isolation, 71 finer-detail landmarks, all-part callout labels in assembled and separated views, mesh view and automatic rotation.
 - **Archive:** eleven zoomable manuscript illustrations and museum photographs, with dates, collection records and image licenses.
 - **Compare:** two selectable models with linked rotation and zoom, independent viewing, and a reset control.

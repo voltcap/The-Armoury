@@ -3,7 +3,7 @@ export function initHome(enter) {
   const frames = [...page.querySelectorAll(".knight-frame")];
   const button = document.getElementById("drawSword");
   const order = [0, 1, 2, 3];
-  const timing = [480, 500, 540, 780];
+  const timing = [400, 420, 450, 630];
   let timer, generation = 0, ready;
   function frame(index) {
     frames.forEach((image, i) => image.classList.toggle("is-active", i === index));

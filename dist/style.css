@@ -381,13 +381,15 @@ h1 {
 .loading p {
   font-size: 14px;
 }
-.spinner {
-  width: 22px;
-  height: 22px;
-  border: 1px solid var(--line);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.spinner, [id^="compareStatus"][data-loading="true"]::before {
+  content: "";
+  display: block;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  background: var(--gold);
+  mask: url("assets/loading-sword.svg") center/contain no-repeat;
+  animation: spin 2s linear infinite;
 }
 @keyframes spin {
   to {
@@ -990,7 +992,7 @@ input[type="range"]::-moz-range-thumb {
   body {
     transition: none;
   }
-  .spinner {
+  .spinner, [id^="compareStatus"][data-loading="true"]::before {
     animation: none;
   }
   * {

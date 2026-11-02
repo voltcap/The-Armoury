@@ -20,10 +20,10 @@
         document.documentElement.dataset.theme = "light";
       }
     </script>
-    <link rel="stylesheet" href="style.css?v=1.2.2" />
-    <link rel="stylesheet" href="suite.css?v=1.2.2" />
-    <link rel="stylesheet" href="manuscript.css?v=1.2.2" />
-    <link rel="stylesheet" href="home.css?v=1.2.2" />
+    <link rel="stylesheet" href="style.css?v=1.2.3" />
+    <link rel="stylesheet" href="suite.css?v=1.2.3" />
+    <link rel="stylesheet" href="manuscript.css?v=1.2.3" />
+    <link rel="stylesheet" href="home.css?v=1.2.3" />
   </head>
   <body>
     <div class="folio-frame" aria-hidden="true"></div>
@@ -59,10 +59,10 @@
           <div class="home-arch" aria-hidden="true"></div>
           <div class="home-flowers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <div class="knight-poses" aria-hidden="true">
-              <img class="knight-frame is-active" data-src="assets/home/frame-01.webp" alt="" width="816" height="1100" decoding="async" />
-              <img class="knight-frame" data-src="assets/home/frame-02.webp" alt="" width="816" height="1100" decoding="async" />
-              <img class="knight-frame" data-src="assets/home/frame-03.webp" alt="" width="816" height="1100" decoding="async" />
-              <img class="knight-frame" data-src="assets/home/frame-04.webp" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame is-active" data-src="assets/home/frame-01.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/frame-02.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/frame-03.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/frame-04.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
           </div>
           <span class="home-star" aria-hidden="true"></span>
         </div>
@@ -101,7 +101,7 @@
             <div id="labels"></div>
 
             <div class="loading" id="loading" role="status">
-              <span class="spinner"></span>
+              <span class="spinner" aria-hidden="true"></span>
               <p>Loading model…</p>
             </div>
           </div>
@@ -239,7 +239,7 @@
                 id="compareLeft"
                 aria-label="Left comparison model. Drag to rotate, scroll to zoom."
               ></canvas>
-              <p id="compareStatusLeft" role="status">Loading model…</p>
+              <p id="compareStatusLeft" role="status" data-loading="true">Loading model…</p>
             </div>
             <div id="compareInfoLeft" class="compare-info"></div>
           </article>
@@ -255,7 +255,7 @@
                 id="compareRight"
                 aria-label="Right comparison model. Drag to rotate, scroll to zoom."
               ></canvas>
-              <p id="compareStatusRight" role="status">Loading model…</p>
+              <p id="compareStatusRight" role="status" data-loading="true">Loading model…</p>
             </div>
             <div id="compareInfoRight" class="compare-info"></div>
           </article>
@@ -299,6 +299,6 @@
       </div>
       <p id="archiveZoomCredit" class="credit"></p>
     </dialog>
-    <script type="module" src="main.js?v=1.2.2"></script>
+    <script type="module" src="main.js?v=1.2.3"></script>
   </body>
 </html>

@@ -96,6 +96,7 @@ export function createComparison(catalog, history) {
     const token = ++v.request,
       state = document.getElementById("compareStatus" + v.side);
     state.hidden = false;
+    state.dataset.loading = "true";
     state.textContent = "Loading model…";
     let lease;
     try {
@@ -164,11 +165,13 @@ export function createComparison(catalog, history) {
         info.append(link);
       }
       state.hidden = true;
+      delete state.dataset.loading;
       v.canvas.dataset.model = id;
       v.dirty = true;
     } catch (e) {
       if (lease && v.lease !== lease) lease.release();
       if (token === v.request) {
+        delete state.dataset.loading;
         state.textContent = "Unable to load. Select the weapon again to retry.";
       }
     }
