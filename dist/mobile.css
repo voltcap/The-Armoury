@@ -1,0 +1,103 @@
+/* Phone controls are hidden outside the mobile layout. */
+.mobile-study-control, .compare-model-id { display: none; }
+
+@media (max-width: 760px), (max-width: 1000px) and (max-height: 600px) {
+  :root, :root[data-theme="dark"] { --frame-width: 6px; --frame-clearance: 7px; }
+  body, :root[data-page="study"] body {
+    padding-top: max(var(--page-gutter), env(safe-area-inset-top, 0px));
+    padding-right: max(var(--page-gutter), env(safe-area-inset-right, 0px));
+    padding-bottom: max(var(--page-gutter), env(safe-area-inset-bottom, 0px));
+    padding-left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
+  }
+  :root[data-page="home"] .volume { min-height: calc(100dvh - max(var(--page-gutter), env(safe-area-inset-top, 0px)) - max(var(--page-gutter), env(safe-area-inset-bottom, 0px))); }
+  :root[data-page="study"] body { height: 100vh; height: 100dvh; }
+  :root[data-page="study"] header { padding: 6px 9px; background-image: none; }
+  :root[data-page="study"] .brand { font-size: 27px; }
+  :root[data-page="study"] .header-actions { flex-direction: row; gap: 4px; }
+  :root[data-page="study"] .header-actions button { min-height: 34px; width: 56px; font-size: 10px; padding: 4px; }
+  :root[data-page="study"] .book-nav { gap: 0; padding: 0 4px; justify-content: space-between; }
+  :root[data-page="study"] .book-nav button { min-height: 38px; font-size: 12px; padding: 6px; }
+  :root[data-page="study"] #studyPage { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 44px minmax(0, 1fr) 42px; }
+  :root[data-page="study"] .collection { grid-column: 1; grid-row: 1; padding: 0 8px; }
+  :root[data-page="study"] #weapons { display: none; }
+  :root[data-page="study"] #weaponSelect { display: block; width: 100%; height: 38px; min-height: 38px; margin-top: 3px; padding: 4px 8px; font-size: 16px; }
+  :root[data-page="study"] .workbench { grid-column: 1; grid-row: 2; padding: 4px 8px 0; grid-template-rows: minmax(0, 1fr) auto auto auto; gap: 0; }
+  :root[data-page="study"] .specimen-heading { display: none; }
+  :root[data-page="study"] #viewport { grid-row: 1; min-height: 0; height: 100%; }
+  :root[data-page="study"] .stage-toolbar { grid-row: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto; margin: 5px 0 0; gap: 2px 8px; }
+  :root[data-page="study"] .stage-toolbar button, :root[data-page="study"] .stage-toolbar .primary { min-height: 38px; padding: 6px 8px; font-size: 13px !important; }
+  :root[data-page="study"] .stage-toolbar .focus-option { grid-column: 1/-1; margin: 0; justify-content: flex-end; min-height: 26px; font-size: 12px; }
+  :root[data-page="study"] .focus-option input { width: 17px; height: 17px; }
+  :root[data-page="study"] .view-controls { grid-row: 3; padding: 0; justify-content: space-around; gap: 5px; }
+  :root[data-page="study"] .view-controls button { min-height: 32px; padding: 4px 10px; font-size: 12px; }
+  :root[data-page="study"] .assembly { grid-row: 4; padding: 0; margin: 0; }
+  :root[data-page="study"] .assembly-head { font-size: 12px; line-height: 1.3; }
+  :root[data-page="study"] .assembly input { margin: 13px 0; }
+  :root[data-page="study"] .assembly-actions button { min-height: 34px; font-size: 12px; padding: 5px 2px; }
+  :root[data-page="study"] .stage-florals i { width: 30px; height: 30px; }
+  :root[data-page="study"] #labels .part-label { font-size: 10px; padding: 3px 5px; }
+  :root[data-page="study"] .mobile-study-control { display: block; min-height: 42px; color: var(--ink); background: var(--paper); border-top: 1px solid var(--gold); font-size: 14px; }
+  :root[data-page="study"] #studyInfoToggle { grid-column: 1; grid-row: 3; }
+  :root[data-page="study"] .inspector { display: none; position: absolute; inset: auto 0 42px; z-index: 20; max-height: 65%; padding: 0 14px 12px; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--gold); background: var(--paper); box-shadow: 0 -8px 24px #0005; }
+  :root[data-page="study"][data-study-info="open"] .inspector { display: block; }
+  :root[data-page="study"] #studyInfoClose { width: 100%; position: sticky; top: 0; z-index: 2; border-top: 0; border-bottom: 1px solid var(--line); text-align: right; }
+  :root[data-page="study"] .inspector-tabs { margin-bottom: 8px; min-height: 40px; height: 40px; }
+  :root[data-page="study"] .inspector-tabs button { min-height: 40px; font-size: 15px; }
+  :root[data-page="study"] .study-modes button { min-height: 36px; font-size: 14px; }
+  :root[data-page="study"] #parts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  :root[data-page="study"] .part-row { min-height: 38px; font-size: 13px; }
+  :root[data-page="study"] #partDetail { margin-top: 10px; padding-top: 10px; }
+  :root[data-page="study"] #partDescription, :root[data-page="study"] #historyPanel { font-size: 15px; line-height: 1.5; }
+  :root[data-page="study"] #partSources a { font-size: 12px; }
+  :root[data-page="study"] .part-navigation button { min-height: 40px; font-size: 14px; }
+  :root[data-page="study"] .site-footer { min-height: 22px; padding: 2px 4px; }
+
+  .compare-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .compare-card { display: contents; }
+  .compare-card:first-child > label { grid-row: 1; }
+  .compare-card:first-child > .compare-stage { grid-row: 2; }
+  .compare-card:last-child > label { grid-row: 3; }
+  .compare-card:last-child > .compare-stage { grid-row: 4; }
+  #compareInfoLeft { grid-row: 5; }
+  #compareInfoRight { grid-row: 6; }
+  :root[data-page="compare"] header { padding: 8px 10px; background-image: none; }
+  :root[data-page="compare"] .brand { font-size: 27px; }
+  :root[data-page="compare"] .header-actions { flex-direction: row; gap: 4px; }
+  :root[data-page="compare"] .header-actions button { width: 56px; min-height: 34px; padding: 4px; font-size: 10px; }
+  #comparePage { padding: 16px 12px; }
+  #comparePage .page-heading { gap: 10px; margin-bottom: 12px; }
+  #comparePage .page-heading h1 { font-size: 34px; margin: 0; }
+  #comparePage .page-heading h1:after { display: none; }
+  #comparePage .page-note { font-size: 12px; line-height: 1.4; margin: 10px 0 16px; }
+  #comparePage .compare-options { font-size: 12px; gap: 10px; }
+  .compare-stage { margin: 0; height: clamp(220px, 32dvh, 280px); }
+  .compare-info { padding-top: 18px; border-top: 3px double var(--gold); }
+  .compare-info h2 { font-size: 28px; }
+  .compare-model-id { display: inline; }
+  .compare-desktop-label { display: none; }
+  .compare-card select { font-size: 16px; min-height: 44px; }
+}
+
+/* Landscape phones keep controls beside the model rather than squeezing its height. */
+@media (max-width: 1000px) and (max-height: 520px) and (orientation: landscape) {
+  :root[data-page="study"] header { padding: 3px 8px; }
+  :root[data-page="study"] .brand { font-size: 24px; }
+  :root[data-page="study"] .illuminated-initial { width: 23px; height: 30px; font-size: 28px; }
+  :root[data-page="study"] .book-nav button { min-height: 30px; padding: 3px 6px; }
+  :root[data-page="study"] #studyPage { grid-template-columns: clamp(180px, 25vw, 210px) minmax(0, 1fr); grid-template-rows: 38px 54px 26px minmax(62px, 1fr) 34px; gap: 0 8px; padding: 4px 8px; }
+  :root[data-page="study"] .workbench { display: contents; }
+  :root[data-page="study"] .collection { grid-column: 1; grid-row: 1; padding: 0; }
+  :root[data-page="study"] #weaponSelect { margin: 0; height: 34px; min-height: 34px; }
+  :root[data-page="study"] #viewport { grid-column: 2; grid-row: 1/-1; }
+  :root[data-page="study"] .stage-toolbar { grid-column: 1; grid-row: 2; margin: 0; gap: 0 6px; }
+  :root[data-page="study"] .stage-toolbar button, :root[data-page="study"] .stage-toolbar .primary { min-height: 30px; padding: 3px 6px; font-size: 12px !important; }
+  :root[data-page="study"] .stage-toolbar .focus-option { min-height: 22px; font-size: 11px; }
+  :root[data-page="study"] .view-controls { grid-column: 1; grid-row: 3; }
+  :root[data-page="study"] .view-controls button { min-height: 26px; padding: 2px 6px; }
+  :root[data-page="study"] .assembly { grid-column: 1; grid-row: 4; align-self: center; }
+  :root[data-page="study"] .assembly-head { font-size: 10px; line-height: 1.2; }
+  :root[data-page="study"] .assembly input { margin: 9px 0; }
+  :root[data-page="study"] .assembly-actions button { font-size: 11px; min-height: 28px; padding: 3px 1px; }
+  :root[data-page="study"] #studyInfoToggle { grid-column: 1; grid-row: 5; min-height: 34px; }
+  :root[data-page="study"] .inspector { bottom: 0; max-height: 100%; width: min(430px, 75%); }
+}

@@ -2,7 +2,12 @@
 <html lang="en" data-page="home">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="The Armoury" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="assets/app-icon-180.png" />
     <meta name="theme-color" content="#171b23" />
     <meta
       name="description"
@@ -20,10 +25,11 @@
         document.documentElement.dataset.theme = "light";
       }
     </script>
-    <link rel="stylesheet" href="style.css?v=1.2.3" />
-    <link rel="stylesheet" href="suite.css?v=1.2.3" />
-    <link rel="stylesheet" href="manuscript.css?v=1.2.3" />
-    <link rel="stylesheet" href="home.css?v=1.2.3" />
+    <link rel="stylesheet" href="style.css?v=1.2.4" />
+    <link rel="stylesheet" href="suite.css?v=1.2.4" />
+    <link rel="stylesheet" href="manuscript.css?v=1.2.4" />
+    <link rel="stylesheet" href="home.css?v=1.2.4" />
+    <link rel="stylesheet" href="mobile.css?v=1.2.4" />
   </head>
   <body>
     <div class="folio-frame" aria-hidden="true"></div>
@@ -59,10 +65,10 @@
           <div class="home-arch" aria-hidden="true"></div>
           <div class="home-flowers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <div class="knight-poses" aria-hidden="true">
-              <img class="knight-frame is-active" data-src="assets/home/frame-01.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
-              <img class="knight-frame" data-src="assets/home/frame-02.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
-              <img class="knight-frame" data-src="assets/home/frame-03.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
-              <img class="knight-frame" data-src="assets/home/frame-04.webp?v=1.2.3" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame is-active" data-src="assets/home/frame-01.webp?v=1.2.4" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/frame-02.webp?v=1.2.4" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/frame-03.webp?v=1.2.4" alt="" width="816" height="1100" decoding="async" />
+              <img class="knight-frame" data-src="assets/home/frame-04.webp?v=1.2.4" alt="" width="816" height="1100" decoding="async" />
           </div>
           <span class="home-star" aria-hidden="true"></span>
         </div>
@@ -133,7 +139,9 @@
             </div>
           </div>
         </section>
-        <aside class="inspector">
+        <button id="studyInfoToggle" class="mobile-study-control" aria-expanded="false" aria-controls="studyInspector">Parts &amp; history</button>
+        <aside class="inspector" id="studyInspector" aria-label="Weapon information">
+          <button id="studyInfoClose" class="mobile-study-control">Close information</button>
           <div class="inspector-tabs">
             <button class="selected" data-tab="anatomy">Parts</button
             ><button data-tab="history">History</button>
@@ -229,7 +237,7 @@
         <div class="compare-grid">
           <article class="compare-card">
             <label
-              >Left weapon<select
+              ><span class="compare-desktop-label">Left weapon</span><span class="compare-model-id">Model A</span><select
                 id="compareSelectLeft"
                 aria-label="Left weapon"
               ></select
@@ -245,7 +253,7 @@
           </article>
           <article class="compare-card">
             <label
-              >Right weapon<select
+              ><span class="compare-desktop-label">Right weapon</span><span class="compare-model-id">Model B</span><select
                 id="compareSelectRight"
                 aria-label="Right weapon"
               ></select
@@ -299,6 +307,6 @@
       </div>
       <p id="archiveZoomCredit" class="credit"></p>
     </dialog>
-    <script type="module" src="main.js?v=1.2.3"></script>
+    <script type="module" src="main.js?v=1.2.4"></script>
   </body>
 </html>

@@ -1,8 +1,18 @@
-import { initHome } from "./home.js?v=1.2.3";
+import { initHome } from "./home.js?v=1.2.4";
 
 const pages = ["home", "study", "archive", "compare", "craft"];
 let exhibit, exhibitReady = false;
 const home = initHome(() => open("study"));
+const infoToggle = document.getElementById("studyInfoToggle");
+function studyInfo(open) {
+  document.documentElement.dataset.studyInfo = open ? "open" : "closed";
+  infoToggle.setAttribute("aria-expanded", String(open));
+  infoToggle.textContent = open ? "Close information" : "Parts & history";
+}
+infoToggle.onclick = () => studyInfo(infoToggle.getAttribute("aria-expanded") !== "true");
+document.getElementById("studyInfoClose").onclick = () => { studyInfo(false); infoToggle.focus(); };
+addEventListener("keydown", (event) => { if (event.key === "Escape") studyInfo(false); });
+addEventListener("armoury:page", () => studyInfo(false));
 
 function show(page) {
   document.documentElement.dataset.page = page;
@@ -24,7 +34,7 @@ async function open(next) {
   window.history.replaceState(null, "", "#" + page);
   if (page === "home") return;
   try {
-    exhibit ??= import("./app.js?v=1.2.3");
+    exhibit ??= import("./app.js?v=1.2.4");
     await exhibit;
     exhibitReady = true;
   } catch (error) {

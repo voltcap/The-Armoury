@@ -152,7 +152,10 @@ export function createComparison(catalog, history) {
         h = history[id];
       info.replaceChildren();
       const title = document.createElement("h2");
-      title.textContent = catalog.find((w) => w.id === id).short;
+      const identifier = document.createElement("span");
+      identifier.className = "compare-model-id";
+      identifier.textContent = v.side === "Left" ? "Model A · " : "Model B · ";
+      title.append(identifier, document.createTextNode(catalog.find((w) => w.id === id).short));
       const text = document.createElement("p");
       text.textContent = h.context;
       info.append(title, text);

@@ -39,7 +39,7 @@ export function initSuite({ catalog, history, inspect, onStudyVisibility }) {
     onStudyVisibility(page === "study");
     dispatchEvent(new CustomEvent("armoury:page", { detail: page }));
     if (page === "compare") {
-      comparisonModule ??= import("./compare.js?v=1.2.3");
+      comparisonModule ??= import("./compare.js?v=1.2.4");
       const { createComparison } = await comparisonModule;
       if (page !== "compare") return;
       comparison ??= createComparison(catalog, history);

@@ -14,6 +14,8 @@ An interactive collection of twelve weapon models, presented as an illuminated m
 
 Light and dark themes are included. Study fits the viewport; the other tabs retain their scrolling document layout. Selecting a part can animate the camera to a close-up; disable **Close-up on selection** to read its information while viewing the complete assembly. **Reset position** restores the camera and shows all pieces while preserving the separation amount.
 
+Mobile Study keeps the 3D viewer in the main screen and opens Parts & history on demand. Landscape phones put controls beside the model. Mobile Compare shows both models before their labelled descriptions. The web manifest and touch icon support adding The Armoury to an iPhone home screen; loading the collection still requires a network connection.
+
 ## Run locally
 
 Use Node.js 22 or later. No package installation or build is needed.

@@ -1,7 +1,7 @@
 import { createDisassembly } from "./disassembly.js?v=1.2.1";
 import { createCameraTracker } from "./camera-state.js?v=1.2.1";
 import { layoutCallouts } from "./label-layout.js?v=1.2.1";
-import { initSuite } from "./suite.js?v=1.2.3";
+import { initSuite } from "./suite.js?v=1.2.4";
 import * as T from "./vendor/three.module.js";
 import { OrbitControls } from "./vendor/controls/OrbitControls.js";
 import { lightExhibit, exhibitMaterial } from "./exhibit-lighting.js?v=1.2.1";
